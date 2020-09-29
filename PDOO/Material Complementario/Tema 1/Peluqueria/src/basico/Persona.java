@@ -25,9 +25,9 @@ public class Persona { // Clase con visibilidad pública
  }
 
  
-LocalDateTime pedirCita(Peluqueria peluqueria) {// Visibilidad de paquete. Método de instancia
+Cita pedirCita(Peluqueria peluqueria) {// Visibilidad de paquete. Método de instancia
      saluda();
-     return peluqueria.darCita(); //envía mensaje a peluquería para que ésta le dé la cita
+     return peluqueria.darCita(this); //envía mensaje a peluquería para que ésta le dé la cita
  }
  
 boolean esAlto(){
@@ -40,4 +40,9 @@ boolean esAlto(){
     return atributos;
 }
 
+ void anularCita(Peluqueria pelu, Cita cita){
+     System.out.println(this.nombre+": Deseo anular la cita");
+     pelu.anularCita(cita);
+ }
+ 
 }
