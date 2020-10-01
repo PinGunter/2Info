@@ -1,0 +1,21 @@
+### Aproximación de Pi a través del cálculo numérico de una integral
+
+###### Salvador Romero Cortés
+
+---
+
+### Introducción
+
+En esta memoria se recoge la actividad del seminario 1. Este ejercicio sirve para practicar las técnicas de programación concurrente en C++11. 
+
+El ejercicio consiste en aproximar el valor del número $\pi$ a través del cálculo número de la integral definida:
+$$
+I = \int_0^1{\frac{4}{1+x^2} \ dx} = \pi
+$$
+
+### Base matemática
+
+El cálculo se puede hacer evaluando la función en $m$ puntos del espacio en el intervalo $[0,1]$ y aproximando $I$ como la media de todos esos valores. De esta manera tenemos que:
+$$
+I \approx \frac{1}{m} \sum_{j=0}^{m-1} f(x_j) \quad : \quad x_j = frac{j+1/2}{m}
+$$
