@@ -23,11 +23,11 @@ gunzip -d *.gz
 
 Valores por defecto de `/etc/default/useradd`
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 13-42-43.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 13-42-43.png)
 
 Valores por defecto de `/etc/login.defs`
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 13-43-52.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 13-43-52.png)
 
 
 
@@ -41,9 +41,9 @@ useradd antonio
 
 y tras la creación vemos como al final de los archivos `/etc/passwd` y `/etc/group` han aparecido los nuevos usuarios
 
-![passwd tras añadir los usuarios](/home/salva/Descargas/ej12-20201001T115608Z-001/ej12/passwd_post.png)
+![passwd tras añadir los usuarios](/home/salva/2Info/SO/Practicas/Practica1/imagenes/passwd_post.png)
 
-![group tras añadir nuevos usuarios](/home/salva/Descargas/ej12-20201001T115608Z-001/ej12/group_post.png)
+![group tras añadir nuevos usuarios](/home/salva/2Info/SO/Practicas/Practica1/imagenes/group_post.png)
 
 **Actividad 1.3 - Creación de usuarios**
 
@@ -53,7 +53,7 @@ Creamos un usuario nuevo, cuya carpeta home se encuentre en el escritorio con la
 useradd usuario -d directorio_home
 ```
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 14-30-27.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 14-30-27.png)
 
 Creamos otro usuario que no tenga directorio home con la orden
 
@@ -61,7 +61,7 @@ Creamos otro usuario que no tenga directorio home con la orden
 useradd usuario -M 
 ```
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 14-32-12.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 14-32-12.png)
 
 Vemos que no ha creado ningún directorio home.
 
@@ -71,7 +71,7 @@ Ahora creamos uno con un comentario con la orden
 useradd usuario -c comentario
 ```
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 14-34-08.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 14-34-08.png)
 
 
 
@@ -81,19 +81,19 @@ Ahora borremos el usuario `user_comentado` y vemos los restos que deja.
 userdel user_comentado
 ```
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 14-36-33.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 14-36-33.png)
 
 Como vemos, la carpeta home del usuario no se ha borrado. Sin embargo, sí se ha borrado su entrada en los archivos `/etc/passwd` y `/etc/group`
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 14-38-23.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 14-38-23.png)
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 14-38-42.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 14-38-42.png)
 
 
 
 Ahora iniciamos sesión con uno de los usuarios, manolo por ejemplo. Vemos que en su directorio home solo tiene los archivos de configuración genéricos.
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 14-40-07.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 14-40-07.png)
 
 
 
@@ -105,7 +105,7 @@ El formato del archivo es:
 
 Usando la orden `ls -la /etc/passwd` podemos ver que el propietario del archivo es el usuario `root`.
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 15-34-58.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 15-34-58.png)
 
 Tiene permisos de escritura y lectura..
 
@@ -115,7 +115,7 @@ Tiene permisos de escritura y lectura..
 
 Desde otro usuario distinto a root no lo podemos ver porque no tenemos permisos de lectura sobre el archivo.
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 15-38-12.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 15-38-12.png)
 
 
 
@@ -136,11 +136,11 @@ gpasswd -a pepe grupo1
 gpasswd -a antonio grupo2
 ```
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 15-58-59.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 15-58-59.png)
 
 Si usamos id como `root` obtenemos el siguiente resultado
 
-![](/home/salva/Imágenes/Captura de pantalla de 2020-10-01 15-59-22.png)
+![](/home/salva/2Info/SO/Practicas/Practica1/imagenes/Captura de pantalla de 2020-10-01 15-59-22.png)
 
 
 
