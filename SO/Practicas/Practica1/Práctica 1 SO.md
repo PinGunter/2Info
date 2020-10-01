@@ -23,11 +23,11 @@ gunzip -d *.gz
 
 Valores por defecto de `/etc/default/useradd`
 
-![valores por defecto useradd](imagenes/Captura de pantalla de 2020-10-01 13-42-43.png)
+![valores por defecto useradd](imagenes/valores_defecto_useradd.png)
 
 Valores por defecto de `/etc/login.defs`
 
-![valores predeterminados login.defs](imagenes/Captura de pantalla de 2020-10-01 13-43-52.png)
+![valores predeterminados login.defs](imagenes/valores_defecto_login.png)
 
 
 
@@ -53,7 +53,7 @@ Creamos un usuario nuevo, cuya carpeta home se encuentre en el escritorio con la
 useradd usuario -d directorio_home
 ```
 
-![manolo_escritorio](imagenes/Captura de pantalla de 2020-10-01 14-30-27.png)
+![manolo_escritorio](imagenes/manolo_escritorio.png)
 
 Creamos otro usuario que no tenga directorio home con la orden
 
@@ -61,7 +61,7 @@ Creamos otro usuario que no tenga directorio home con la orden
 useradd usuario -M 
 ```
 
-![sin_home](imagenes/Captura de pantalla de 2020-10-01 14-32-12.png)
+![sin_home](imagenes/sin_home.png)
 
 Vemos que no ha creado ningún directorio home.
 
@@ -71,7 +71,7 @@ Ahora creamos uno con un comentario con la orden
 useradd usuario -c comentario
 ```
 
-![con comentario](imagenes/Captura de pantalla de 2020-10-01 14-34-08.png)
+![con comentario](imagenes/con _comentario.png)
 
 
 
@@ -81,19 +81,19 @@ Ahora borremos el usuario `user_comentado` y vemos los restos que deja.
 userdel user_comentado
 ```
 
-![restos de borrar](imagenes/Captura de pantalla de 2020-10-01 14-36-33.png)
+![restos de borrar](imagenes/restos_de_borrar.png)
 
 Como vemos, la carpeta home del usuario no se ha borrado. Sin embargo, sí se ha borrado su entrada en los archivos `/etc/passwd` y `/etc/group`
 
-![passwd tras borrar](imagenes/Captura de pantalla de 2020-10-01 14-38-23.png)
+![passwd tras borrar](imagenes/passwd_tras_borrar.png)
 
-![group tras borrar](imagenes/Captura de pantalla de 2020-10-01 14-38-42.png)
+![group tras borrar](imagenes/group_tras_borrar.png)
 
 
 
 Ahora iniciamos sesión con uno de los usuarios, manolo por ejemplo. Vemos que en su directorio home solo tiene los archivos de configuración genéricos.
 
-![archivos predet. home](imagenes/Captura de pantalla de 2020-10-01 14-40-07.png)
+![archivos predet. home](imagenes/archivos_home.png)
 
 
 
@@ -105,7 +105,7 @@ El formato del archivo es:
 
 Usando la orden `ls -la /etc/passwd` podemos ver que el propietario del archivo es el usuario `root`.
 
-![permisos passwd](imagenes/Captura de pantalla de 2020-10-01 15-34-58.png)
+![permisos passwd](imagenes/permisos_passwd.png)
 
 Tiene permisos de escritura y lectura..
 
@@ -115,7 +115,7 @@ Tiene permisos de escritura y lectura..
 
 Desde otro usuario distinto a root no lo podemos ver porque no tenemos permisos de lectura sobre el archivo.
 
-![shadow sin root](imagenes/Captura de pantalla de 2020-10-01 15-38-12.png)
+![shadow sin root](imagenes/shadow_sin_root.png)
 
 
 
@@ -136,11 +136,11 @@ gpasswd -a pepe grupo1
 gpasswd -a antonio grupo2
 ```
 
-![usuarios a grupos](imagenes/Captura de pantalla de 2020-10-01 15-58-59.png)
+![usuarios a grupos](imagenes/usuarios_a_grupos.png)
 
 Si usamos id como `root` obtenemos el siguiente resultado
 
-![id como root](imagenes/Captura de pantalla de 2020-10-01 15-59-22.png)
+![id como root](imagenes/id_root.png)
 
 
 
