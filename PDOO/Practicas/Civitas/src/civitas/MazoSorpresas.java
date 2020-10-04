@@ -62,7 +62,7 @@ public class MazoSorpresas {
         if (estaEnMazo){
             sorpresas.remove(sorpresa);
             cartasEspeciales.add(sorpresa);
-            Diario.getInstance().ocurreEvento("Se inhabilita carta sorpresa");
+            Diario.getInstance().ocurreEvento("Se inhabilita carta sorpresa "+sorpresa.getNom());
         }
     }
     
@@ -71,7 +71,7 @@ public class MazoSorpresas {
         if (estaEnMazo){
             cartasEspeciales.remove(sorpresa);
             sorpresas.add(sorpresa);
-            Diario.getInstance().ocurreEvento("Se habilitad carta sorpresa");  
+            Diario.getInstance().ocurreEvento("Se habilitad carta sorpresa "+ sorpresa.getNom());  
         }
     }
 }

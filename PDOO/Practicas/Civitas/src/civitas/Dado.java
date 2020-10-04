@@ -38,7 +38,7 @@ public class Dado {
     }
     
     boolean salgoDeLaCarcel(){
-        int tirada = random.nextInt(6)+1;
+        int tirada = tirar();
         if (tirada >= SalidaCarcel){
             ultimoResultado = tirada;
         }

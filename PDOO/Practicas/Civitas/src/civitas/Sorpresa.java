@@ -10,5 +10,13 @@ package civitas;
  * @author salva
  */
 public class Sorpresa {
+    String nombre;
     
+    Sorpresa(String n){
+        nombre = n;
+    }
+    
+    String getNom(){
+        return nombre;
+    }
 }

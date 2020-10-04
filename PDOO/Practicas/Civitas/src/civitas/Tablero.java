@@ -18,6 +18,7 @@ public class Tablero {
     private boolean tieneJuez;
     
     Tablero(int indice){
+        casillas = new ArrayList<>();
         if (indice >= 1)
             numCasillaCarcel = indice;
         else
@@ -25,7 +26,6 @@ public class Tablero {
         casillas.add(new Casilla("Salida"));
         porSalida = 0;
         tieneJuez = false;
-        casillas = new ArrayList<>();
     }
     
     private boolean correcto(){
