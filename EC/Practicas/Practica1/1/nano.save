@@ -1,0 +1,9 @@
+compilar ->  gcc archivo.c -c salida
+tipo de archivo -> file ./archivo
+que contiene -> nm ./archivo
+ejecutar -> ./archivo
+desensamblar -> objdump -d archivo
+ver llamadas al sistema -> strace ./archivo
+ver llamadas de biblios -> ltrace ./archivo
+que bibliotecas usa -> ldd archivo
+examinar biblioteca -> objdump -d /lib64/libc.so.6

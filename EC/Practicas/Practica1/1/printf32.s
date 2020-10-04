@@ -10,6 +10,7 @@ f:      .string "i = %d\n" # cadena de formato
 #################################################
 
 .text
+
         .extern printf     # printf en otro sitio
         .globl _start      # función principal
 
@@ -19,8 +20,8 @@ _start: push (i)           # apila i
         call printf        # llamada a printf
         add  $8, %esp      # restaura pila
 
-        movl  $1, %eax     # exit
-        xorl  %ebx, %ebx   # 0
+       	movl  $1, %eax     # exit
+      	xorl  %ebx, %ebx   # 0
         int   $0x80        # llamada a exit
 
 #################################################
