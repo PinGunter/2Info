@@ -25,6 +25,7 @@ public class Tablero {
         casillas.add(new Casilla("Salida"));
         porSalida = 0;
         tieneJuez = false;
+        casillas = new ArrayList<>();
     }
     
     private boolean correcto(){
@@ -70,6 +71,24 @@ public class Tablero {
     }
     
     int nuevaPosicion(int actual, int tirada){
-        
+        int nueva = actual + tirada;
+        if (!this.correcto())
+            return -1;
+        else{
+            if (nueva > casillas.size()){
+                nueva = nueva % casillas.size();
+                porSalida += 1;
+            }
+            return nueva;
+            
+        }
+    }
+    
+    int calcularTirada(int origen, int destino){
+        int tirada = destino - origen;
+        if (tirada < 0){
+            tirada += casillas.size();
+        }
+        return tirada;
     }
 }
