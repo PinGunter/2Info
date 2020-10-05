@@ -1,16 +1,30 @@
 require_relative "persona"
 require_relative "peluqueria"
+require_relative "color_pelo"
 
 module Basico
 
  p= Persona.new( "Pepe" ,19 , ColorPelo::RUBIO)
+ j = Persona.new("Juan", 20, ColorPelo::MORENO)
  p.saluda
  puts p.inspect  #observa lo que aparece en pantalla
  
- pelu= Peluqueria.new
- puts 'Cita en la peluqueria: '
- puts p.pedir_cita(pelu)
+ puts p.get_planeta #uso de metodo de instancia que consulta un atributo de clase
  
+  puts Persona.get_planeta
+  
+  Persona.set_planeta("Mercurio")
+  
+  puts p.get_planeta
+  
+  p.set_planeta("Neptuno")
+  
+  puts j.get_planeta
+ 
+  puts j.inspect
+  puts j.get_planeta
+  puts p.inspect
+  puts p.get_planeta
 end
 
 # Tareas:
