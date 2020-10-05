@@ -1,20 +1,22 @@
 module Basico
    
   require_relative "color_pelo"
-
+  require_relative "cita"
   class Persona
-   
+     attr_accessor :pelo
+
     @@Planeta="Tierra" #atributo de clase
     @@Mayoria_Edad=18
     @@Contador_Personas=0
    
     @creacion=2020       #Atributo de instancia de la clase. exclusivo de ruby
    
-    def initialize (n, e, p) # " constructor "
+    def initialize (n, e, p,a) # " constructor "
       # Atributos de instancia ( son siempre privados )
       @nombre=n
       @edad=e
       @pelo=p
+      @altura=a
       @@Contador_Personas+=1
     end
 
@@ -24,6 +26,19 @@ module Basico
       puts "Hola , soy "+@nombre
     end
  
+    def es_alto
+      @altura>170
+    end
+    
+    def anular_cita(pelu,cita)
+      puts "Hola, soy " + @nombre + "y deseo anular la cita"
+      pelu.anular_cita(cita)
+    end
+    
+    def to_s
+      "Nombre: "+@nombre.to_s+ " Edad: "+@edad.to_s+" Pelo: "+@pelo.to_s+" Altura: "+@altura.to_s
+    end
+    
     def get_nombre  
       @apellido="Sanchez"       ### Se crea este atributo para el objeto que llama al metodo
       @nombre
