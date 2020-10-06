@@ -2,9 +2,8 @@
 require_relative "casilla"
 module Civitas
   class Tablero
-    attr_reader :num_casilla_carcel, :casillas
+    attr_reader :num_casilla_carcel
     
-    attr_reader :casillas
     def initialize(indice)
       if indice >= 1
         @num_casilla_carcel = indice
@@ -77,6 +76,7 @@ module Civitas
       end
       return tirada
     end
+    
     
     private :correcto
   end
