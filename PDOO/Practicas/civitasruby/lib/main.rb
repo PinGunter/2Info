@@ -1,30 +1,17 @@
-# encoding:utf-8
+#encoding :utf-8
+require_relative "diario"
+require_relative "estados_juego"
+require_relative "operaciones_juego"
+require_relative "tipo_casilla"
+require_relative "tipo_sorpresa"
+require_relative "tablero"
+require_relative "casilla"
 module Civitas
-  module Tipo_casilla
-    CALLE = :calle
-    SORPRESA = :sorpresa
-    JUEZ = :juez
-    IMPUESTO = :impuesto
-    DESCANSO = :descanso
-  end
-  
-  module Tipo_sorpresa
-    IR_CARCEL = :ir_carcel
-    IR_CASILLA = :ir_casilla
-    PAGAR_COBRAR = :pagar_cobrar
-    POR_CASA_HOTEL = :por_casa_hotel
-    POR_JUGADOR = :por_jugador
-    SALIR_CARCEL = :salir_carcel
-  end
-  
-  module Operaciones_juego
-    AVANZAR = :avanzar
-    COMPRAR = :comprar
-    GESTIONAR = :gestionar
-    SALIR_CARCEL = :salir_carcel
-    PASAR_TURNO = :pasar_turno
-  end
-
-
+  tablero = Tablero.new(2)
+  tablero.añade_juez
+  tablero.añade_casilla(Casilla.new("Primera"))
+  puts tablero.get_casilla(2).nombre
+ # puts tablero.casillas.inspect
 end
+
 
