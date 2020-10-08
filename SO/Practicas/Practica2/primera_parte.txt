@@ -1,0 +1,42 @@
+Practica 2
+Creamos discos virtuales
+
+mknod /dev/loop0 b 7 0
+mknod /dev/loop1 b 7 1
+
+Creamos archivos de 20MB y 30MB
+
+dd if=/dev/zero of=/root/archivo_SA20 bs=2k count=10000
+dd if=/dev/zero of=/root/archivo_SA30 bs=3k count=10000
+
+Asociamos el fichero a los discos virtuales
+
+losetup /dev/loop0 /root/archivo_SA20
+losetup /dev/loop1 /root/archivo_SA30
+
+fdisk -l /dev/loop0
+fdisk -l /dev/loop1
+
+fdisk /dev/loop0
+	n
+	1
+	(default)
+	(default)
+	...
+	w
+	(reboot)
+(lo mismo con /dev/loop1)
+
+Formateamos las particiones
+mke2fs -L LABEL_ext3 -t ext3 /dev/loop0
+mke2fs -L LABEL_ext4 -t ext4 /dev/loop1
+
+Actividad 2.3
+a) [imagen]
+b) [imagen]
+
+Montaje/Desmontaje
+2.4
+	@pre mkdir /mnt/SA_ext3; mkdir /mnt/SA_ext4;
+3) mnt -L LABEL_ext3 /mnt/SA_ext3 -r
+4) mnt -L LABEL_ext4 /mnt/SA_ext3 -o dirsync
