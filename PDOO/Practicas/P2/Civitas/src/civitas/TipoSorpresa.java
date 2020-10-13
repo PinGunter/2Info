@@ -9,13 +9,6 @@ package civitas;
  *
  * @author salva
  */
-public class Civitas {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+enum TipoSorpresa {
+    IRCARCEL, IRCASILLA, PAGARCOBRAR, PORCASAHOTEL, PORJUGADOR, SALIRCARCEL
 }
