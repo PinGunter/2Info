@@ -87,6 +87,7 @@ Pila<T>::Pila(int tam)
 template <typename T>
 Pila<T>::Pila(const Pila<T>& p)
 {
+	datos = nullptr;
 	reservar(p.reservados);
 	copiar(p);
 }
