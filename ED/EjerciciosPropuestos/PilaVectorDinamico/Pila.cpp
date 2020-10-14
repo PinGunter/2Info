@@ -45,11 +45,13 @@ void Pila::reservar(int n)
 
 Pila::Pila(int tam)
 {
+	datos = nullptr;
 	reservar(tam);
 }
 
 Pila::Pila(const Pila& p)
 {
+	datos = nullptr;
 	reservar(p.reservados);
 	copiar(p);
 }
