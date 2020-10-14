@@ -1,3 +1,4 @@
+// Salvador Romero Cortés
 #ifndef PILA_H
 #define PILA_H
 typedef char Tbase;

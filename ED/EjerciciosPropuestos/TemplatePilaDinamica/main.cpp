@@ -1,5 +1,7 @@
+// Salvador Romero Cort√©s
+
 #include <iostream>
-#include "Pila.h"
+#include "Pila.hpp"
 using namespace std;
 
 int main() {
@@ -10,7 +12,7 @@ int main() {
 	while ((dato = cin.get()) != '\n')
 		p += dato;
 
-	cout << "La escribimos del revÈs" << endl;
+	cout << "La escribimos del revÔøΩs" << endl;
 	while (!p.vacia()) {
 		cout << p.tope();
 		q += p.tope();

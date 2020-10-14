@@ -1,12 +1,15 @@
 // Salvador Romero Cortés
+
 #ifndef PILA_H
 #define PILA_H
-typedef char Tbase;
+#include <cassert>
 const int TAM = 10;
+
+template <typename T>
 class Pila
 {
 private:
-	Tbase *datos;
+	T *datos;
 	int reservados;
 	int nelem;
 
@@ -21,12 +24,13 @@ public:
 	Pila & operator=(const Pila& p);
 
 	bool vacia() const;
-	void poner(const Tbase& c);
+	void poner(const T& c);
 	void quitar();
-	Tbase& tope();
-	const Tbase& tope() const;
+	T& tope();
+	const T& tope() const;
 	Pila & operator--(int n);
-	void operator+=(const Tbase& c);
+	void operator+=(const T& c);
 };
 
+#include "Pila.tpp"
 #endif

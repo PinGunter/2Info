@@ -1,3 +1,4 @@
+// Salvador Romero Cort√©s
 #include <iostream>
 #include "Pila.h"
 using namespace std;
@@ -10,7 +11,7 @@ int main() {
 	while ((dato = cin.get()) != '\n')
 		p += dato;
 
-	cout << "La escribimos del revÈs" << endl;
+	cout << "La escribimos del revÔøΩs" << endl;
 	while (!p.vacia()) {
 		cout << p.tope();
 		q += p.tope();
