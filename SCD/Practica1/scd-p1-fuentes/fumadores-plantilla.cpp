@@ -1,3 +1,4 @@
+//Salvador Romero Cortés
 #include <iostream>
 #include <cassert>
 #include <thread>
@@ -8,6 +9,14 @@
 
 using namespace std ;
 using namespace SEM ;
+
+// ---- Variables Globales ----- 
+const int num_fumadores = 3;
+Semaphore materiales[num_fumadores] = {0,0,0};
+Semaphore mostrador = 1;
+
+
+
 
 //**********************************************************************
 // plantilla de función para generar un entero aleatorio uniformemente
@@ -50,7 +59,13 @@ int producir_ingrediente()
 
 void funcion_hebra_estanquero(  )
 {
-
+   int mostrado = 0;
+   while (true){
+      mostrado = producir_ingrediente();
+      sem_wait(mostrador);
+      cout << "Puesto ingrediente numero: " << mostrado << endl << flush;
+      sem_signal(materiales[mostrado]);
+   }
 }
 
 //-------------------------------------------------------------------------
@@ -82,7 +97,10 @@ void  funcion_hebra_fumador( int num_fumador )
 {
    while( true )
    {
-
+      sem_wait(materiales[num_fumador]);
+      cout << "Recogido material " << num_fumador << endl << flush;
+      sem_signal(mostrador);
+      fumar(num_fumador);
    }
 }
 
@@ -90,6 +108,17 @@ void  funcion_hebra_fumador( int num_fumador )
 
 int main()
 {
-   // declarar hebras y ponerlas en marcha
-   // ......
+  cout << "--------------------------------------------------------" << endl
+        << "-------- Problema del estanco y los fumadores ---------" << endl
+        << "--------------------------------------------------------" << endl
+        << flush ;
+
+   thread estanco(funcion_hebra_estanquero);
+   thread fumadores[num_fumadores];
+   for (int i=0; i < num_fumadores; i++)
+      fumadores[i] = thread(funcion_hebra_fumador,i);
+   estanco.join();
+   for (int i=0; i < num_fumadores; i++)
+      fumadores[i].join();
+
 }
