@@ -80,6 +80,7 @@ void Pila<T>::reservar(int n)
 template <typename T>
 Pila<T>::Pila(int tam)
 {
+	datos = nullptr;
 	reservar(tam);
 }
 
