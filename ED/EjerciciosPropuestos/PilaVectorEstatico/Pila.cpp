@@ -58,10 +58,11 @@ const Tbase& Pila::tope() const
 	return datos[nelem - 1];
 }
 
-Pila & Pila::operator--(int n)
+Pila  Pila::operator--(int n)
 {
+	Pila copia(*this);
 	quitar();
-	return *this;
+	return copia;
 }
 
 void Pila::operator+=(const Tbase& c)
