@@ -1,0 +1,96 @@
+\doxysection{Referencia del Archivo Racional.\+cpp}
+\label{Racional_8cpp}\index{Racional.cpp@{Racional.cpp}}
+
+
+Implementación de los métodos y funciones declarados en \doxyref{Cabeceras}{p.}{Racional_8h_Cabeceras}.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include \char`\"{}Racional.\+h\char`\"{}}\newline
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \textbf{ operator$<$$<$} (ostream \&os, const \textbf{ Racional} \&r)
+\item 
+istream \& \textbf{ operator$>$$>$} (istream \&is, \textbf{ Racional} \&r)
+\item 
+int \textbf{ get\+Max\+Com\+Div} (int primero, int segundo)
+\begin{DoxyCompactList}\small\item\em función que calcula el máximo comun divisor de dos números basado en el algo. de Euclides \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementación de los métodos y funciones declarados en \doxyref{Cabeceras}{p.}{Racional_8h_Cabeceras}. 
+
+\begin{DoxyAuthor}{Autor}
+[Modificado por Salva Romero, proporcionado por profesor] \label{Racional_8cpp_Definiciones}%
+
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\label{Racional_8cpp_a76a5d944b02dad8f177df16270f2bc0d}} 
+\index{Racional.cpp@{Racional.cpp}!getMaxComDiv@{getMaxComDiv}}
+\index{getMaxComDiv@{getMaxComDiv}!Racional.cpp@{Racional.cpp}}
+\doxysubsubsection{getMaxComDiv()}
+{\footnotesize\ttfamily int get\+Max\+Com\+Div (\begin{DoxyParamCaption}\item[{int}]{primero,  }\item[{int}]{segundo }\end{DoxyParamCaption})}
+
+
+
+función que calcula el máximo comun divisor de dos números basado en el algo. de Euclides 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em primero} & el primero de la pareja de números sobre la que se calcula \\
+\hline
+{\em segundo} & el segundo de la pareja de números sobre la que se calcula \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+el M\+CD de ambos números 
+\end{DoxyReturn}
+
+
+Hace referencia a get\+Max\+Com\+Div().
+
+
+
+Referenciado por get\+Max\+Com\+Div() y Racional\+::reducir().
+
+\mbox{\label{Racional_8cpp_a4335a71aa6c96ff2f0cb5aee0f3961a1}} 
+\index{Racional.cpp@{Racional.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Racional.cpp@{Racional.cpp}}
+\doxysubsubsection{operator$<$$<$()}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \textbf{ Racional} \&}]{r }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em os} & stream de salida \\
+\hline
+{\em r} & \doxyref{Racional}{p.}{classRacional} a escribir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondición}
+Se obtiene en {\itshape os} la cadena (num/den) con {\itshape num},den los valores del numerador y denominador de {\itshape r} 
+\end{DoxyPostcond}
+\mbox{\label{Racional_8cpp_a32a42bfb8bd87c71444f292d8f8d09be}} 
+\index{Racional.cpp@{Racional.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Racional.cpp@{Racional.cpp}}
+\doxysubsubsection{operator$>$$>$()}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\textbf{ Racional} \&}]{r }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em is} & stream de entrada \\
+\hline
+{\em r} & \doxyref{Racional}{p.}{classRacional} que recibe el valor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em El} & \doxyref{Racional}{p.}{classRacional} le{\ucr}do en r \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyPrecond}{Precondición}
+La entrada tiene el formato (num/den) con {\itshape num},{\itshape den} los valores del numerador y denominador 
+\end{DoxyPrecond}
