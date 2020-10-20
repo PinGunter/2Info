@@ -21,7 +21,7 @@ public:
 	void quitar();
 	Tbase& tope();
 	const Tbase& tope() const;
-	Pila & operator--(int n);
+	Pila  operator--(int n);
 	void operator+=(const Tbase& c);
 };
 

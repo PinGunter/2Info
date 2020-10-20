@@ -1,5 +1,8 @@
-// Salvador Romero Cortés
-#include <cassert>
+/**
+ * @author Salvador Romero Cortés
+ * */
+ 
+ #include <cassert>
 
 template <typename T>
 void Pila<T>::copiar(const Pila<T>& p)
