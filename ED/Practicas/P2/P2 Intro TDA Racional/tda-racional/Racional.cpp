@@ -111,11 +111,11 @@ Racional Racional::simplifica(){
 }
 
 //funciones getters
-int Racional::numerador(){
+int Racional::numerador() const{
   return num;
 }
 
-int Racional::denominador(){
+int Racional::denominador()const {
   return den;
 }
 
@@ -139,6 +139,14 @@ void Racional::reducir(){
 }
 
 //metodo para obtener el valor real
-double Racional::getReal(){
+double Racional::getReal() const {
   return ((numerador()*1.0)/(denominador()*1.0));
+}
+
+//metodo para saber si un racional esta simplificado o no
+bool Racional::es_irreducible() const{
+  bool numer_reducido, denom_reducido;
+  numer_reducido = (numerador()/getMaxComDiv(numerador(),denominador()) == numerador());
+  denom_reducido = (denominador()/getMaxComDiv(numerador(),denominador()) == denominador());
+  return numer_reducido && denom_reducido;
 }

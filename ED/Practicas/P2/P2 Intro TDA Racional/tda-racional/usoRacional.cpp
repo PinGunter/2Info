@@ -72,6 +72,8 @@ int main(void){
 
   //prueba de nuevos métodos
   cout << "\n ------ Métodos nuevos ------" << endl;
+  cout << w << (w.es_irreducible() ? " está reducido" : " no está reducido") << endl;
+  cout << z << (z.es_irreducible() ? " está reducido" : " no está reducido") << endl;
   cout << "Simplificamos los números racionales introducidos y calculamos su valor real:" << endl;
   w.reducir(); z.reducir();
   cout << "Primero: " << w << " = " << w.getReal() << endl;
