@@ -23,8 +23,6 @@ Semaphore puede_producir = tam_vec;
 Semaphore puede_consumir = 0;
 int posicion_prod = 0, posicion_cons = 0;
 int vec[tam_vec]= {0};
-mutex prod;
-mutex cons;
 //**********************************************************************
 // plantilla de función para generar un entero aleatorio uniformemente
 // distribuido entre dos valores enteros, ambos incluidos
