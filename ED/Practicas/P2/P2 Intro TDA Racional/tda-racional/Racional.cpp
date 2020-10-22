@@ -111,23 +111,13 @@ Racional Racional::simplifica(){
 }
 
 //funciones getters
-int Racional::numerador() const{
+int Racional::numerador(){
   return num;
 }
 
-int Racional::denominador()const {
+int Racional::denominador(){
   return den;
 }
-
-//funcion para calcular el MCD
-int getMaxComDiv(int primero, int segundo){
-  //caso base
-  if (segundo == 0)
-    return primero;
-  
-  getMaxComDiv(segundo,primero%segundo);
-}
-
 
 //metodo para reducir el racional
 void Racional::reducir(){
@@ -139,14 +129,27 @@ void Racional::reducir(){
 }
 
 //metodo para obtener el valor real
-double Racional::getReal() const {
+double Racional::getReal(){
   return ((numerador()*1.0)/(denominador()*1.0));
 }
 
-//metodo para saber si un racional esta simplificado o no
-bool Racional::es_irreducible() const{
-  bool numer_reducido, denom_reducido;
-  numer_reducido = (numerador()/getMaxComDiv(numerador(),denominador()) == numerador());
-  denom_reducido = (denominador()/getMaxComDiv(numerador(),denominador()) == denominador());
-  return numer_reducido && denom_reducido;
+//Operador -
+Racional Racional::operator-(const Racional &r){
+  return Racional(num*r.den-den*r.num, den*r.den);
 }
+
+//Operador /
+Racional Racional::operator/(const Racional &r){
+  return Racional(num*r.den, den*r.num);
+}
+
+
+//funcion para calcular el MCD
+int getMaxComDiv(int primero, int segundo){
+  //caso base
+  if (segundo == 0)
+    return primero;
+  
+  getMaxComDiv(segundo,primero%segundo);
+}
+

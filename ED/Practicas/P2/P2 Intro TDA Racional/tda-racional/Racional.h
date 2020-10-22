@@ -77,13 +77,13 @@ class Racional {
   * @brief Numerador
   * @return Devuelve el numerador del racional
   */ 
-  int numerador ()const;
+  int numerador ();
 
 /**
   * @brief Denominador
   * @return Devuelve el denominador del racional
   */
-  int denominador()const ;
+  int denominador();
 
 /**
   * @brief Asignaci�n de un racional
@@ -190,16 +190,21 @@ class Racional {
    * @return devuelve el valor decimal del objeto
    * @post no se modifica el objeto
    * */
-  double getReal() const;
+  double getReal();
+
+  /******* OPERADORES NUEVOS *********\*/
+  /**
+  * @brief Resta de dos racionales
+  * @param r racional a multiplicar con el objeto implicito
+  */
+  Racional operator-(const Racional & r);
 
   /**
-   * @brief método que indica si una fracción se encuentra en su forma irreducible
-   * @pre el objeto que llama la función debe estar inicializadoa a valores válidos
-   * @return true si el número racional está ya simplificado
-   *         false en otro caso
-   * @post no se modifica el objeto
-   */
-  bool es_irreducible() const;
+  * @brief División de dos racionales
+  * @param r racional a multiplicar con el objeto implicito
+  */
+  Racional operator/(const Racional & r);
+
 };
 
 /********   FUNCIONES AUXILIARES **********\*/
