@@ -11,17 +11,20 @@ using namespace SEM ;
 //**********************************************************************
 // variables compartidas
 
+const int num_prod_cons = 2;
+
+
 const int num_items = 40 ,   // número de items
-	       tam_vec   = 10 ;   // tamaño del buffer
-unsigned  cont_prod[num_items] = {0}, // contadores de verificación: producidos
-          cont_cons[num_items] = {0}; // contadores de verificación: consumidos
+	       tam_vec   = 2;   // tamaño del buffer
+unsigned  cont_prod[num_items*num_prod_cons] = {0}, // contadores de verificación: producidos
+          cont_cons[num_items*num_prod_cons] = {0}; // contadores de verificación: consumidos
 
 
 /// VARIABLES GLOBALES 
 Semaphore puede_producir = tam_vec;
 Semaphore puede_consumir = 0;
 int posicion = 0;
-int vec[tam_vec];
+int vec[tam_vec]= {0};
 mutex mtx;
 
 //**********************************************************************
@@ -41,25 +44,25 @@ template< int min, int max > int aleatorio()
 // funciones comunes a las dos soluciones (fifo y lifo)
 //----------------------------------------------------------------------
 
-int producir_dato()
+int producir_dato(int indice)
 {
    static int contador = 0 ;
    this_thread::sleep_for( chrono::milliseconds( aleatorio<20,100>() ));
 
-   cout << "producido: " << contador << endl << flush ;
+   cout << "productor " << indice << " producido: " << contador << endl << flush ;
 
    cont_prod[contador] ++ ;
    return contador++ ;
 }
 //----------------------------------------------------------------------
 
-void consumir_dato( unsigned dato )
+void consumir_dato( unsigned dato , int indice)
 {
-   assert( dato < num_items );
+  // assert( dato < num_items );
    cont_cons[dato] ++ ;
    this_thread::sleep_for( chrono::milliseconds( aleatorio<20,100>() ));
 
-   cout << "                  consumido: " << dato << endl ;
+   cout << "                  consumidor " << indice << " consumido: " << dato << endl ;
 
 }
 
@@ -70,7 +73,7 @@ void test_contadores()
 {
    bool ok = true ;
    cout << "comprobando contadores ...." ;
-   for( unsigned i = 0 ; i < num_items ; i++ )
+   for( unsigned i = 0 ; i < num_items*num_prod_cons ; i++ )
    {  if ( cont_prod[i] != 1 )
       {  cout << "error: valor " << i << " producido " << cont_prod[i] << " veces." << endl ;
          ok = false ;
@@ -86,11 +89,11 @@ void test_contadores()
 
 //----------------------------------------------------------------------
 
-void  funcion_hebra_productora(  )
+void  funcion_hebra_productora( int indice )
 {
    for( unsigned i = 0 ; i < num_items ; i++ )
    {
-      int dato = producir_dato() ;
+      int dato = producir_dato(indice) ;
       sem_wait(puede_producir);
       mtx.lock();
          vec[posicion] = dato;
@@ -102,7 +105,7 @@ void  funcion_hebra_productora(  )
 
 //----------------------------------------------------------------------
 
-void funcion_hebra_consumidora(  )
+void funcion_hebra_consumidora( int indice )
 {
    for( unsigned i = 0 ; i < num_items ; i++ )
    {
@@ -112,7 +115,7 @@ void funcion_hebra_consumidora(  )
          posicion--;
          dato = vec[posicion];
       mtx.unlock();
-      consumir_dato( dato ) ;
+      consumir_dato( dato,indice ) ;
       sem_signal(puede_producir);
 
     }
@@ -126,11 +129,18 @@ int main()
         << "--------------------------------------------------------" << endl
         << flush ;
 
-   thread hebra_productora ( funcion_hebra_productora ),
-          hebra_consumidora( funcion_hebra_consumidora );
+   thread productores[num_prod_cons];
+   thread consumidores[num_prod_cons];
 
-   hebra_productora.join() ;
-   hebra_consumidora.join() ;
+   for (int i=0; i < num_prod_cons; i++){
+      productores[i] = thread(funcion_hebra_productora,i);
+      consumidores[i] = thread(funcion_hebra_consumidora,i);
+   }
+
+   for (int i=0; i < num_prod_cons; i++){
+      productores[i].join();
+      consumidores[i].join();
+   }
 
    test_contadores();
 }
