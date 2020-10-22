@@ -15,14 +15,14 @@ const int num_prod_cons = 2;
 const int num_items = 40 ,   // número de items
 	       tam_vec   = 2;   // tamaño del buffer
 unsigned  cont_prod[num_items*num_prod_cons] = {0}, // contadores de verificación: producidos
-          cont_cons[num_items] = {0}; // contadores de verificación: consumidos
+          cont_cons[num_items*num_prod_cons] = {0}; // contadores de verificación: consumidos
 
 
 /// VARIABLES GLOBALES 
 Semaphore puede_producir = tam_vec;
 Semaphore puede_consumir = 0;
 int posicion_prod = 0, posicion_cons = 0;
-int vec[tam_vec];
+int vec[tam_vec]= {0};
 mutex prod;
 mutex cons;
 //**********************************************************************
@@ -44,16 +44,13 @@ template< int min, int max > int aleatorio()
 
 int producir_dato(int indice)
 {
-   prod.lock();
    static int contador = 0 ;
    this_thread::sleep_for( chrono::milliseconds( aleatorio<20,100>() ));
 
    cout << "productor " << indice << " producido: " << contador << endl << flush ;
 
-   // cont_prod[contador] ++ ;
-   contador ++;
-   prod.unlock();
-   return contador ;
+   cont_prod[contador] ++ ;
+   return contador++ ;
 }
 //----------------------------------------------------------------------
 
@@ -61,12 +58,11 @@ void consumir_dato( unsigned dato, int indice )
 {
   // assert( dato < num_items*num_prod_cons);
 
-   // cont_cons[dato] ++ ;
-   cons.lock();
+   cont_cons[dato] ++ ;
    this_thread::sleep_for( chrono::milliseconds( aleatorio<20,100>() ));
 
    cout << "                  cosumidor " << indice << " consumido: " << dato << endl ;
-   cons.unlock();
+
 }
 
 
@@ -76,7 +72,7 @@ void test_contadores()
 {
    bool ok = true ;
    cout << "comprobando contadores ...." ;
-   for( unsigned i = 0 ; i < num_items ; i++ )
+   for( unsigned i = 0 ; i < num_items*num_prod_cons ; i++ )
    {  if ( cont_prod[i] != 1 )
       {  cout << "error: valor " << i << " producido " << cont_prod[i] << " veces." << endl ;
          ok = false ;
@@ -108,7 +104,7 @@ void  funcion_hebra_productora( int indice )
 
 void funcion_hebra_consumidora( int indice)
 {
-   for( unsigned i = 0 ; i < num_items*2 ; i++ )
+   for( unsigned i = 0 ; i < num_items ; i++ )
    {
       int dato ;
       sem_wait(puede_consumir);
@@ -140,5 +136,5 @@ int main()
       productores[i].join();
       consumidores[i].join();
    }
-  // test_contadores();
+   test_contadores();
 }
