@@ -11,7 +11,6 @@
 #include <mutex>
 #include <condition_variable>
 #include <random>
-#include <cmath>
 #include "HoareMonitor.h" //clase para monitores SU
 
 using namespace std;
@@ -22,7 +21,7 @@ mutex mtx; //cerrojo para mostrar en pantalla
 // ========================================================================
 /* FUNCIONES PRODUCTORAS/CONSUMIDORAS Y DE COMPROBACION*/
 
-const int num_hebras = 2;
+const int num_hebras = 4;
 const int num_items = 40;
 unsigned
     cont_prod[num_items * num_hebras], // contadores de verificación: producidos
@@ -63,7 +62,7 @@ void consumir_dato(unsigned dato, int indice)
    if (num_items * num_hebras <= dato)
    {
       cout << " dato === " << dato << ", num_items == " << num_items << endl;
-      //assert(dato < num_items*num_hebras);
+      assert(dato < num_items*num_hebras);
    }
    cont_cons[dato]++;
    this_thread::sleep_for(chrono::milliseconds(aleatorio<20, 100>()));
