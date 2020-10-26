@@ -139,7 +139,7 @@ ProdConsLIFO::ProdConsLIFO()
 //metodo para insertar valores en el buffer
 void ProdConsLIFO::insertar(int dato)
 {
-   while (primera_libre >= num_celdas_total)
+   if (primera_libre >= num_celdas_total)
       libres.wait();
 
    buffer[primera_libre] = dato;
@@ -150,7 +150,7 @@ void ProdConsLIFO::insertar(int dato)
 //metodo para leer valores del buffer
 int ProdConsLIFO::extraer()
 {
-   while (primera_libre == 0)
+   if (primera_libre == 0)
       ocupadas.wait();
    primera_libre--;
    int valor = buffer[primera_libre];

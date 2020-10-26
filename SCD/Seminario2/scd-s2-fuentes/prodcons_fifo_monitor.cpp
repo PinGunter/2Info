@@ -140,7 +140,7 @@ ProdConsFIFO::ProdConsFIFO()
 //metodo para insertar valores en el buffer
 void ProdConsFIFO::insertar(int dato)
 {
-   while (num_items == num_celdas_total)
+   if (num_items == num_celdas_total)
       libres.wait();
 
    buffer[posicion_prod] = dato;
@@ -152,7 +152,7 @@ void ProdConsFIFO::insertar(int dato)
 //metodo para leer valores del buffer
 int ProdConsFIFO::extraer()
 {
-   while (num_items == 0)
+   if (num_items == 0)
       ocupadas.wait();
    int valor = buffer[posicion_cons];
    num_items--;
