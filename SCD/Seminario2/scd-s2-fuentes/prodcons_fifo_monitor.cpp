@@ -147,6 +147,7 @@ void ProdConsFIFO::insertar(int dato)
    ocupadas.signal();
    posicion_prod  = (posicion_prod+1) % num_celdas_total;
    num_items++;
+   //ocupadas.signal();
 }
 
 //metodo para leer valores del buffer
@@ -158,6 +159,7 @@ int ProdConsFIFO::extraer()
    libres.signal();
    num_items--;
    posicion_cons = (posicion_cons+1) % num_celdas_total;
+   //libres.signal();
    return valor;
 }
 
