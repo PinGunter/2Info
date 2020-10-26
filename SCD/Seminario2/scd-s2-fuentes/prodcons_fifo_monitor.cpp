@@ -191,7 +191,7 @@ int main()
       hebra_prod[i] = thread(funcion_hebra_productora, monitor, i);
       hebra_cons[i] = thread(funcion_hebra_consumidora, monitor, i);
    }
-   // esperar a que terminen las hebras (no pasa nunca)
+   // esperar a que terminen las hebras
    for (unsigned i = 0; i < num_hebras; i++)
    {
       hebra_prod[i].join();
