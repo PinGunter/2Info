@@ -62,7 +62,7 @@ void consumir_dato(unsigned dato, int indice)
    if (num_items * num_hebras <= dato)
    {
       cout << " dato === " << dato << ", num_items == " << num_items << endl;
-      //assert(dato < num_items*num_hebras);
+      assert(dato < num_items*num_hebras);
    }
    cont_cons[dato]++;
    this_thread::sleep_for(chrono::milliseconds(aleatorio<20, 100>()));
