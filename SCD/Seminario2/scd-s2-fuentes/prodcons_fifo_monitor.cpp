@@ -147,6 +147,8 @@ void ProdConsFIFO::insertar(int dato)
    //ocupadas.signal();
    posicion_prod  = (posicion_prod+1) % num_celdas_total;
    num_items++;
+   //cout << "                  produce: " << dato << endl;
+
    ocupadas.signal();
 }
 
@@ -159,6 +161,7 @@ int ProdConsFIFO::extraer()
    //libres.signal();
    num_items--;
    posicion_cons = (posicion_cons+1) % num_celdas_total;
+   //cout << "                  consume: " << valor << endl;
    libres.signal();
    return valor;
 }

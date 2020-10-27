@@ -144,6 +144,8 @@ void ProdConsLIFO::insertar(int dato)
 
    buffer[primera_libre] = dato;
    primera_libre++;
+//   cout << "produce " << dato << endl;
+
    ocupadas.signal();
 }
 
@@ -154,6 +156,7 @@ int ProdConsLIFO::extraer()
       ocupadas.wait();
    primera_libre--;
    int valor = buffer[primera_libre];
+  // cout << "                  consume: " << valor << endl;
    libres.signal();
    return valor;
 }
