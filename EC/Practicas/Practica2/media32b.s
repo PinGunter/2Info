@@ -1,14 +1,15 @@
 .section .data
-lista:		.int 0xffffffff,0xffffffff,0xffffffff,0xffffffff
-			.int 0xffffffff,0xffffffff,0xffffffff,0xffffffff
-			.int 0xffffffff,0xffffffff,0xffffffff,0xffffffff
-			.int 0xffffffff,0xffffffff,0xffffffff,0xffffffff
+lista:		.int 0x5,0x5,0x5,0x5
+			.int 0x5,0x5,0x5,0x5
+			.int 0x5ffff,0x5,0x5,0x5
+			.int 0x5,0x5,0x5,0x5
 
 longlista:	.int   (.-lista)/4			# asi sabemos cuantos elementos hay en la lista
 media:	.int   0
 resto:	.int   0
-formato:	.ascii 	"media \t = %18ld 	resto = \n"
-			.ascii	"\t\t = 0x %08x \t %08x \n"
+formato:	.ascii 	"Media = %d = 0x%x hex\n" 
+			.ascii  "Resto = %d = 0x%x hex\n"
+			
 
 # opción: 1) no usar printf, 2)3) usar printf/fmt/exit, 4) usar tb main
 # 1) as  suma.s -o suma.o
@@ -25,17 +26,20 @@ main: .global  main
 	mov     $lista, %rbx
 	mov  longlista, %ecx
 	call suma		# == suma(&lista, longlista);
-	mov  %eax, resultado
-	mov  %edx, resultado+4	# añadimos la parte mas significativa 4 bytes detras (concatenamos)
+	mov  %eax, media
+	mov  %edx, resto
+	# mov  %edx, resultado+4	# añadimos la parte mas significativa 4 bytes detras (concatenamos)
 #	ret
 
 
 # imprimir:
-	mov	  %edx, %ecx	# parte mas significativa | penultimo argumento
-	mov   %eax, %r8d	# parte menos significativa	| ultimo argumento
+	# mov	  %edx, %ecx	# parte mas significativa | penultimo argumento
+	# mov   %eax, %r8d	# parte menos significativa	| ultimo argumento
 	mov   $formato, %rdi	# guardamos el formato
-	mov   resultado,%rsi	# y el resultado en los registros de 64bits
-	mov   resultado,%rdx
+	mov   media,%esi	# y el resultado en los registros de 64bits
+	mov   media,%edx
+	mov   resto, %ecx
+	mov   resto, %r8
 	# para imprimir la parte mas significativa y la menos por separadao
 	mov          $0,%eax	# varargin sin xmm
 	call  printf		# == printf(formato, media, resto,media,resto);
