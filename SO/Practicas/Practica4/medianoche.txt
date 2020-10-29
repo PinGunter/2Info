@@ -1,0 +1,21 @@
+total 1364
+-rw-rw-r-- 1 salva salva  33730 oct 22 12:40 2020-296-12:40:00
+-rw-rw-r-- 1 salva salva 246204 oct 22 13:15 4-11.png
+-rw-rw-r-- 1 salva salva  64678 oct 22 12:08 4-1.png
+-rw-rw-r-- 1 salva salva 277255 oct 22 12:17 4-2.png
+-rw-rw-r-- 1 salva salva  56036 oct 22 12:23 4-3a.png
+-rw-rw-r-- 1 salva salva  60881 oct 22 12:24 4-3b.png
+-rw-rw-r-- 1 salva salva  64208 oct 22 12:25 4-3c.png
+-rw-rw-r-- 1 salva salva  68020 oct 22 12:28 4-3d.png
+-rw-rw-r-- 1 salva salva  37490 oct 22 12:29 4-3e.png
+-rw-rw-r-- 1 salva salva 180491 oct 22 12:41 4-5.png
+-rw-rw-r-- 1 salva salva  68827 oct 22 12:50 4-6.png
+-rw-rw-r-- 1 salva salva 118900 oct 22 12:48 4-6-profe.png
+-rw-rw-r-- 1 salva salva  81218 oct 22 12:13 at.png
+-rw-rw-r-- 1 salva salva      0 oct 22 12:17 a.txt
+-rw-rw-r-- 1 salva salva      0 oct 22 12:19 b.txt
+drwxrwxr-x 2 salva salva   4096 oct 22 12:50 cuatroseis
+-rw-rw-r-- 1 salva salva   1411 oct 22 12:17 listahome-2020-296-12:17:14-17713
+-rw-rw-r-- 1 salva salva      0 oct 23 10:54 medianoche+1.txt
+-rw-rw-r-- 1 salva salva      0 oct 23 10:54 medianoche.txt
+-rw-rw-r-- 1 salva salva   1176 oct 22 13:17 P4.md

@@ -1,0 +1,8 @@
+Crear en el directorio /root un enlace duro y un enlace simbólico a cualesquiera de los programa que aparecen en /bin. Una vez creados hacer un ls -l del directorio /root y pegar el resultado. Idem para la oden stat sobre estos dos archivos.
+
+ln /bin/ls hardlink-ls
+ln /bin/ls -s softlink-ls
+
+ls -l /root
+stat hardlink-ls
+stat softlink-ls

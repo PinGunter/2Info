@@ -1,0 +1,24 @@
+media32b.s: Mensajes del ensamblador:
+media32b.s:60: Error: Definir TEST entre 1..19
+media32b.s:63: Error: Definir TEST entre 1..19
+media32b.s:63: Error: Definir TEST entre 1..19
+media32b.s:63: Error: Definir TEST entre 1..19
+./test_media.sh: línea 5: ./media32b: No existe el archivo o el directorio
+rm: no se puede borrar 'media32b': No existe el archivo o el directorio
+media32b.s: Mensajes del ensamblador:
+media32b.s:60: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:60: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:60: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:60: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200
+media32b.s:63: Aviso: valora 0xffffffff4d2fa200 truncado a 0x4d2fa200

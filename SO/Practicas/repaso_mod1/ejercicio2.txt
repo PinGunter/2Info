@@ -1,0 +1,4 @@
+Crea un script que devuelva exclusivamente la información sobre la cantidad de espacio libre y ocupado tanto de la memoria principal como del espacio de intercambio de tu sistema (Ubuntu).
+
+#! /bin/bash
+free | awk '/total/{ print "\t" $2 "\t" $3} /Mem:|Swap:/{ print $1 "\t" $3 "\t"$4}' # hay que corregir

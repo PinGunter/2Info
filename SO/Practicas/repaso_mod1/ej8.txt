@@ -1,0 +1,5 @@
+todos los días de marzo del año 2013 a las 12:00 de la mañana
+
+0 12 * 3 * 
+
+no se puede poner el año en cron

@@ -1,0 +1,5 @@
+Indica el significado de los sigiuentes campos mostrados por la orden top : 'us', 'ni' y 'si'. Además indica para un determinado proceso de ejemplo cuáles son las columnas que muestran: el tamaño de la memoria RAM que realmente utiliza el proceso y el tamaño de memoria que puede compartir con otros procesos.
+
+us : tiempo que lleva ejecutando procesos de usuario sin "nice"
+ni : tiempo que lleva ejecutando procesos de usuario "niced"
+si : tiempo que lleva procesando interrupciones software.

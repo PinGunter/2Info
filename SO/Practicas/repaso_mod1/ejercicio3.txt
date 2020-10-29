@@ -1,0 +1,16 @@
+Crea un archivo llamado log en tu directorio home y consigue que todos los Viernes a las 2 horas y 5 minutos durante los meses de Marzo, Abril y Mayo, se ejecute el guión del apartado anterior y se guarden los resultados en el archivo creado ( log ), de tal forma que se pueda observar la evolución de la memoria. Para verificar que funciona pruébalo especificando "cada minuto".
+
+########
+
+#creamos carpeta
+mkdir ~/log
+
+#modificamos crontab
+crontab -e
+# escribimos
+5 2 * 3-5 5 ~/2Info/SO/Practicas/repaso_mod1/2.sh
+
+
+
+
+
