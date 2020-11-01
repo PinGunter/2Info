@@ -1,3 +1,7 @@
+/**
+ * @file main.cpp
+ * @author Salvador Romero Cortés
+ */
 #include <iostream>
 #include "Lista.hpp"
 

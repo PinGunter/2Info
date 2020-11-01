@@ -1,3 +1,7 @@
+/**
+ * @file Lista.hpp
+ * @author Salvador Romero Cortés
+ */
 #ifndef LISTA_H
 #define LISTA_H
 

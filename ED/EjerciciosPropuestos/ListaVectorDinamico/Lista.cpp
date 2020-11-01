@@ -1,3 +1,8 @@
+/**
+ * @file Lista.cpp
+ * @author Salvador Romero Cortés
+ */
+
 #include "Lista.hpp"
 #include <cassert>
 
