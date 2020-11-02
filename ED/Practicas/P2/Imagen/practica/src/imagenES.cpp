@@ -202,7 +202,7 @@ byte Imagen::valor_pixel(int fila, int columna) const{
 }
 
 void Imagen::reservar(int filas, int columnas){
-    liberar();
+   // liberar();
     this->imagen = new byte * [filas];
     for (int i=0; i < filas; i++)
         this->imagen[i] = new byte[columnas];
@@ -245,71 +245,13 @@ Imagen leerVectorPGM(byte * vector, int filas, int columnas){
 }
 
 Imagen leerVectorPPM(byte * vector, int filas, int columnas){
-    Imagen img(filas,columnas);
-    int posicion_columna = 0;
-    for (int i=0; i < filas; i++){
-        posicion_columna = 0;
-        for (int j=0; j < columnas;){
-            for (int k=0; k < 3; k++){
-                double transformador;
-                switch (k){
-                    case 0:
-                        transformador = ROJO_GRIS;
-                        break;
-                    case 1:
-                        transformador = VERDE_GRIS;
-                        break;
-                    case 2:
-                        transformador = AZUL_GRIS;
-                        break;
-                };
-                transformador *= vector[i*columnas+j+k];
-                transformador = ceil(transformador);
-                img.asigna_pixel(i,posicion_columna,
-                                    img.valor_pixel(i,posicion_columna) + 
-                                    transformador);
-                if (k == 2)
-                    j++;
-            }
-            posicion_columna++;
-        }
-    }
-
-
-    // int f = 0, c = 0;
-    // for (int i=0; i < filas*columnas*3; i++){
-    //     int dato = vector[i];
-    //     int factor = i % 3;
-    //     switch (factor){
-    //         case 0:
-    //             factor = ROJO_GRIS;
-    //             break;
-    //         case 1:
-    //             factor = VERDE_GRIS;
-    //             break;
-    //         case 2:
-    //             factor = AZUL_GRIS;
-    //             break;
-    //     }; 
-    //     img.asigna_pixel(f,c,ceil(dato*factor)+img.valor_pixel(f,c));
-
-    //     if (i % 3 == 2 && i % img.num_columnas()*3 == 0 && f != img.num_filas()-1){
-    //         cout << "fila:" << f << endl << "i:" << i << endl << "columna: " << c << endl;
-    //         c = 0;
-    //         f++;
-    //     }else if (i % 3 == 2)
-    //         c++;
-        
-       
-            
-            
-    // }
-
-
-
-
-
-    return img;
+    byte * vector_gris = new byte[filas*columnas];
+    int j=0; 
+    for (int i=0; i < filas*columnas; i++)
+        vector_gris[i] = vector[j++]*ROJO_GRIS + vector[j++] * VERDE_GRIS + vector[j++] * AZUL_GRIS;
+    Imagen gris = leerVectorPGM(vector_gris,filas,columnas);
+    delete [] vector_gris;
+    return gris;
 }
 
 void escribirVectorPGM(const Imagen & img, byte * vector, int & filas, int & columnas){

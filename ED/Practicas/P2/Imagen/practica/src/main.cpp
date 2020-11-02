@@ -16,10 +16,9 @@ using namespace std;
  * @param args el vector de los parametros pasados en la ejecucion
  **/
 int main(int argc, char *args[]){   
-    const char * ppm = "imagenes_entrada/alhambra.ppm";
-    // const char * pgm = "imagenes_entrada/board.pgm";
-    const char * out = "imagenes_salida/alhambra.pgm";
-    colorAGris(ppm,out);
+    const char * ppm = "imagenes_entrada/peppers.ppm";
+    const char * out = "imagenes_salida/prueba.pgm";
+   colorAGris(ppm,out);
 //    int f,c;
 //    if (LeerTipoImagen(pgm) == TipoImagen::IMG_PGM){
 //     byte * entrada = LeerImagenPGM(pgm,f,c);
