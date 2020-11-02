@@ -19,7 +19,8 @@ using namespace HM; //espacio de nombres para los monitores
 mutex mtx; //cerrojo para mostrar en pantalla
 
 
-const int num_fumadores = 3;
+const int num_lector = 6;
+const int num_escri = 6;
 
 //**********************************************************************
 // plantilla de función para generar un entero aleatorio uniformemente
@@ -36,28 +37,21 @@ int aleatorio()
 }
 
 //**********************************************************************
-// funciones estanqueras y fumadoras
+// funciones de lectura y escritura
 //----------------------------------------------------------------------
 
-int producirIngrediente()
+void escribir(int indice)
 {
-   //this_thread::sleep_for(chrono::milliseconds(aleatorio<20, 100>()));
-   int ingrediente = aleatorio<0,num_fumadores-1>();
-   unique_lock<mutex> guarda(mtx);
-   cout << "Estanquera produce ingrediente: " << ingrediente << endl;
-   return ingrediente;
+   cout << "Escritor " << indice << " empieza a escribir en la estructura de datos" << endl;
+   this_thread::sleep_for(chrono::milliseconds(aleatorio<20, 200>()));
+   cout << "Escritor " << indice << " termina de escribir en la estructura de datos" << endl;
 }
-//----------------------------------------------------------------------
 
-void fumar(int indice)
+void leer(int indice)
 {
-   // mutex para que la salida no se mezcle
-   // comentado para ver varios fumadores simultaneos
-   //unique_lock<mutex> guarda(mtx);
-   cout << "                  Fumador " << indice << " empieza a fumar" << endl;
-   this_thread::sleep_for(chrono::milliseconds(aleatorio<500, 700>()));
-   cout << "                  Fumador " << indice << " deja de fumar" << endl;
-
+   cout << "\tLector " << indice << " empieza a leer en la estructura de datos" << endl;
+   this_thread::sleep_for(chrono::milliseconds(aleatorio<20, 200>()));
+   cout << "\tLector " << indice << " termina de leer en la estructura de datos" << endl;
 }
 
 //----------------------------------------------------------------------
@@ -66,81 +60,96 @@ void fumar(int indice)
  * @brief clase que representa el monitor de estanco
  */
 
-class Estanco : public HoareMonitor
+class Lec_Esc : public HoareMonitor
 {
 private:
-   int mostrador;
-   CondVar mostrador_vacio, esta_mio[num_fumadores];
+   bool escrib; //indica si un escritor esta escribiendo
+   int n_lec;       //número de lectores simultaneos
+   CondVar lectura,escritura;
 public:
-   Estanco();
-   void ponerIngrediente(int ingre);
-   void esperarRecogida();
-   void obtenerIngrediente(int i);
+   Lec_Esc();
+   void ini_lectura();
+   void fin_lectura();
+   void ini_escritura();
+   void fin_escritura();
 };
 
-Estanco::Estanco(){
-   mostrador = -1;   //mostrador == -1 quiere decir que esta vacio
-   mostrador_vacio = newCondVar();
-   for (int i=0; i < num_fumadores; i++)
-      esta_mio[i] = newCondVar();
+Lec_Esc::Lec_Esc(){
+   escrib = false;
+   n_lec = 0;
+   lectura = newCondVar();
+   escritura = newCondVar();
 }
 
-void Estanco::ponerIngrediente(int ingre){
-   mostrador = ingre;
-   esta_mio[ingre].signal();
+void Lec_Esc::ini_lectura(){
+   if (escrib)
+      lectura.wait();
+   n_lec += 1;
+   lectura.signal();
 }
 
-void Estanco::esperarRecogida(){
-   if (mostrador != -1) //comprobamos que no este vacio
-      mostrador_vacio.wait();
+void Lec_Esc::fin_lectura(){
+   n_lec -= 1;
+   if (n_lec == 0)
+      escritura.signal();
 }
 
-void Estanco::obtenerIngrediente(int i){
-   if (mostrador != i)
-      esta_mio[i].wait();
-   cout << "                  Fumador " << i << "recoge ingrediente" << endl;
-   mostrador = -1;      //marcamos el mostrador como vacia
-   mostrador_vacio.signal();
+void Lec_Esc::ini_escritura(){
+   if (n_lec > 0 || escrib)
+      escritura.wait();
+   escrib = true;
 }
 
+void Lec_Esc::fin_escritura(){
+   escrib = false;
+   if (lectura.empty())
+      escritura.signal();
+   else
+      lectura.signal();
+}
 
 //funciones que ejecutan las hebras
-void funcion_hebra_estanquera(MRef<Estanco> monitor)
+void funcion_hebra_lectora(MRef<Lec_Esc> monitor, int indice)
 {
    while (true){
-      int ingrediente = producirIngrediente();
-      monitor->ponerIngrediente(ingrediente);
-      mtx.lock();
-      cout << "Estanquero ha puesto ingrediente y espera que se recoja" << endl;
-      mtx.unlock();
-      monitor->esperarRecogida();
+      monitor->ini_lectura();
+      leer(indice);
+      monitor->fin_lectura();
+      this_thread::sleep_for(chrono::milliseconds(aleatorio<20, 200>()));
    }
 }
 
-void funcion_hebra_fumadora(MRef<Estanco> monitor, int indice)
+void funcion_hebra_escritora(MRef<Lec_Esc> monitor, int indice)
 {
    while (true){
-      monitor->obtenerIngrediente(indice);
-      fumar(indice);
+      monitor->ini_escritura();
+      escribir(indice);
+      monitor->fin_escritura();
+      this_thread::sleep_for(chrono::milliseconds(aleatorio<20, 200>()));
    }
 }
 
 int main()
 {
    // crear monitor
-   MRef<Estanco> monitor = Create<Estanco>();
+   MRef<Lec_Esc> monitor = Create<Lec_Esc>();
    // creamos las hebras
-   thread hebras_fumadoras[num_fumadores],
-          hebra_estanquera;
+   thread lectores[num_lector],
+          escritores[num_escri];
    
    //lanzamos las hebras
-   hebra_estanquera = thread(funcion_hebra_estanquera,monitor);
-   for (int i=0; i < num_fumadores; i++)
-      hebras_fumadoras[i] = thread(funcion_hebra_fumadora,monitor,i);
+   for (int i=0; i < num_escri; i++){
+      escritores[i] = thread(funcion_hebra_escritora,monitor,i);
+   }   
+   for (int i=0; i < num_lector; i++){
+      lectores[i] = thread(funcion_hebra_lectora,monitor,i);
+   }
    
    // esperar a que terminen las hebras
-   hebra_estanquera.join();
-   for (int i = 0; i < num_fumadores; i++)
-      hebras_fumadoras[i].join();
-
+   for (int i=0; i < num_escri; i++){
+      escritores[i].join();
+   }   
+   for (int i=0; i < num_lector; i++){
+      lectores[i].join();
+   }
 }
