@@ -89,7 +89,7 @@ void funcion_hebra( MBarreraSC * monitor, int num_hebra )
 int main()
 {
    // declarar el número total de hebras
-   const int num_hebras = 6 ;
+   const int num_hebras = 3;
 
    // crear monitor
    MBarreraSC monitor( num_hebras );
