@@ -16,7 +16,7 @@ using namespace std;
  * @param args el vector de los parametros pasados en la ejecucion
  **/
 int main(int argc, char *args[]){   
-    const char * ppm = "imagenes_entrada/peppers.ppm";
+    const char * ppm = "imagenes_entrada/earth.ppm";
     const char * out = "imagenes_salida/prueba.pgm";
    colorAGris(ppm,out);
 //    int f,c;
