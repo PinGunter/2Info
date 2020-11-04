@@ -57,7 +57,7 @@ void leer(int indice)
 //----------------------------------------------------------------------
 
 /**
- * @brief clase que representa el monitor de estanco
+ * @brief clase que representa el monitor de lectores-escritores
  */
 
 class Lec_Esc : public HoareMonitor
