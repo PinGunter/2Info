@@ -160,7 +160,7 @@ Un usuario root podría guardar los archivos temporales en cualquier carpeta si 
 
 **Actividad 1.9 - Información de los SAs**
 
-La diferencia está en que `/etc/fstab` muestra los sistemas de archivos que se pueden montan en el sistema. El fichero `/etc/mtab` muestra los sistemas de archivos *actualmente* montados. Esto incluye a los que se montan durante el boot y manualmente.
+La diferencia está en que `/etc/fstab` muestra los sistemas de archivos que se pueden montan en el sistema. El fichero `/etc/mtab` muestra los sistemas de archivos *actualmente* montados. Esto incluye a los que se montan durante el boot y manualmente. Si queremos que se monte automaticamente incluimos la línea correspondiente a `/etc/fstab`.
 
 **Actividad 1.10 - Información de los SAs**
 
@@ -183,6 +183,8 @@ Sexto campo: usado por `fsck` para determinar el orden en el que se checkean los
 * `/etc/fstab`
 
   Muestra información descriptiva sobre los sistemas de archivos que se pueden montar en el sistema.
+
+  Si queremos que se monte automaticamente incluimos la línea correspondiente a `/etc/fstab`.
 
 * `/etc/mtab`
 

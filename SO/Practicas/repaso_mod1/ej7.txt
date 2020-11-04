@@ -1,1 +1,13 @@
 Crear una sistema de archivos de tipo ext3 dentro de un archivo utilizando el dispositivo /dev/loop. Este sistema de archivos debe tener 15 MB de tamaño y un tamaño de bloque de 4KB. Tras su creación hay que montarlo de solo lectura y sin que se puedan ejecutar archivos desde el. Indicar las ordenes necesarias para realizar estos pasos y mostrar la información de los metadatos del sistema de archivos creado.
+
+#creamos el archivo especial
+mknod /dev/loop0 b 7 0
+#de 15 MB
+dd if=/dev/zero of=/root/archivo bs=15k count=1000
+#asociamos el archivo al archivo especial
+losetup /dev/loop0 /root/archivo
+#Formateamos las particiones con tamaño de bloque 4k
+mke2fs -L label_ext3 -t ext3 -b 4096 /dev/loop0 
+#lo montamos en solo lectura y sin poder ejecutar nada
+mkdir /mnt/montaje
+mount -L label_ext3 /mnt/montaje/ -r noexec

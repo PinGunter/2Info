@@ -1,1 +1,14 @@
 Modifique los elementos que sean necesarios en el sistema UML para cada vez que arrancamos la máquina virtual se realice el montaje de nuestro directorio home del anfitrión en un directorio de la máquina virtual en lugar de tener que hacerlo a mano.
+
+
+creamos script en .bashrc
+#! /bin/bash
+
+#creamos directorio en caso de que no exista
+
+if [ ! -d /montaje ]; then
+        mkdir /montaje
+fi
+
+mount none /montaje -t hostfs -o /home
+
