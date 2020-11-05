@@ -162,8 +162,8 @@ sumaq:
 	mov $0, %rsi	# indice
 
 bucleq:
-	mov  (%rbx,%rsi,4), %eax  # el nuevo indice es RSI
-	cltq 	  # extendemos el signo EAX -> RAX
+	movslq  (%rbx,%rsi,4), %rax  # el nuevo indice es RSI
+	# cltq 	  # extendemos el signo EAX -> RAX
 	cqto
 	add %rax, %rdi	# sumamos LSB
 	inc %rsi
@@ -171,7 +171,7 @@ bucleq:
 	jne bucleq
 
 	mov %rdi, %rax
-	idiv %ecx # dividimos rdx:rax entre ecx (numero de elementos de la lista, tambien se puede usar longlista)
+	idiv %rcx # dividimos rdx:rax entre ecx (numero de elementos de la lista, tambien se puede usar longlista)
 	
 
 	ret
