@@ -3,11 +3,15 @@ Crear una sistema de archivos de tipo ext3 dentro de un archivo utilizando el di
 #creamos el archivo especial
 mknod /dev/loop0 b 7 0
 #de 15 MB
-dd if=/dev/zero of=/root/archivo bs=15k count=1000
+dd if=/dev/zero of=/root/archivo bs=4k count=3750
 #asociamos el archivo al archivo especial
 losetup /dev/loop0 /root/archivo
+
+### tambien se puede usar fdisk
+## fdisk /dev/loop0
+###
 #Formateamos las particiones con tamaño de bloque 4k
 mke2fs -L label_ext3 -t ext3 -b 4096 /dev/loop0 
 #lo montamos en solo lectura y sin poder ejecutar nada
 mkdir /mnt/montaje
-mount -L label_ext3 /mnt/montaje/ -r -noexec
+mount /dev/loop /mnt/montaje -r -o noexec
