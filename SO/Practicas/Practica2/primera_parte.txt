@@ -40,3 +40,32 @@ Montaje/Desmontaje
 	@pre mkdir /mnt/SA_ext3; mkdir /mnt/SA_ext4;
 3) mnt -L LABEL_ext3 /mnt/SA_ext3 -r
 4) mnt -L LABEL_ext4 /mnt/SA_ext3 -o dirsync
+
+
+
+### gestores de paquetes
+#montar paquetes
+mount none /montaje -t hostfs -o home
+##instar quota
+rpm -i libnl-1.1-12.fc14.i686.rpm 
+rpm -i tcp_wrappers-7.6-59.fc14.i686.rpm 
+rpm -i quota-3.17-13.fc14.i686.rpm 
+
+#ver informacion
+rpm -qi quota-3.17-13.fc14.i686
+
+# ver archivos de conf
+rpm -qc quota-3.17-13.fc14.i686
+
+# ver dependencias (instalado)
+rpm -qR quota-3.17-13.fc14.i686
+
+# ver dependencias (sin instalar)
+rpm -qpR quota-3.17-13.fc14.i686.rpm
+
+# instalar
+rpm -i quota-3.17-13.fc14.i686.rpm
+
+#obtener max info desinstalando
+rpm -evv sysstat-9.0.6-3.fc13.i686
+

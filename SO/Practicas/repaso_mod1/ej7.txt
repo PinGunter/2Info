@@ -10,4 +10,4 @@ losetup /dev/loop0 /root/archivo
 mke2fs -L label_ext3 -t ext3 -b 4096 /dev/loop0 
 #lo montamos en solo lectura y sin poder ejecutar nada
 mkdir /mnt/montaje
-mount -L label_ext3 /mnt/montaje/ -r noexec
+mount -L label_ext3 /mnt/montaje/ -r -noexec

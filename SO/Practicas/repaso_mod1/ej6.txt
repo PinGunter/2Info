@@ -12,3 +12,6 @@ fi
 
 mount none /montaje -t hostfs -o /home
 
+
+### tambien lo podemos hacer editando /etc/fstab
+/home /montaje hostfs defaults 0 0
