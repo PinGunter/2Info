@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['leerimagenpgm_7',['LeerImagenPGM',['../imagenES_8cpp.html#a03340a1e1e4a88385c972bb4af463649',1,'LeerImagenPGM(const char *nombre, int &amp;fils, int &amp;cols):&#160;imagenES.cpp'],['../imagenES_8h.html#a5e571c683fa4297b869d9e2b090cc59b',1,'LeerImagenPGM(const char *nombre, int &amp;filas, int &amp;columnas):&#160;imagenES.cpp']]],
-  ['leerimagenppm_8',['LeerImagenPPM',['../imagenES_8cpp.html#a05aea20533de5bbd02789f76aafbb99b',1,'LeerImagenPPM(const char *nombre, int &amp;fils, int &amp;cols):&#160;imagenES.cpp'],['../imagenES_8h.html#a72295e7268650ba538f8ba3048dcc9eb',1,'LeerImagenPPM(const char *nombre, int &amp;filas, int &amp;columnas):&#160;imagenES.cpp']]],
-  ['leertipoimagen_9',['LeerTipoImagen',['../imagenES_8cpp.html#acaa5fb277940aceed29f86c093a3d89c',1,'LeerTipoImagen(const char *nombre):&#160;imagenES.cpp'],['../imagenES_8h.html#acaa5fb277940aceed29f86c093a3d89c',1,'LeerTipoImagen(const char *nombre):&#160;imagenES.cpp']]]
+  ['imagen_7',['Imagen',['../classImagen.html',1,'Imagen'],['../classImagen.html#a7632978f5ae089713e652bb362da1e78',1,'Imagen::Imagen(int filas, int columnas)'],['../classImagen.html#a33f5f31d610526dbe66d04de0a827f91',1,'Imagen::Imagen(const Imagen &amp;otra)']]],
+  ['imagenes_2ecpp_8',['imagenES.cpp',['../imagenES_8cpp.html',1,'']]],
+  ['imagenes_2eh_9',['imagenES.h',['../imagenES_8h.html',1,'']]]
 ];

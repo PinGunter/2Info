@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['imagen_4',['Imagen',['../classImagen.html',1,'Imagen'],['../classImagen.html#a7632978f5ae089713e652bb362da1e78',1,'Imagen::Imagen(int filas, int columnas)'],['../classImagen.html#a33f5f31d610526dbe66d04de0a827f91',1,'Imagen::Imagen(const Imagen &amp;otra)']]],
-  ['imagenes_2ecpp_5',['imagenES.cpp',['../imagenES_8cpp.html',1,'']]],
-  ['imagenes_2eh_6',['imagenES.h',['../imagenES_8h.html',1,'']]]
+  ['error_3',['error',['../imagenES_8cpp.html#a5f58c4296230b8b7f3a64d79d245bd5a',1,'error(string mensaje):&#160;imagenES.cpp'],['../imagenES_8h.html#a1619ea9a64c017d9bf879fe878927d9c',1,'error(std::string mensaje):&#160;imagenES.h']]],
+  ['escribirimagenpgm_4',['EscribirImagenPGM',['../imagenES_8cpp.html#a4b649cc272f02649563791d5ed75b557',1,'EscribirImagenPGM(const char *nombre, const unsigned char *datos, const int fils, const int cols):&#160;imagenES.cpp'],['../imagenES_8h.html#a3e58b9b9378bd1fbb8a87cd20e2d96a1',1,'EscribirImagenPGM(const char *nombre, const unsigned char *datos, const int filas, const int columnas):&#160;imagenES.cpp']]],
+  ['escribirimagenppm_5',['EscribirImagenPPM',['../imagenES_8cpp.html#ae149be8653b9f8c7321ac40577e7518c',1,'EscribirImagenPPM(const char *nombre, const unsigned char *datos, const int fils, const int cols):&#160;imagenES.cpp'],['../imagenES_8h.html#a645dac5e00527fc00d735bb20f0d3ff9',1,'EscribirImagenPPM(const char *nombre, const unsigned char *datos, const int filas, const int columnas):&#160;imagenES.cpp']]],
+  ['escribirvectorpgm_6',['escribirVectorPGM',['../imagenES_8cpp.html#a06ef9d7aeca2096ca2d31f1c181b9026',1,'escribirVectorPGM(const Imagen &amp;img, byte *vector, int &amp;filas, int &amp;columnas):&#160;imagenES.cpp'],['../imagenES_8h.html#a06ef9d7aeca2096ca2d31f1c181b9026',1,'escribirVectorPGM(const Imagen &amp;img, byte *vector, int &amp;filas, int &amp;columnas):&#160;imagenES.cpp']]]
 ];

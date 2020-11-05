@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['valor_5fpixel_14',['valor_pixel',['../classImagen.html#a9f4da242215f29774645d831db3b66cb',1,'Imagen']]]
+  ['operator_3d_19',['operator=',['../classImagen.html#aa8bdc0191ef1b952a6405273edf3f3c8',1,'Imagen']]]
 ];

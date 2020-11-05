@@ -67,7 +67,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Funciones</a>  </div>
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Referencia del Archivo imagenES.cpp</div>  </div>
 </div><!--header-->
@@ -75,9 +76,12 @@ $(function() {
 
 <p>Fichero con definiciones para la E/S de imágenes.  
 <a href="#details">Más...</a></p>
-<div class="textblock"><code>#include &lt;fstream&gt;</code><br />
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;<a class="el" href="imagenES_8h_source.html">imagenES.h</a>&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Dependencia gráfica adjunta para imagenES.cpp:</div>
 <div class="dyncontent">
@@ -111,11 +115,95 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>LeerCabecera</b> (ifs
 <tr class="memitem:a4b649cc272f02649563791d5ed75b557"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#a4b649cc272f02649563791d5ed75b557">EscribirImagenPGM</a> (const char *nombre, const unsigned char *datos, const int fils, const int cols)</td></tr>
 <tr class="memdesc:a4b649cc272f02649563791d5ed75b557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe una imagen de tipo PGM.  <a href="imagenES_8cpp.html#a4b649cc272f02649563791d5ed75b557">Más...</a><br /></td></tr>
 <tr class="separator:a4b649cc272f02649563791d5ed75b557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f58c4296230b8b7f3a64d79d245bd5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#a5f58c4296230b8b7f3a64d79d245bd5a">error</a> (string mensaje)</td></tr>
+<tr class="separator:a5f58c4296230b8b7f3a64d79d245bd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67aa569e325efcee08e39c635767ef78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImagen.html">Imagen</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#a67aa569e325efcee08e39c635767ef78">leerVectorPGM</a> (<a class="el" href="imagenES_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *vector, int filas, int columnas)</td></tr>
+<tr class="memdesc:a67aa569e325efcee08e39c635767ef78"><td class="mdescLeft">&#160;</td><td class="mdescRight">funcion para obtener una imagen a partir de un vector 1d de una imagen PGM  <a href="imagenES_8cpp.html#a67aa569e325efcee08e39c635767ef78">Más...</a><br /></td></tr>
+<tr class="separator:a67aa569e325efcee08e39c635767ef78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a231a8956f205d978f0578dd5b517704b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImagen.html">Imagen</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#a231a8956f205d978f0578dd5b517704b">leerVectorPPM</a> (<a class="el" href="imagenES_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *vector, int filas, int columnas)</td></tr>
+<tr class="memdesc:a231a8956f205d978f0578dd5b517704b"><td class="mdescLeft">&#160;</td><td class="mdescRight">funcion para obtener una imagen a partir de un vector 1d de una imagen PPM  <a href="imagenES_8cpp.html#a231a8956f205d978f0578dd5b517704b">Más...</a><br /></td></tr>
+<tr class="separator:a231a8956f205d978f0578dd5b517704b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ef9d7aeca2096ca2d31f1c181b9026"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#a06ef9d7aeca2096ca2d31f1c181b9026">escribirVectorPGM</a> (const <a class="el" href="classImagen.html">Imagen</a> &amp;img, <a class="el" href="imagenES_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *vector, int &amp;filas, int &amp;columnas)</td></tr>
+<tr class="memdesc:a06ef9d7aeca2096ca2d31f1c181b9026"><td class="mdescLeft">&#160;</td><td class="mdescRight">funcion para transformar un objeto imagen en un vector unidimensional  <a href="imagenES_8cpp.html#a06ef9d7aeca2096ca2d31f1c181b9026">Más...</a><br /></td></tr>
+<tr class="separator:a06ef9d7aeca2096ca2d31f1c181b9026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb06e9fa37177e2fffd85054bc75acbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="imagenES_8cpp.html#afb06e9fa37177e2fffd85054bc75acbb">colorAGris</a> (const char *nombre_ppm, const char *nombre_pgm)</td></tr>
+<tr class="memdesc:afb06e9fa37177e2fffd85054bc75acbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">función que permite convertir una imagen PPM a una imagen PGM  <a href="imagenES_8cpp.html#afb06e9fa37177e2fffd85054bc75acbb">Más...</a><br /></td></tr>
+<tr class="separator:afb06e9fa37177e2fffd85054bc75acbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:adeb9342ec2334dee1f1246be459ac1e9"><td class="memItemLeft" align="right" valign="top"><a id="adeb9342ec2334dee1f1246be459ac1e9"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>ROJO_GRIS</b> = 0.2989</td></tr>
+<tr class="separator:adeb9342ec2334dee1f1246be459ac1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f5c9bbb12dea46bb23e3154e8923176"><td class="memItemLeft" align="right" valign="top"><a id="a8f5c9bbb12dea46bb23e3154e8923176"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>VERDE_GRIS</b> = 0.587</td></tr>
+<tr class="separator:a8f5c9bbb12dea46bb23e3154e8923176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527e9729a04cbb691845003444571add"><td class="memItemLeft" align="right" valign="top"><a id="a527e9729a04cbb691845003444571add"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>AZUL_GRIS</b> = 0.114</td></tr>
+<tr class="separator:a527e9729a04cbb691845003444571add"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Fichero con definiciones para la E/S de imágenes. </p>
 <dl class="section author"><dt>Autor</dt><dd>Salvador Romero Cortés Permite la E/S de archivos de tipo PGM,PPM </dd></dl>
 </div><h2 class="groupheader">Documentación de las funciones</h2>
+<a id="afb06e9fa37177e2fffd85054bc75acbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb06e9fa37177e2fffd85054bc75acbb">&#9670;&nbsp;</a></span>colorAGris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void colorAGris </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>nombre_ppm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>nombre_pgm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>función que permite convertir una imagen PPM a una imagen PGM </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombre_ppm</td><td>la imagen a color </td></tr>
+    <tr><td class="paramname">nombre_pgm</td><td>la imagen en escala de grises </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondición</dt><dd>debe existir el archivo con el nombre <em>nombre_ppm</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>se escribe directamente el archivo desde esta funcion </dd></dl>
+
+</div>
+</div>
+<a id="a5f58c4296230b8b7f3a64d79d245bd5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f58c4296230b8b7f3a64d79d245bd5a">&#9670;&nbsp;</a></span>error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void error </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>mensaje</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>FUNCIONES AUXILIARES </p>
+
+</div>
+</div>
 <a id="a4b649cc272f02649563791d5ed75b557"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b649cc272f02649563791d5ed75b557">&#9670;&nbsp;</a></span>EscribirImagenPGM()</h2>
 
@@ -217,6 +305,59 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>LeerCabecera</b> (ifs
   </dd>
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>si ha tenido éxito en la escritura. </dd></dl>
+
+</div>
+</div>
+<a id="a06ef9d7aeca2096ca2d31f1c181b9026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ef9d7aeca2096ca2d31f1c181b9026">&#9670;&nbsp;</a></span>escribirVectorPGM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void escribirVectorPGM </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classImagen.html">Imagen</a> &amp;&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="imagenES_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *&#160;</td>
+          <td class="paramname"><em>vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>filas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>columnas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>funcion para transformar un objeto imagen en un vector unidimensional </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>la imagen que se va a convertir </td></tr>
+    <tr><td class="paramname">vector</td><td>el vector donde se escribe la imagen </td></tr>
+    <tr><td class="paramname">filas</td><td>el número de filas de la imagen </td></tr>
+    <tr><td class="paramname">columnas</td><td>el número de columnas de la imagen </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondición</dt><dd></dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>todos los parámetros se modifican menos <em>img</em> </dd></dl>
 
 </div>
 </div>
@@ -337,6 +478,96 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>LeerCabecera</b> (ifs
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>Devuelve el tipo de la imagen en el archivo</dd></dl>
 <dl class="section see"><dt>Ver también</dt><dd><a class="el" href="imagenES_8h.html#a8914f6544a484741b05c092d9e7522ed" title="Tipo de imagen.">TipoImagen</a> </dd></dl>
+
+</div>
+</div>
+<a id="a67aa569e325efcee08e39c635767ef78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67aa569e325efcee08e39c635767ef78">&#9670;&nbsp;</a></span>leerVectorPGM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classImagen.html">Imagen</a> leerVectorPGM </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="imagenES_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *&#160;</td>
+          <td class="paramname"><em>vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>columnas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>funcion para obtener una imagen a partir de un vector 1d de una imagen PGM </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>el vector unidimensional que contiene los pixeles de la imagen </td></tr>
+    <tr><td class="paramname">filas</td><td>el número de filas que tendrá la imagen </td></tr>
+    <tr><td class="paramname">columnas</td><td>el número de columnas que tendrá la imagen </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>objeto imagen con los datos del vector </dd></dl>
+
+</div>
+</div>
+<a id="a231a8956f205d978f0578dd5b517704b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a231a8956f205d978f0578dd5b517704b">&#9670;&nbsp;</a></span>leerVectorPPM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classImagen.html">Imagen</a> leerVectorPPM </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="imagenES_8h.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *&#160;</td>
+          <td class="paramname"><em>vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>columnas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>funcion para obtener una imagen a partir de un vector 1d de una imagen PPM </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>el vector unidimensional que contiene los pixeles de la imagen </td></tr>
+    <tr><td class="paramname">filas</td><td>el número de filas que tendrá la imagen </td></tr>
+    <tr><td class="paramname">columnas</td><td>el número de columnas que tendrá la imagen </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>objeto imagen con los datos del vector (en escala de grises) </dd></dl>
 
 </div>
 </div>

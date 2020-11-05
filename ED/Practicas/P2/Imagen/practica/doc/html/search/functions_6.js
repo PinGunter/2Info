@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['valor_5fpixel_29',['valor_pixel',['../classImagen.html#a9f4da242215f29774645d831db3b66cb',1,'Imagen']]]
+  ['num_5fcolumnas_40',['num_columnas',['../classImagen.html#ac28d55c18064aea2a65e6fcf51d86191',1,'Imagen']]],
+  ['num_5ffilas_41',['num_filas',['../classImagen.html#a4cb4faa04f5e2913965e43a6a65acfd1',1,'Imagen']]]
 ];

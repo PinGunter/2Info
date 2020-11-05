@@ -6,4 +6,6 @@ digraph "inc/imagenES.h"
   Node1 [label="inc/imagenES.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Fichero cabecera para la E/S de imágenes."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="src/imagenES.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$imagenES_8cpp.html",tooltip="Fichero con definiciones para la E/S de imágenes."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="archivo que ejecuta el programa principal"];
 }
