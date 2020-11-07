@@ -8,6 +8,8 @@
 
 #ifndef _IMAGEN_ES_H_
 #define _IMAGEN_ES_H_
+#define BLANCO 255
+#define NEGRO 0
 
 /**
   * @brief Tipo de imagen
@@ -207,52 +209,5 @@ private:
   void copiar(const Imagen &otra);
 };
 #endif
-
-/** FUNCIONES AUXILIARES **/
-/**
- * @brief funcion para mostrar los mensajes de error
- * @param mensaje el mensaje de error
- **/
-void error(std::string mensaje);
-
-
-
-/*     FUNCIONES SOBRE EL TIPO IMAGEN  */
-/**
- * @brief funcion para obtener una imagen a partir de un vector 1d de una imagen PGM
- * @param vector el vector unidimensional que contiene los pixeles de la imagen
- * @param filas el número de filas que tendrá la imagen
- * @param columnas el número de columnas que tendrá la imagen
- * @return objeto imagen con los datos del vector
- **/
-Imagen leerVectorPGM(byte * vector, int filas, int columnas);
-/**
- * @brief funcion para obtener una imagen a partir de un vector 1d de una imagen PPM
- * @param vector el vector unidimensional que contiene los pixeles de la imagen
- * @param filas el número de filas que tendrá la imagen
- * @param columnas el número de columnas que tendrá la imagen
- * @return objeto imagen con los datos del vector (en escala de grises)
- **/
-Imagen leerVectorPPM(byte * vector, int filas, int columnas);
-/**
- * @brief funcion para transformar un objeto imagen en un vector unidimensional
- * @param img la imagen que se va a convertir
- * @param vector el vector donde se escribe la imagen
- * @param filas el número de filas de la imagen
- * @param columnas el número de columnas de la imagen
- * @pre 
- * @post todos los parámetros se modifican menos @a img
- **/
-void escribirVectorPGM(const Imagen &img, byte * vector, int &filas, int &columnas);
-
-/**
- * @brief función que permite convertir una imagen PPM a una imagen PGM
- * @param nombre_ppm la imagen a color
- * @param nombre_pgm la imagen en escala de grises
- * @pre debe existir el archivo con el nombre @a nombre_ppm
- * @post se escribe directamente el archivo desde esta funcion
- **/
-void colorAGris(const char * nombre_ppm, const char * nombre_pgm);
-
 
 /* Fin Fichero: imagenES.h */

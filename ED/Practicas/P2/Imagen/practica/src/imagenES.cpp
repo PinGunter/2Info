@@ -15,11 +15,6 @@
 
 using namespace std;
 
-// constantes para transformar de gris a color
-const double ROJO_GRIS = 0.2989;
-const double VERDE_GRIS = 0.587;
-const double AZUL_GRIS = 0.114;
-
 TipoImagen LeerTipo(ifstream& f){
   char c1,c2;
   TipoImagen res= IMG_DESCONOCIDO;
@@ -197,12 +192,14 @@ void Imagen::asigna_pixel(int fila, int columna, byte valor){
 }
 
 byte Imagen::valor_pixel(int fila, int columna) const{
+  if (!(fila >= 0 && fila < num_filas() && columna >= 0 && columna < num_columnas()))
+        std::cout << "fila:" << fila << endl << "columna:" << columna << endl;
     assert(fila >= 0 && fila < num_filas() && columna >= 0 && columna < num_columnas());
     return imagen[fila][columna];
 }
 
 void Imagen::reservar(int filas, int columnas){
-   // liberar();
+    liberar();
     this->imagen = new byte * [filas];
     for (int i=0; i < filas; i++)
         this->imagen[i] = new byte[columnas];
@@ -219,65 +216,9 @@ void Imagen::liberar(){
 }
 
 void Imagen::copiar(const Imagen &otra){
-    this->filas = otra.num_filas();
-    this->columnas = otra.num_columnas();
     for (int i=0; i < filas; i++)
-        for (int j=0; j < filas; j++)
+        for (int j=0; j < columnas; j++)
             asigna_pixel(i,j,otra.valor_pixel(i,j));
-}
-
-/** FUNCIONES AUXILIARES **/
-
-void error(string mensaje){
-    cerr << mensaje << endl;
-    exit(1);
-}
-
-/*     FUNCIONES SOBRE EL TIPO IMAGEN  */
-Imagen leerVectorPGM(byte * vector, int filas, int columnas){
-    Imagen imagen(filas,columnas);
-    for (int i=0; i < filas; i++){
-        for (int j=0; j < columnas; j++){
-            imagen.asigna_pixel(i,j,vector[i*columnas+j]);
-        }
-    }
-    return imagen;
-}
-
-Imagen leerVectorPPM(byte * vector, int filas, int columnas){
-    byte * vector_gris = new byte[filas*columnas];
-    int j=0; 
-    for (int i=0; i < filas*columnas; i++)
-        vector_gris[i] = vector[j++]*ROJO_GRIS + vector[j++] * VERDE_GRIS + vector[j++] * AZUL_GRIS;
-    Imagen gris = leerVectorPGM(vector_gris,filas,columnas);
-    delete [] vector_gris;
-    return gris;
-}
-
-void escribirVectorPGM(const Imagen & img, byte * vector, int & filas, int & columnas){
-    filas = img.num_filas();
-    columnas = img.num_columnas();
-    for (int i=0; i < filas; i++){
-        for (int j=0; j < columnas; j++){
-            vector[i*columnas+j] = img.valor_pixel(i,j);
-        }
-    }
-}
-
-void colorAGris(const char * nombre_ppm, const char * nombre_pgm){
-    TipoImagen primera;
-    primera = LeerTipoImagen(nombre_ppm);
-    if (primera != IMG_PPM)
-        error("El archivo introducido no es de tipo PPM");
-
-    int filas, columnas;
-    byte *ppm = LeerImagenPPM(nombre_ppm,filas,columnas);
-    Imagen color_a_gris = leerVectorPPM(ppm,filas,columnas);
-    byte *pgm = new byte[filas*columnas];
-    escribirVectorPGM(color_a_gris,pgm,filas,columnas);
-    EscribirImagenPGM(nombre_pgm,pgm,filas,columnas);
-    delete [] ppm;
-    delete [] pgm;
 }
 
 /* Fin Fichero: imagenES.cpp */

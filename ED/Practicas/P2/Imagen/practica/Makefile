@@ -3,7 +3,7 @@ OBJ = obj
 SRC = src
 INC = inc
 
-$(BIN)/main: $(OBJ)/main.o $(OBJ)/imagenES.o
+$(BIN)/main: $(OBJ)/main.o $(OBJ)/imagenES.o $(OBJ)/funciones_imagen.o
 	echo Creando ejecutable
 	g++ $^ -o $@
 $(OBJ)/main.o: $(SRC)/main.cpp
@@ -12,6 +12,9 @@ $(OBJ)/main.o: $(SRC)/main.cpp
 $(OBJ)/imagenES.o: $(SRC)/imagenES.cpp
 	echo Creando imagenES.o
 	g++ -g -c -I./$(INC) $< -o $@
+$(OBJ)/funciones_imagen.o: $(SRC)/funciones_imagen.cpp
+	g++ -g -c -I./$(INC) $< -o $@
+
 clean: 
 	echo Limpiando
 	-rm $(OBJ)/* $(BIN)/*
@@ -19,3 +22,13 @@ rebuild: clean $(BIN)/main
 documentacion:
 	echo Creando documentacion
 	doxygen doxyfile
+
+color_gris: $(BIN)/color_a_gris
+
+$(BIN)/color_a_gris: $(OBJ)/color_a_gris.o $(OBJ)/imagenES.o $(OBJ)/funciones_imagen.o
+	echo Creando Binario Color -> Gris
+	g++ $^ -o $@
+
+$(OBJ)/color_a_gris.o: $(SRC)/color_a_gris.cpp 
+	echo Compilando color_a_gris
+	g++ -g -c -I./$(INC) $< -o $@
