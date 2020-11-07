@@ -103,7 +103,7 @@ void umbralizar_escala_grises(const char* original, const char * salida,int umbr
 
 //----------------------------------------------------------------
 
-void contrastar(const char * original, const char * salida){//, byte min, byte max){
+void contrastar(const char * original, const char * salida, byte min, byte max){
     //comprobamos que min y max sean valores validos
     // if (min >= max)
     //     error("Intervalo de contraste incorrecto");
@@ -120,14 +120,23 @@ void contrastar(const char * original, const char * salida){//, byte min, byte m
     //vemos que el calculo de (max-min)/(b-a) es constante en toda la imagen, por tanto
     //podemos calcularlo una única vez
 
-    // double constante_transformacion = (max-min) / (NEGRO-BLANCO);
+    byte maximo = 0, minimo = 255;
+
+    for (int i=0; i < img_salida.num_filas(); i++){
+        for (int j=0; j < img_salida.num_columnas(); j++){
+            if (img_salida.valor_pixel(i,j) > maximo) maximo = img_salida.valor_pixel(i,j);
+            if (img_salida.valor_pixel(i,j) < minimo) minimo = img_salida.valor_pixel(i,j);
+        }
+    }
+
+    double const_transformacion = (max-min)/(maximo-minimo);
 
     //aplicamos la transformacion a la imagen
     for (int i=0; i < img_salida.num_filas(); i++){
         for (int j=0; j < img_salida.num_columnas(); j++){
             byte actual = img_salida.valor_pixel(i,j);
-            // byte nuevo_val = (unsigned char)(min+(constante_transformacion*(actual-NEGRO)));
-            img_salida.asigna_pixel(i,j,(actual > 200 ? 255 : 0));
+            byte nuevo = (byte)(min + (const_transformacion*(actual-minimo)));
+            img_salida.asigna_pixel(i,j,nuevo);
         }
     }
 

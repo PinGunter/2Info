@@ -80,7 +80,7 @@ void umbralizar_escala_grises(const char* original, const char * salida,int umbr
  * @param max final del intervalo
  * @post se escribe en disco la imagen @a salida
  */
-void contrastar(const char * original, const char * salida);//, byte min, byte max);
+void contrastar(const char * original, const char * salida, byte min, byte max);
 
 #endif
 // fin archivo
