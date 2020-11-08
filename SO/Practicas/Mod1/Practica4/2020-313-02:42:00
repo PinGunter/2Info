@@ -1,0 +1,376 @@
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 nov07 ?        00:00:24 /sbin/init splash
+root           2       0  0 nov07 ?        00:00:00 [kthreadd]
+root           3       2  0 nov07 ?        00:00:00 [rcu_gp]
+root           4       2  0 nov07 ?        00:00:00 [rcu_par_gp]
+root           6       2  0 nov07 ?        00:00:00 [kworker/0:0H-kblockd]
+root           9       2  0 nov07 ?        00:00:00 [mm_percpu_wq]
+root          10       2  0 nov07 ?        00:00:00 [ksoftirqd/0]
+root          11       2  0 nov07 ?        00:00:13 [rcu_sched]
+root          12       2  0 nov07 ?        00:00:00 [migration/0]
+root          13       2  0 nov07 ?        00:00:00 [idle_inject/0]
+root          14       2  0 nov07 ?        00:00:00 [cpuhp/0]
+root          15       2  0 nov07 ?        00:00:00 [cpuhp/1]
+root          16       2  0 nov07 ?        00:00:00 [idle_inject/1]
+root          17       2  0 nov07 ?        00:00:00 [migration/1]
+root          18       2  0 nov07 ?        00:00:00 [ksoftirqd/1]
+root          20       2  0 nov07 ?        00:00:00 [kworker/1:0H-kblockd]
+root          21       2  0 nov07 ?        00:00:00 [cpuhp/2]
+root          22       2  0 nov07 ?        00:00:00 [idle_inject/2]
+root          23       2  0 nov07 ?        00:00:00 [migration/2]
+root          24       2  0 nov07 ?        00:00:00 [ksoftirqd/2]
+root          26       2  0 nov07 ?        00:00:00 [kworker/2:0H-kblockd]
+root          27       2  0 nov07 ?        00:00:00 [cpuhp/3]
+root          28       2  0 nov07 ?        00:00:00 [idle_inject/3]
+root          29       2  0 nov07 ?        00:00:00 [migration/3]
+root          30       2  0 nov07 ?        00:00:00 [ksoftirqd/3]
+root          32       2  0 nov07 ?        00:00:00 [kworker/3:0H-kblockd]
+root          33       2  0 nov07 ?        00:00:00 [cpuhp/4]
+root          34       2  0 nov07 ?        00:00:00 [idle_inject/4]
+root          35       2  0 nov07 ?        00:00:00 [migration/4]
+root          36       2  0 nov07 ?        00:00:00 [ksoftirqd/4]
+root          38       2  0 nov07 ?        00:00:00 [kworker/4:0H-kblockd]
+root          39       2  0 nov07 ?        00:00:00 [cpuhp/5]
+root          40       2  0 nov07 ?        00:00:00 [idle_inject/5]
+root          41       2  0 nov07 ?        00:00:00 [migration/5]
+root          42       2  0 nov07 ?        00:00:00 [ksoftirqd/5]
+root          44       2  0 nov07 ?        00:00:00 [kworker/5:0H-kblockd]
+root          45       2  0 nov07 ?        00:00:00 [cpuhp/6]
+root          46       2  0 nov07 ?        00:00:00 [idle_inject/6]
+root          47       2  0 nov07 ?        00:00:00 [migration/6]
+root          48       2  0 nov07 ?        00:00:00 [ksoftirqd/6]
+root          50       2  0 nov07 ?        00:00:00 [kworker/6:0H-kblockd]
+root          51       2  0 nov07 ?        00:00:00 [cpuhp/7]
+root          52       2  0 nov07 ?        00:00:00 [idle_inject/7]
+root          53       2  0 nov07 ?        00:00:00 [migration/7]
+root          54       2  0 nov07 ?        00:00:00 [ksoftirqd/7]
+root          56       2  0 nov07 ?        00:00:00 [kworker/7:0H-kblockd]
+root          57       2  0 nov07 ?        00:00:00 [cpuhp/8]
+root          58       2  0 nov07 ?        00:00:00 [idle_inject/8]
+root          59       2  0 nov07 ?        00:00:00 [migration/8]
+root          60       2  0 nov07 ?        00:00:00 [ksoftirqd/8]
+root          62       2  0 nov07 ?        00:00:00 [kworker/8:0H-kblockd]
+root          63       2  0 nov07 ?        00:00:00 [cpuhp/9]
+root          64       2  0 nov07 ?        00:00:00 [idle_inject/9]
+root          65       2  0 nov07 ?        00:00:00 [migration/9]
+root          66       2  0 nov07 ?        00:00:00 [ksoftirqd/9]
+root          68       2  0 nov07 ?        00:00:00 [kworker/9:0H-kblockd]
+root          69       2  0 nov07 ?        00:00:00 [cpuhp/10]
+root          70       2  0 nov07 ?        00:00:00 [idle_inject/10]
+root          71       2  0 nov07 ?        00:00:00 [migration/10]
+root          72       2  0 nov07 ?        00:00:00 [ksoftirqd/10]
+root          74       2  0 nov07 ?        00:00:00 [kworker/10:0H-kblockd]
+root          75       2  0 nov07 ?        00:00:00 [cpuhp/11]
+root          76       2  0 nov07 ?        00:00:00 [idle_inject/11]
+root          77       2  0 nov07 ?        00:00:00 [migration/11]
+root          78       2  0 nov07 ?        00:00:00 [ksoftirqd/11]
+root          80       2  0 nov07 ?        00:00:00 [kworker/11:0H-kblockd]
+root          81       2  0 nov07 ?        00:00:00 [kdevtmpfs]
+root          82       2  0 nov07 ?        00:00:00 [netns]
+root          83       2  0 nov07 ?        00:00:00 [rcu_tasks_kthre]
+root          84       2  0 nov07 ?        00:00:00 [kauditd]
+root          89       2  0 nov07 ?        00:00:00 [khungtaskd]
+root          90       2  0 nov07 ?        00:00:00 [oom_reaper]
+root          91       2  0 nov07 ?        00:00:00 [writeback]
+root          92       2  0 nov07 ?        00:00:00 [kcompactd0]
+root          93       2  0 nov07 ?        00:00:00 [ksmd]
+root          94       2  0 nov07 ?        00:00:00 [khugepaged]
+root         141       2  0 nov07 ?        00:00:00 [kintegrityd]
+root         142       2  0 nov07 ?        00:00:00 [kblockd]
+root         143       2  0 nov07 ?        00:00:00 [blkcg_punt_bio]
+root         144       2  0 nov07 ?        00:00:00 [tpm_dev_wq]
+root         145       2  0 nov07 ?        00:00:00 [ata_sff]
+root         146       2  0 nov07 ?        00:00:00 [md]
+root         147       2  0 nov07 ?        00:00:00 [edac-poller]
+root         148       2  0 nov07 ?        00:00:00 [devfreq_wq]
+root         149       2  0 nov07 ?        00:00:00 [watchdogd]
+root         152       2  0 nov07 ?        00:00:00 [irq/25-AMD-Vi]
+root         155       2  0 nov07 ?        00:00:00 [kswapd0]
+root         156       2  0 nov07 ?        00:00:00 [ecryptfs-kthrea]
+root         158       2  0 nov07 ?        00:00:00 [kthrotld]
+root         159       2  0 nov07 ?        00:00:00 [irq/26-aerdrv]
+root         160       2  0 nov07 ?        00:00:00 [irq/27-aerdrv]
+root         161       2  0 nov07 ?        00:00:00 [irq/29-aerdrv]
+root         162       2  0 nov07 ?        00:00:00 [irq/30-aerdrv]
+root         163       2  0 nov07 ?        00:00:00 [irq/31-aerdrv]
+root         164       2  0 nov07 ?        00:00:00 [irq/32-aerdrv]
+root         171       2  0 nov07 ?        00:00:00 [acpi_thermal_pm]
+root         174       2  0 nov07 ?        00:00:00 [vfio-irqfd-clea]
+root         176       2  0 nov07 ?        00:00:00 [ipv6_addrconf]
+root         185       2  0 nov07 ?        00:00:00 [kstrp]
+root         203       2  0 nov07 ?        00:00:00 [charger_manager]
+root         263       2  0 nov07 ?        00:00:00 [scsi_eh_0]
+root         264       2  0 nov07 ?        00:00:00 [scsi_tmf_0]
+root         265       2  0 nov07 ?        00:00:00 [scsi_eh_1]
+root         266       2  0 nov07 ?        00:00:00 [scsi_tmf_1]
+root         267       2  0 nov07 ?        00:00:00 [scsi_eh_2]
+root         268       2  0 nov07 ?        00:00:00 [scsi_tmf_2]
+root         269       2  0 nov07 ?        00:00:00 [scsi_eh_3]
+root         270       2  0 nov07 ?        00:00:00 [scsi_tmf_3]
+root         271       2  0 nov07 ?        00:00:00 [scsi_eh_4]
+root         272       2  0 nov07 ?        00:00:00 [scsi_tmf_4]
+root         273       2  0 nov07 ?        00:00:00 [scsi_eh_5]
+root         274       2  0 nov07 ?        00:00:00 [scsi_tmf_5]
+root         277       2  0 nov07 ?        00:00:00 [scsi_eh_6]
+root         279       2  0 nov07 ?        00:00:00 [scsi_tmf_6]
+root         280       2  0 nov07 ?        00:00:00 [scsi_eh_7]
+root         281       2  0 nov07 ?        00:00:00 [scsi_tmf_7]
+root         283       2  0 nov07 ?        00:00:00 [scsi_eh_8]
+root         284       2  0 nov07 ?        00:00:00 [scsi_tmf_8]
+root         285       2  0 nov07 ?        00:00:00 [scsi_eh_9]
+root         286       2  0 nov07 ?        00:00:00 [scsi_tmf_9]
+root         287       2  0 nov07 ?        00:00:00 [scsi_eh_10]
+root         288       2  0 nov07 ?        00:00:00 [scsi_tmf_10]
+root         289       2  0 nov07 ?        00:00:00 [scsi_eh_11]
+root         290       2  0 nov07 ?        00:00:00 [scsi_tmf_11]
+root         291       2  0 nov07 ?        00:00:00 [scsi_eh_12]
+root         292       2  0 nov07 ?        00:00:00 [scsi_tmf_12]
+root         293       2  0 nov07 ?        00:00:00 [scsi_eh_13]
+root         294       2  0 nov07 ?        00:00:00 [scsi_tmf_13]
+root         297       2  0 nov07 ?        00:00:00 [scsi_eh_14]
+root         298       2  0 nov07 ?        00:00:00 [scsi_tmf_14]
+root         321       2  0 nov07 ?        00:00:00 [kworker/11:1H-kblockd]
+root         322       2  0 nov07 ?        00:00:00 [kworker/10:1H-kblockd]
+root         347       2  0 nov07 ?        00:00:00 [kworker/2:1H-kblockd]
+root         349       2  0 nov07 ?        00:00:00 [kworker/9:1H-kblockd]
+root         350       2  0 nov07 ?        00:00:03 [jbd2/sda2-8]
+root         351       2  0 nov07 ?        00:00:00 [ext4-rsv-conver]
+root         352       2  0 nov07 ?        00:00:00 [kworker/3:1H-kblockd]
+root         363       2  0 nov07 ?        00:00:00 [kworker/6:1H-kblockd]
+root         367       2  0 nov07 ?        00:00:00 [kworker/4:1H-kblockd]
+root         369       2  0 nov07 ?        00:00:00 [kworker/8:1H-kblockd]
+root         391       2  0 nov07 ?        00:00:00 [kworker/5:1H-kblockd]
+root         393       2  0 nov07 ?        00:00:00 [kworker/0:1H-kblockd]
+root         400       1  0 nov07 ?        00:00:07 /lib/systemd/systemd-journald
+root         419       2  0 nov07 ?        00:00:00 [kworker/1:1H-kblockd]
+root         421       2  0 nov07 ?        00:00:00 [kworker/7:1H-kblockd]
+root         431       1  0 nov07 ?        00:00:01 /lib/systemd/systemd-udevd
+root         432       2  0 nov07 ?        00:00:00 [ccp-1-q0]
+root         433       2  0 nov07 ?        00:00:00 [ccp-1-q1]
+root         434       2  0 nov07 ?        00:00:00 [ccp-1-q2]
+root         435       2  0 nov07 ?        00:00:00 [ccp-1-q3]
+root         436       2  0 nov07 ?        00:00:00 [ccp-1-q4]
+root         445       2  0 nov07 ?        00:00:00 [loop0]
+root         466       2  0 nov07 ?        00:00:00 [loop1]
+root         467       2  0 nov07 ?        00:00:00 [loop2]
+root         469       2  0 nov07 ?        00:00:00 [loop3]
+root         513       2  0 nov07 ?        00:00:00 [loop4]
+root         514       2  0 nov07 ?        00:00:00 [loop5]
+root         515       2  0 nov07 ?        00:00:00 [loop6]
+root         540       2  0 nov07 ?        00:00:00 [cfg80211]
+root         543       2  0 nov07 ?        00:00:00 [cryptd]
+root         549       2  0 nov07 ?        00:00:00 [led_workqueue]
+root         572       2  0 nov07 ?        00:00:00 [loop7]
+root         577       2  0 nov07 ?        00:00:03 [irq/75-iwlwifi:]
+root         578       2  0 nov07 ?        00:00:00 [irq/76-iwlwifi:]
+root         579       2  0 nov07 ?        00:00:00 [irq/77-iwlwifi:]
+root         580       2  0 nov07 ?        00:00:00 [irq/78-iwlwifi:]
+root         581       2  0 nov07 ?        00:00:00 [irq/79-iwlwifi:]
+root         582       2  0 nov07 ?        00:00:00 [irq/80-iwlwifi:]
+root         583       2  0 nov07 ?        00:00:00 [irq/81-iwlwifi:]
+root         584       2  0 nov07 ?        00:00:00 [irq/82-iwlwifi:]
+root         585       2  0 nov07 ?        00:00:00 [irq/83-iwlwifi:]
+root         586       2  0 nov07 ?        00:00:00 [irq/84-iwlwifi:]
+root         587       2  0 nov07 ?        00:00:00 [irq/85-iwlwifi:]
+root         588       2  0 nov07 ?        00:00:00 [irq/86-iwlwifi:]
+root         589       2  0 nov07 ?        00:00:00 [irq/87-iwlwifi:]
+root         590       2  0 nov07 ?        00:00:00 [irq/88-iwlwifi:]
+root         593       2  0 nov07 ?        00:00:00 [amd_iommu_v2]
+root         596       2  0 nov07 ?        00:00:00 [loop8]
+root         622       2  0 nov07 ?        00:00:00 [loop9]
+root         659       2  0 nov07 ?        00:00:00 [kworker/u65:2-rb_allocator]
+root         660       2  0 nov07 ?        00:00:00 [loop10]
+root         661       2  0 nov07 ?        00:00:00 [ttm_swap]
+root         666       2  0 nov07 ?        00:01:06 [gfx]
+root         667       2  0 nov07 ?        00:00:00 [comp_1.0.0]
+root         668       2  0 nov07 ?        00:00:00 [comp_1.1.0]
+root         669       2  0 nov07 ?        00:00:00 [comp_1.2.0]
+root         670       2  0 nov07 ?        00:00:00 [comp_1.3.0]
+root         671       2  0 nov07 ?        00:00:00 [comp_1.0.1]
+root         672       2  0 nov07 ?        00:00:00 [comp_1.1.1]
+root         673       2  0 nov07 ?        00:00:00 [comp_1.2.1]
+root         674       2  0 nov07 ?        00:00:00 [comp_1.3.1]
+root         676       2  0 nov07 ?        00:00:03 [sdma0]
+root         677       2  0 nov07 ?        00:00:00 [sdma1]
+root         678       2  0 nov07 ?        00:00:00 [uvd]
+root         679       2  0 nov07 ?        00:00:00 [uvd_enc0]
+root         680       2  0 nov07 ?        00:00:00 [uvd_enc1]
+root         681       2  0 nov07 ?        00:00:00 [vce0]
+root         682       2  0 nov07 ?        00:00:00 [vce1]
+root         683       2  0 nov07 ?        00:00:00 [vce2]
+root         690       2  0 nov07 ?        00:00:00 [loop11]
+root         738       2  0 nov07 ?        00:00:00 [loop12]
+root         818       2  0 nov07 ?        00:00:00 [loop13]
+root         827       2  0 nov07 ?        00:00:00 [loop14]
+root         830       2  0 nov07 ?        00:00:00 [loop15]
+root         871       2  0 nov07 ?        00:00:00 [loop16]
+root         914       2  0 nov07 ?        00:00:00 [loop17]
+root         915       2  0 nov07 ?        00:00:00 [loop18]
+root         916       2  0 nov07 ?        00:00:00 [loop19]
+root         917       2  0 nov07 ?        00:00:00 [loop20]
+root         918       2  0 nov07 ?        00:00:00 [loop21]
+root         919       2  0 nov07 ?        00:00:00 [loop22]
+systemd+     997       1  0 nov07 ?        00:00:02 /lib/systemd/systemd-resolved
+systemd+     998       1  0 nov07 ?        00:00:00 /lib/systemd/systemd-timesyncd
+root        1003       1  0 nov07 ?        00:00:00 /usr/lib/accountsservice/accounts-daemon
+root        1004       1  0 nov07 ?        00:00:01 /usr/sbin/acpid
+avahi       1008       1  0 nov07 ?        00:00:15 avahi-daemon: running [salva-desktop.local]
+root        1010       1  0 nov07 ?        00:00:00 /usr/lib/bluetooth/bluetoothd
+root        1011       1  0 nov07 ?        00:00:00 /usr/sbin/cron -f
+message+    1013       1  0 nov07 ?        00:00:05 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root        1016       1  0 nov07 ?        00:00:09 /usr/sbin/NetworkManager --no-daemon
+root        1026       1  0 nov07 ?        00:00:02 /usr/sbin/irqbalance --foreground
+root        1027       1  0 nov07 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root        1029       1  0 nov07 ?        00:00:01 /usr/lib/policykit-1/polkitd --no-debug
+syslog      1031       1  0 nov07 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root        1035       1  0 nov07 ?        00:00:04 /usr/lib/snapd/snapd
+root        1037       1  0 nov07 ?        00:00:00 /usr/libexec/switcheroo-control
+root        1041       1  0 nov07 ?        00:00:00 /lib/systemd/systemd-logind
+root        1043       1  0 nov07 ?        00:00:07 /usr/lib/udisks2/udisksd
+root        1045       1  0 nov07 ?        00:00:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+daemon      1046       1  0 nov07 ?        00:00:00 /usr/sbin/atd -f
+avahi       1050    1008  0 nov07 ?        00:00:00 avahi-daemon: chroot helper
+root        1160       1  0 nov07 ?        00:00:00 /usr/sbin/ModemManager --filter-policy=strict
+root        1163       1  0 nov07 ?        00:00:00 /snap/anbox/186/usr/bin/anbox container-manager --data-path=/var/snap/anbox/common/ --android-image=/snap/anbox/186/android.img --daemon
+root        1164       1  0 nov07 ?        00:00:04 /snap/multipass/2857/bin/multipassd --verbosity debug --logger platform
+root        1208       1  0 nov07 ?        00:00:00 /usr/sbin/gdm3
+root        1272       1  0 nov07 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+rtkit       1347       1  0 nov07 ?        00:00:00 /usr/libexec/rtkit-daemon
+root        1442       2  0 nov07 ?        00:00:00 bpfilter_umh
+root        1573       1  0 nov07 ?        00:00:00 /usr/lib/upower/upowerd
+root        1690       2  0 nov07 ?        00:00:00 [loop23]
+nobody      1699    1164  0 nov07 ?        00:00:00 /snap/multipass/2857/usr/sbin/dnsmasq --keep-in-foreground --strict-order --bind-interfaces --pid-file --domain=multipass --local=/multipass/ --except-interface=lo --interface=mpqemubr0 --listen-address=10.146.45.1 --dhcp-no-override --dhcp-authoritative --dhcp-leasefile=/var/snap/multipass/common/data/multipassd/network/dnsmasq.leases --dhcp-hostsfile=/var/snap/multipass/common/data/multipassd/network/dnsmasq.hosts --dhcp-range 10.146.45.2,10.146.45.254,infinite --conf-file=/var/snap/multipass/common/data/multipassd/network/dnsmasq-TJ1164.conf
+geoclue     1791       1  0 nov07 ?        00:00:02 /usr/libexec/geoclue
+colord      1963       1  0 nov07 ?        00:00:00 /usr/libexec/colord
+root        2102    1208  0 nov07 ?        00:00:00 gdm-session-worker [pam/gdm-password]
+salva       2111       1  0 nov07 ?        00:00:01 /lib/systemd/systemd --user
+salva       2112    2111  0 nov07 ?        00:00:00 (sd-pam)
+salva       2117    2111  0 nov07 ?        00:07:18 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+salva       2119    2111  0 nov07 ?        00:00:00 /usr/libexec/tracker-miner-fs
+salva       2123    2111  0 nov07 ?        00:00:04 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+salva       2126    2111  0 nov07 ?        00:00:00 /usr/libexec/gvfsd
+salva       2130       1  0 nov07 ?        00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+salva       2135    2111  0 nov07 ?        00:00:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+salva       2154    2111  0 nov07 ?        00:00:01 /usr/libexec/gvfs-udisks2-volume-monitor
+salva       2161    2111  0 nov07 ?        00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+salva       2167    2111  0 nov07 ?        00:00:03 /usr/libexec/goa-daemon
+root        2169       2  0 nov07 ?        00:00:00 [krfcommd]
+salva       2176    2111  0 nov07 ?        00:00:00 /usr/libexec/goa-identity-service
+salva       2181    2111  0 nov07 ?        00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+salva       2186    2111  0 nov07 ?        00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+salva       2190    2111  0 nov07 ?        00:00:00 /usr/libexec/gvfs-afc-volume-monitor
+salva       2205    2102  0 nov07 tty2     00:00:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+salva       2207    2205  2 nov07 tty2     00:18:14 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+salva       2241    2205  0 nov07 tty2     00:00:00 /usr/libexec/gnome-session-binary --systemd --systemd --session=ubuntu
+salva       2309    2241  0 nov07 ?        00:00:00 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+salva       2346    2111  0 nov07 ?        00:00:00 /usr/libexec/at-spi-bus-launcher
+salva       2351    2346  0 nov07 ?        00:00:01 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+salva       2374    2111  0 nov07 ?        00:00:00 /usr/libexec/gnome-session-ctl --monitor
+salva       2381    2111  0 nov07 ?        00:00:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+salva       2395    2111  2 nov07 ?        00:24:59 /usr/bin/gnome-shell
+salva       2439    2395  0 nov07 ?        00:00:00 ibus-daemon --panel disable --xim
+salva       2443    2439  0 nov07 ?        00:00:00 /usr/libexec/ibus-memconf
+salva       2444    2439  0 nov07 ?        00:00:00 /usr/libexec/ibus-extension-gtk3
+salva       2446    2111  0 nov07 ?        00:00:00 /usr/libexec/ibus-x11 --kill-daemon
+salva       2448    2111  0 nov07 ?        00:00:00 /usr/libexec/ibus-portal
+salva       2461    2111  0 nov07 ?        00:00:04 /usr/libexec/at-spi2-registryd --use-gnome-session
+salva       2465    2111  0 nov07 ?        00:00:00 /usr/libexec/xdg-permission-store
+salva       2467    2111  0 nov07 ?        00:00:00 /usr/libexec/gnome-shell-calendar-server
+salva       2478    2111  0 nov07 ?        00:00:00 /usr/libexec/evolution-source-registry
+whoopsie    2493       1  0 nov07 ?        00:00:00 /usr/bin/whoopsie -f
+kernoops    2502       1  0 nov07 ?        00:00:01 /usr/sbin/kerneloops --test
+kernoops    2512       1  0 nov07 ?        00:00:01 /usr/sbin/kerneloops
+salva       2524    2111  0 nov07 ?        00:00:00 /usr/libexec/dconf-service
+salva       2527    2111  0 nov07 ?        00:00:00 /usr/libexec/gvfsd-metadata
+salva       2536    2111  0 nov07 ?        00:00:01 /usr/libexec/evolution-calendar-factory
+salva       2550    2111  0 nov07 ?        00:00:00 /usr/libexec/evolution-addressbook-factory
+root        2579       1  0 nov07 ?        00:00:03 /usr/bin/windscribe start
+salva       2585    2126  0 nov07 ?        00:00:00 /usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/gvfs/exec_spaw/0
+salva       2598    2111  0 nov07 ?        00:00:01 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+salva       2621    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-a11y-settings
+salva       2622    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-color
+salva       2623    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-datetime
+salva       2625    2111  0 nov07 ?        00:00:01 /usr/libexec/gsd-housekeeping
+salva       2628    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-keyboard
+salva       2630    2111  0 nov07 ?        00:00:02 /usr/libexec/gsd-media-keys
+salva       2638    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-power
+salva       2639    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-print-notifications
+salva       2642    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-rfkill
+salva       2645    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-screensaver-proxy
+salva       2646    2111  0 nov07 ?        00:00:01 /usr/libexec/gsd-sharing
+salva       2648    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-smartcard
+salva       2650    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-sound
+salva       2652    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-usb-protection
+salva       2654    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-wacom
+salva       2656    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-wwan
+salva       2667    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-xsettings
+salva       2668    2381  0 nov07 ?        00:00:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+salva       2674    2381  0 nov07 ?        00:00:00 /usr/libexec/gsd-disk-utility-notify
+salva       2718    2439  0 nov07 ?        00:00:00 /usr/libexec/ibus-engine-simple
+salva       2738    2111  0 nov07 ?        00:00:07 /snap/snap-store/481/usr/bin/snap-store --gapplication-service
+salva       2758    2111  0 nov07 ?        00:00:00 /usr/libexec/xdg-document-portal
+salva       2852    2111  0 nov07 ?        00:00:00 /usr/libexec/gsd-printer
+salva       3847    2381  0 nov07 ?        00:00:00 update-notifier
+root        6396    2102  0 nov07 ?        00:00:00 gdm-session-worker [pam/gdm-password]
+salva       7299    2126  0 nov07 ?        00:00:00 /usr/libexec/gvfsd-network --spawner :1.3 /org/gtk/gvfs/exec_spaw/1
+salva       7324    2126  0 nov07 ?        00:00:00 /usr/libexec/gvfsd-dnssd --spawner :1.3 /org/gtk/gvfs/exec_spaw/3
+root       11400       2  0 nov07 ?        00:00:00 [kworker/u65:1-rb_allocator]
+root       11748    2102  0 nov07 ?        00:00:00 gdm-session-worker [pam/gdm-password]
+root       12255    2102  0 nov07 ?        00:00:00 gdm-session-worker [pam/gdm-password]
+salva      16205    2111  0 nov07 ?        00:00:00 /usr/bin/gnome-calendar --gapplication-service
+salva      18789    2111  0 nov07 ?        00:00:00 /usr/libexec/xdg-desktop-portal
+salva      18793    2111  0 nov07 ?        00:00:00 /usr/libexec/xdg-desktop-portal-gtk
+salva      20528    2111  0 nov07 ?        00:00:00 /usr/libexec/evinced
+salva      21980    2111  0 nov07 ?        00:00:52 evince /home/salva/2Info/SO/Practicas/SO-P-Todos_GuiaPráctcas.pdf
+root       32652       1  0 00:00 ?        00:00:00 /usr/sbin/cupsd -l
+root       32653       1  0 00:00 ?        00:00:00 /usr/sbin/cups-browsed
+root       38551       2  0 01:14 ?        00:00:00 [kworker/6:0-events]
+root       40334       2  0 01:53 ?        00:00:00 [kworker/2:0-events]
+root       40343       2  0 01:53 ?        00:00:00 [kworker/0:0-rcu_par_gp]
+root       40351       2  0 01:53 ?        00:00:00 [kworker/7:1-rcu_par_gp]
+root       41526       2  0 02:06 ?        00:00:00 [kworker/8:1-events]
+salva      41535    2111  0 02:06 ?        00:00:06 /usr/libexec/gnome-terminal-server
+salva      41543   41535  0 02:06 pts/0    00:00:01 fish
+root       42787       2  0 02:19 ?        00:00:00 [kworker/5:1-events]
+root       42798       2  0 02:19 ?        00:00:00 [kworker/3:10-events]
+root       42845       2  0 02:22 ?        00:00:00 [kworker/u64:2-events_unbound]
+salva      43623    2126  0 02:26 ?        00:00:00 /usr/libexec/gvfsd-http --spawner :1.3 /org/gtk/gvfs/exec_spaw/4
+root       44503       2  0 02:30 ?        00:00:00 [kworker/u64:0+events_unbound]
+root       44504       2  0 02:30 ?        00:00:00 [kworker/1:0-events]
+root       44718       2  0 02:31 ?        00:00:00 [kworker/11:3-rcu_par_gp]
+salva      44970    2395  1 02:32 ?        00:00:10 /snap/spotify/42/usr/share/spotify/spotify
+salva      45069   44970  0 02:32 ?        00:00:00 /snap/spotify/42/usr/share/spotify/spotify --type=zygote --no-zygote-sandbox --no-sandbox --log-file=/snap/spotify/42/usr/share/spotify/debug.log --log-severity=disable --product-version=Spotify/1.1.42.622 --lang=en
+salva      45070   44970  0 02:32 ?        00:00:00 /snap/spotify/42/usr/share/spotify/spotify --type=zygote --no-sandbox --log-file=/snap/spotify/42/usr/share/spotify/debug.log --log-severity=disable --product-version=Spotify/1.1.42.622 --lang=en
+salva      45098   45069  0 02:32 ?        00:00:00 /snap/spotify/42/usr/share/spotify/spotify --type=gpu-process --field-trial-handle=16507284381050586587,557469701209361822,131072 --enable-features=CastMediaRouteProvider --disable-features=OutOfBlinkCors --no-sandbox --log-file=/snap/spotify/42/usr/share/spotify/debug.log --log-severity=disable --product-version=Spotify/1.1.42.622 --lang=en --gpu-preferences=MAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAQAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA= --use-gl=swiftshader-webgl --log-file=/snap/spotify/42/usr/share/spotify/debug.log --shared-files
+salva      45102   44970  0 02:32 ?        00:00:00 /snap/spotify/42/usr/share/spotify/spotify --type=utility --utility-sub-type=network.mojom.NetworkService --field-trial-handle=16507284381050586587,557469701209361822,131072 --enable-features=CastMediaRouteProvider --disable-features=OutOfBlinkCors --lang=es --service-sandbox-type=network --no-sandbox --log-file=/snap/spotify/42/usr/share/spotify/debug.log --log-severity=disable --product-version=Spotify/1.1.42.622 --lang=en --log-file=/snap/spotify/42/usr/share/spotify/debug.log --shared-files=v8_snapshot_data:100
+salva      45114   45070  1 02:32 ?        00:00:08 /snap/spotify/42/usr/share/spotify/spotify --type=renderer --no-sandbox --log-file=/snap/spotify/42/usr/share/spotify/debug.log --field-trial-handle=16507284381050586587,557469701209361822,131072 --enable-features=CastMediaRouteProvider --disable-features=OutOfBlinkCors --disable-gpu-compositing --lang=es --log-file=/snap/spotify/42/usr/share/spotify/debug.log --log-severity=disable --product-version=Spotify/1.1.42.622 --disable-spell-checking --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --shared-files=v8_snapshot_data:100
+root       45509       2  0 02:32 ?        00:00:00 [kworker/3:1-rcu_par_gp]
+root       45704       2  0 02:33 ?        00:00:00 [kworker/7:0-events]
+root       45714       2  0 02:33 ?        00:00:00 [kworker/9:3-events]
+root       45789       2  0 02:33 ?        00:00:00 [kworker/4:5-memcg_kmem_cache]
+root       45795       2  0 02:33 ?        00:00:00 [kworker/4:6-events]
+root       45802       2  0 02:33 ?        00:00:00 [kworker/8:0-events]
+root       45805       2  0 02:33 ?        00:00:00 [kworker/0:1-events]
+root       45807       2  0 02:33 ?        00:00:00 [kworker/6:4-events]
+root       45840       2  0 02:33 ?        00:00:00 [kworker/5:0-rcu_par_gp]
+salva      45944    2395  1 02:33 ?        00:00:06 /usr/share/typora/Typora
+salva      45949   45944  0 02:33 ?        00:00:00 /usr/share/typora/Typora --type=zygote --no-zygote-sandbox
+salva      45950   45944  0 02:33 ?        00:00:00 /usr/share/typora/Typora --type=zygote
+salva      45952   45950  0 02:33 ?        00:00:00 /usr/share/typora/Typora --type=zygote
+salva      45986   45949  1 02:33 ?        00:00:05 /usr/share/typora/Typora --type=gpu-process --field-trial-handle=7222591299524507001,6276015091653841888,131072 --enable-features=WebComponentsV0Enabled --disable-features=SpareRendererForSitePerProcess --gpu-preferences=MAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAQAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA= --shared-files
+salva      45989   45944  0 02:33 ?        00:00:00 /usr/share/typora/Typora --type=utility --field-trial-handle=7222591299524507001,6276015091653841888,131072 --enable-features=WebComponentsV0Enabled --disable-features=SpareRendererForSitePerProcess --lang=es --service-sandbox-type=network --shared-files=v8_snapshot_data:100
+salva      46018   45944  3 02:33 ?        00:00:16 /usr/share/typora/Typora --type=renderer --field-trial-handle=7222591299524507001,6276015091653841888,131072 --enable-features=WebComponentsV0Enabled --disable-features=SpareRendererForSitePerProcess --lang=es --app-path=/usr/share/typora/resources/app --node-integration --node-integration-in-worker --webview-tag --no-sandbox --no-zygote --background-color=#FFFFFF --enable-websql --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100 --tyopt={"isMaximized":false,"isFullScreen":false,"enableInlineMath":true,"enableHighlight":false,"enableSubscript":false,"enableSuperscript":false,"enableDiagram":true,"copyMarkdownByDefault":true,"showLineNumbersForFence":false,"noPairingMatch":false,"autoPairExtendSymbol":false,"expandSimpleBlock":false,"headingStyle":0,"ulStyle":0,"olStyle":0,"scrollWithCursor":true,"useRelativePathForImg":false,"allowImageUpload":false,"defaultImageStorage":null,"applyImageMoveForWeb":false,"applyImageMoveForLocal":true,"preferCRLF":false,"sidebarTab":"","useTreeStyle":false,"sortType":0,"strictMarkdown":true,"noLineWrapping":false,"prettyIndent":false,"twoHyphensToEm":false,"indentSize":2,"codeIndentSize":4,"enableAutoSave":false,"saveFileOnSwitch":false,"presetSpellCheck":"auto","autoCorrectMisspell":false,"monocolorEmoji":false,"passiveEvents":true,"preLinebreakOnExport":true,"ignoreLineBreak":false,"sendAnonymousUsage":true,"uuid":"682d6f08-442c-46fa-a895-a70be6f6a902","appVersion":"0.9.96","instance":"40981165-23d4-4082-b631-f169b0769f28","userLocale":"es-ES","appLocale":"es","wordCountDelimiter":0,"userPath":"/home/salva","userDataPath":"/home/salva/.config/Typora","tempPath":"/tmp","documentsPath":"/home/salva/Documentos","curTheme":"github.css","framelessWindow":false,"showStatusBar":true,"wordsPerMinute":382,"maxFetchCountOnFileList":500,"autoSaveTimer":3,"autoHideMenuBar":false,"searchService":[["Search with Google","https://google.com/search?q=%s"]],"zoomFactor":1,"autoEscapeImageURL":false,"moveColLeftKey":"alt+left","moveColRightKey":"alt+right","moveRowUpKey":"alt+up","moveRowDownKey":"alt+down","mathFormatOnCopy":"svg","noWarnigUploadDisabled":false,"noWarnigForMoveFile":false,"noWarnigForMoveFileToList":false,"noWarnigForDeleteFile":false,"noWarnigForTypeWriterMode":false,"noWarnigForFocusMode":false,"noWarningForPathWatchError":false,"hasUpdates":false}
+root       46150       2  0 02:34 ?        00:00:00 [kworker/11:4-events]
+salva      46188    2111  0 02:36 ?        00:00:02 /usr/bin/nautilus --gapplication-service
+root       46230       2  0 02:36 ?        00:00:00 [kworker/u64:1-events_unbound]
+root       46255       2  0 02:36 ?        00:00:00 [kworker/9:4-events]
+root       46268       2  0 02:36 ?        00:00:00 [kworker/1:2-events]
+root       46269       2  0 02:36 ?        00:00:00 [kworker/2:3-events]
+root       46272       2  0 02:36 ?        00:00:00 [kworker/10:5-events]
+root       46298       2  0 02:36 ?        00:00:00 [kworker/10:6-events]
+salva      46711    2111  0 02:41 ?        00:00:00 /usr/libexec/tracker-store
+daemon     46733    1046  0 02:41 ?        00:00:00 /usr/sbin/atd -f
+salva      46748   46733  0 02:41 ?        00:00:00 sh
+salva      46749   46748  0 02:41 ?        00:00:00 bash 4.5.sh
+salva      46754   46749  0 02:41 ?        00:00:00 ps -ef
+Mi pid = 46749
