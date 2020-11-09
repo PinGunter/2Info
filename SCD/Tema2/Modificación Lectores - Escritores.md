@@ -64,7 +64,7 @@ De esta manera si vemos que hay hebras escritores esperando en la cola de la con
 
 Este contador lo gestiona la hebra lectora cuando entra y cuando sale de la estructura. Cuando entra, si hay escritores esperando quiere decir que es una hebra del conjunto extra (aumentamos el contador). Análogamente cuando sale de la estructura comprueba que hay escritores esperando y se disminuye el contador en caso afirmativo.
 
-Cuando las hebras lectoras extras se salgan de la estructura avisan a la hebra escritora, esto es cuando el contador es 0.
+Así cuando salgan todas las hebras lectoras, se avisa a los escritores.
 
 Además también añadimos una salida por pantalla para saber cuando un escritor está esperando.
 
