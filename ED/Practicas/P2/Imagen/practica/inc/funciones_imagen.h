@@ -45,7 +45,7 @@ Imagen leerVectorPPM(byte * vector, int filas, int columnas);
  * @pre 
  * @post todos los parámetros se modifican menos @a img
  **/
-void escribirVectorPGM(const Imagen &img, byte * vector, int &filas, int &columnas);
+void escribirVectorPGM(const Imagen &img, byte * vector, int filas, int columnas);
 
 /**
  * @brief función que permite convertir una imagen PPM a una imagen PGM

@@ -23,27 +23,28 @@ void error(string mensaje){
 }
 
 /*     FUNCIONES SOBRE EL TIPO IMAGEN  */
-Imagen leerVectorPGM(byte * vector, int filas, int columnas){
-    Imagen imagen(filas,columnas);
-    for (int i=0; i < filas; i++){
-        for (int j=0; j < columnas; j++){
-            imagen.asigna_pixel(i,j,vector[i*columnas+j]);
-        }
-    }
-    return imagen;
-}
+//Innecesaria teniendo el constructor con el vector 
+// Imagen leerVectorPGM(byte * vector, int filas, int columnas){
+//     Imagen imagen(filas,columnas);
+//     for (int i=0; i < filas; i++){
+//         for (int j=0; j < columnas; j++){
+//             imagen.asigna_pixel(i,j,vector[i*columnas+j]);
+//         }
+//     }
+//     return imagen;
+// }
 //----------------------------------------------------------------
 Imagen leerVectorPPM(byte * vector, int filas, int columnas){
     byte * vector_gris = new byte[filas*columnas];
     int j=0; 
     for (int i=0; i < filas*columnas; i++)
         vector_gris[i] = vector[j++]*ROJO_GRIS + vector[j++] * VERDE_GRIS + vector[j++] * AZUL_GRIS;
-    Imagen gris = leerVectorPGM(vector_gris,filas,columnas);
+    Imagen gris(filas,columnas,vector_gris);
     delete [] vector_gris;
     return gris;
 }
 //----------------------------------------------------------------
-void escribirVectorPGM(const Imagen & img, byte * vector, int & filas, int & columnas){
+void escribirVectorPGM(const Imagen & img, byte * vector, int filas, int columnas){
     filas = img.num_filas();
     columnas = img.num_columnas();
     for (int i=0; i < filas; i++){

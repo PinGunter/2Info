@@ -134,6 +134,15 @@ public:
   Imagen(const Imagen & otra);
 
   /**
+   * @brief constructor de la clase imagen
+   * @param filas el numero de filas que va a tener
+   * @param columnas el numero de columnas que va a tener la imagen
+   * @param vector vector unidimensional donde se almacenan todos los pixeles
+   * @return la imagen creada a partir del vector
+   */
+  Imagen (int filas, int columnas, byte * vector);
+
+  /**
    * @brief destructor de la clase Imagen.
    * @post destruye la imagen, libera la memoria, volverá a usarse con una llamada al constructor
    **/

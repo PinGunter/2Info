@@ -162,6 +162,17 @@ Imagen::Imagen(const Imagen &otra){
     copiar(otra);
 }
 
+Imagen::Imagen (int filas, int columnas, byte * vector){
+    imagen = nullptr;
+    reservar(filas,columnas);
+    for (int i=0; i < filas; i++){
+        for (int j=0; j < columnas; j++){
+            asigna_pixel(i,j,vector[i*columnas+j]);
+        }
+    }
+}
+
+
 Imagen::~Imagen(){
     liberar();
 }
