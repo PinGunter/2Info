@@ -195,16 +195,20 @@ int Imagen::num_columnas() const{
 }
 
 void Imagen::asigna_pixel(int fila, int columna, byte valor){
-    if (!(fila >= 0 && fila < num_filas() && columna >= 0 && columna < num_columnas()))
-        std::cout << "fila:" << fila << endl << "columna:" << columna << endl;
+    if (!(fila >= 0 && fila < num_filas() && columna >= 0 && columna < num_columnas())){
+        std::cout << "filas: " << num_filas() << endl << "columnas: " << num_columnas() << endl;
+        std::cout << "falla fila:" << fila << endl << "falla columna:" << columna << endl;
+    }
     assert(fila >= 0 && fila < num_filas() && columna >= 0 && columna < num_columnas());
     assert(valor >= 0 && valor <= 255);
     imagen[fila][columna] = valor;
 }
 
 byte Imagen::valor_pixel(int fila, int columna) const{
-  if (!(fila >= 0 && fila < num_filas() && columna >= 0 && columna < num_columnas()))
-        std::cout << "fila:" << fila << endl << "columna:" << columna << endl;
+    if (!(fila >= 0 && fila < num_filas() && columna >= 0 && columna < num_columnas())){
+        std::cout << "filas: " << num_filas() << endl << "columnas: " << num_columnas() << endl;
+        std::cout << "falla fila:" << fila << endl << "falla columna:" << columna << endl;
+    }
     assert(fila >= 0 && fila < num_filas() && columna >= 0 && columna < num_columnas());
     return imagen[fila][columna];
 }

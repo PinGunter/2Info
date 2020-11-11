@@ -64,7 +64,6 @@ int main(int argc, char *argv[])
 		cont++;
 		leidos = read(fdin,buffer,num_bytes+1);
 	}
-	//ponemos al principio el puntero de escritura
 	close(fdin);
 	close(fdout);
 	return 0;

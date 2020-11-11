@@ -18,9 +18,10 @@ using namespace std;
  * @param args el vector de los parametros pasados en la ejecucion, esto es imagen_entrada,imagen_salida,min,max
  **/
 int main(int argc, char *args[]){   
-    byte min = (byte) atoi(args[3]);
-    byte max = (byte) atoi(args[4]);
-    //umbralizar_escala_grises(args[1],args[2],atoi(args[3]),atoi(args[4]));
-    contrastar(args[1],args[2],min,max);
+    // int min =  atoi(args[3]);
+    // int max =  atoi(args[4]);
+    // umbralizar_escala_grises(args[1],args[2],atoi(args[3]),atoi(args[4]));
+    //contrastar(args[1],args[2],min,max);
+    zoom(args[1],args[2],atoi(args[3]),atoi(args[4]),atoi(args[5]),atoi(args[6]));
 }
 

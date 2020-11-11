@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <imagenES.h>
+#include <cmath>
 
 /** FUNCIONES AUXILIARES **/
 /**
@@ -80,7 +81,31 @@ void umbralizar_escala_grises(const char* original, const char * salida,int umbr
  * @param maximo final del intervalo
  * @post se escribe en disco la imagen @a salida
  */
-void contrastar(const char * original, const char * salida, byte minimo, byte maximo);
+void contrastar(const char * original, const char * salida, int minimo, int maximo);
+
+
+/**
+ * @brief función para escribir en el disco un objeto de la clase imagen
+ * @param img imagen a escribir en disco
+ * @param nombre_archivo el nombre del archivo que se guarda
+ * @pre @a img deber se una imagen inicializada y valida
+ * @pre @a nombre_archivo debe ser un nombre valido
+ * @return true si no ha habido fallos, false en caso contrario
+ */
+bool escribirImagen(const Imagen & img, const char * nombre_archivo);
+
+
+/**
+ * @brief funcion para realizar zoom en una porción cuadrada de la imagen
+ * @param entrada nombre del archivo de la imagen de entrada
+ * @param salida nombre del archivo de la imagen de salida
+ * @param x1 posicion x de la esquina superior izquierda
+ * @param y1 posicion y de la esquina superior izquierda
+ * @param x2 posicion x de la esquina inferior derecha
+ * @param y2 posicion y de la esquina inferior derecha
+ * @pre x1 < x2 y y1 < y2. Además debe ser cuadrado, |x1-x2| == |y1-y2|
+ */
+void zoom(const char * entrada, const char * salida, int x1, int y1, int x2, int y2);
 
 #endif
 // fin archivo

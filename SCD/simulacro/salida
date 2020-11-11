@@ -1,0 +1,914 @@
+--------------------------------------------------------
+-------- Problema del estanco y los fumadores ---------
+--------------------------------------------------------
+Estanquero : empieza a producir ingrediente (12 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (42 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (140 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (49 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (32 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (13 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (191 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (82 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (87 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (72 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (41 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (39 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2 se va a dormir
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (71 milisegundos)
+Recogido material 1
+Fumador 1 se va a dormir
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Despertando al fumador 1
+Estanquero : empieza a producir ingrediente (23 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (39 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (70 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (146 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (38 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (172 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Despertando al fumador 2
+Estanquero : empieza a producir ingrediente (32 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (98 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (73 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (116 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (16 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (32 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (14 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (120 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (18 milisegundos)
+Recogido material 0
+Fumador 0 se va a dormir
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (43 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (182 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Despertando al fumador 0
+Estanquero : empieza a producir ingrediente (70 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (148 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (50 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (133 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (57 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (148 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (56 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (22 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (73 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (122 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (64 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (85 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (32 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (197 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (58 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (195 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (34 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (156 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (60 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (120 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (51 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (107 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (92 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (152 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (58 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (168 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (66 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (153 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (17 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (156 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (52 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (49 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (47 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (196 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (61 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (94 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (86 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (60 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (97 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (159 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (26 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (128 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (92 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (88 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (37 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (124 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (57 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (108 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (26 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (162 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (52 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (126 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (63 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (74 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (23 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (34 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (76 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (123 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (66 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (80 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (73 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (197 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (54 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (179 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (45 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (70 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (19 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (55 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (10 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (29 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (32 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (116 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (18 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (169 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (79 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (172 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (67 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (158 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (30 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (154 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (43 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (79 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (60 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (61 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (89 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (189 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (78 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (157 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (41 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (146 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (84 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (75 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (56 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (67 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (48 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (188 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (67 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (149 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (40 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (99 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (15 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (129 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (74 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (48 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (67 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (89 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (45 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (183 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (95 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (200 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (76 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (166 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (94 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (94 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (42 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (25 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (63 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (132 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (35 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (176 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (26 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (136 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (17 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (168 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (60 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (143 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (87 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (45 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (93 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (101 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (25 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (20 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (52 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (162 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (39 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (156 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (40 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (48 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (64 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (96 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (70 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (156 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (51 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (101 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (55 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (62 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (38 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (23 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (47 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (164 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (31 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (103 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (87 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (109 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (21 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (175 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (92 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (128 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (17 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (46 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (12 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (147 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (98 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (98 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (99 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (137 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (71 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (34 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (29 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (145 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (49 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (197 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (48 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (48 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (81 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (123 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (46 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (85 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (85 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (188 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (29 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (117 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (91 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (36 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (23 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (33 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (99 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (107 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (72 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (53 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (96 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (112 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (24 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (87 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (36 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (128 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (10 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (93 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (42 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (76 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (58 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (23 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (94 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (64 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (89 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (132 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (82 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (121 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (48 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (92 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (84 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Recogido material 0
+Fumador 0  : empieza a fumar (39 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (11 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (140 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (50 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (160 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (40 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (195 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (94 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (62 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (33 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (124 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (51 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (46 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (88 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (43 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (65 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (163 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (27 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (199 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (31 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (35 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (91 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (135 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (57 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (181 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (37 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (35 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (31 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (105 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (44 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (143 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (75 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (27 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (86 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (180 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (59 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (93 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (61 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (60 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (99 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (162 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (13 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (70 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (100 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (185 milisegundos)
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (35 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (164 milisegundos)
+Estanquero : termina de producir ingrediente 2
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (86 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Recogido material 2
+Fumador 2  : empieza a fumar (59 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (71 milisegundos)
+Recogido material 1
+Fumador 1  : empieza a fumar (148 milisegundos)
+Fumador 2  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (68 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (99 milisegundos)
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (22 milisegundos)
+Estanquero : termina de producir ingrediente 0
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (152 milisegundos)
+Puesto ingrediente numero: 0
+Estanquero : empieza a producir ingrediente (38 milisegundos)
+Recogido material 0
+Fumador 0  : empieza a fumar (63 milisegundos)
+Estanquero : termina de producir ingrediente 1
+Puesto ingrediente numero: 1
+Estanquero : empieza a producir ingrediente (38 milisegundos)
+Fumador 0  : termina de fumar, comienza espera de ingrediente.
+Estanquero : termina de producir ingrediente 2
+Fumador 1  : termina de fumar, comienza espera de ingrediente.
+Recogido material 1
+Fumador 1  : empieza a fumar (51 milisegundos)
+Puesto ingrediente numero: 2
+Estanquero : empieza a producir ingrediente (90 milisegundos)
+Recogido material 2
+Fumador 2  : empieza a fumar (81 milisegundos)
