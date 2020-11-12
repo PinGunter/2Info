@@ -72,6 +72,17 @@ void colorAGris(const char *nombre_ppm, const char *nombre_pgm)
     delete[] pgm;
 }
 
+
+//------------------------
+bool escribirImagen(const Imagen &img, const char *nombre_archivo)
+{
+    byte *vector_salida = new byte[img.num_filas() * img.num_columnas()];
+    escribirVectorPGM(img, vector_salida, img.num_filas(), img.num_columnas());
+    bool ok = EscribirImagenPGM(nombre_archivo, vector_salida, img.num_filas(), img.num_columnas());
+    delete[] vector_salida;
+    return ok;
+}
+
 //----------------------------------------------------------------
 
 void umbralizar_escala_grises(const char *original, const char *salida, int umbral_min, int umbral_max)
@@ -96,6 +107,63 @@ void umbralizar_escala_grises(const char *original, const char *salida, int umbr
     escribirImagen(img_salida, salida);
     delete[] vector_original;
 }
+
+//------------------------------------------------------
+
+void zoom(const char *entrada, const char *salida, int x1, int y1, int x2, int y2)
+{
+    if (x1 >= x2 || y1 >= y2)
+        error("Posiciones zoom incorrectas");
+    else if ((x2 - x1) != (y2 - y1))
+        error("El recorte no es cuadrado");
+
+    int tam_recorte = x2 - x1;           // N
+    int dimension = 2 * tam_recorte - 1; // 2N+1
+    int filas, columnas;
+    cout << dimension << endl;
+
+    //lectura de datos
+    byte *vector_original = LeerImagenPGM(entrada, filas, columnas);
+    Imagen original(filas, columnas, vector_original);
+
+    Imagen interpo_colum(tam_recorte, dimension);
+    //Primero copiamos los valores originales
+    for (int i = 0, x_orig = x1; i < tam_recorte; i++){
+        for (int j = 0, y_orig = y1; j < dimension; j += 2){
+            interpo_colum.asigna_pixel(i, j, original.valor_pixel(x_orig, y_orig++));
+        }
+        x_orig++;
+    }
+
+    //Ahora rellenamos las columnas con la media
+    for (int i = 0; i < tam_recorte; i++){
+        for (int j = 1; j < dimension; j += 2){
+            int media = (interpo_colum.valor_pixel(i, j - 1) + interpo_colum.valor_pixel(i, j + 1)) / 2.0;
+            interpo_colum.asigna_pixel(i, j, media);
+        }
+    }
+    
+    //terminamos la imagen con las filas
+    Imagen final(dimension, dimension);
+
+    for (int i=0; i < dimension; i+=2){
+        for (int j=0; j < dimension; j++){
+            final.asigna_pixel(i,j,interpo_colum.valor_pixel(i/2,j));
+        }
+    }
+
+    for (int i=1; i < dimension; i+=2){
+        for (int j=0; j < dimension; j++){
+            int media = (final.valor_pixel(i-1,j) + final.valor_pixel(i+1,j)) / 2.0;
+            final.asigna_pixel(i,j,media);
+        }
+    }
+
+    escribirImagen(final, salida);
+
+    delete[] vector_original;
+}
+
 
 //----------------------------------------------------------------
 
@@ -152,68 +220,46 @@ void contrastar(const char *original, const char *salida, int minimo, int maximo
     delete[] vector_original;
 }
 
-//--------
+//---------------------------------
 
-//------------------------
-bool escribirImagen(const Imagen &img, const char *nombre_archivo)
-{
-    byte *vector_salida = new byte[img.num_filas() * img.num_columnas()];
-    escribirVectorPGM(img, vector_salida, img.num_filas(), img.num_columnas());
-    bool ok = EscribirImagenPGM(nombre_archivo, vector_salida, img.num_filas(), img.num_columnas());
-    delete[] vector_salida;
-    return ok;
-}
-
-void zoom(const char *entrada, const char *salida, int x1, int y1, int x2, int y2)
-{
-    if (x1 >= x2 || y1 >= y2)
-        error("Posiciones zoom incorrectas");
-    else if ((x2 - x1) != (y2 - y1))
-        error("El recorte no es cuadrado");
-
-    int tam_recorte = x2 - x1;           // N
-    int dimension = 2 * tam_recorte - 1; // 2N+1
-    int filas, columnas;
-    cout << dimension << endl;
-
-    //lectura de datos
-    byte *vector_original = LeerImagenPGM(entrada, filas, columnas);
-    Imagen original(filas, columnas, vector_original);
-
-    Imagen interpo_colum(tam_recorte, dimension);
-    //Primero copiamos los valores originales
-    for (int i = 0, x_orig = x1; i < tam_recorte; i++){
-        for (int j = 0, y_orig = y1; j < dimension; j += 2){
-            interpo_colum.asigna_pixel(i, j, original.valor_pixel(x_orig, y_orig++));
-        }
-        x_orig++;
-    }
-
-    //Ahora rellenamos las columnas con la media
-    for (int i = 0; i < tam_recorte; i++){
-        for (int j = 1; j < dimension; j += 2){
-            int media = (interpo_colum.valor_pixel(i, j - 1) + interpo_colum.valor_pixel(i, j + 1)) / 2.0;
-            interpo_colum.asigna_pixel(i, j, media);
-        }
+void morphing(const char * fuente, const char * destino, const char * basename, int pasos){
+    
+    //comprobacion de errores
+    if (pasos <= 0){
+        error("El número de pasos debe ser mayor que 0");
     }
     
-    //terminamos la imagen con las filas
-    Imagen final(dimension, dimension);
-
-    for (int i=0; i < dimension; i+=2){
-        for (int j=0; j < dimension; j++){
-            final.asigna_pixel(i,j,interpo_colum.valor_pixel(i/2,j));
-        }
+    int filas1, filas2, columnas1, columnas2;
+    byte * v_fuente = LeerImagenPGM(fuente,filas1,columnas1);
+    byte * v_destino = LeerImagenPGM(destino,filas2,columnas2);    
+    if (filas1 != filas2 || columnas1 != columnas2){
+        delete [] v_fuente;
+        delete [] v_destino;
+        error ("Las imagenes no son del mismo tamaño");
     }
 
-    for (int i=1; i < dimension; i+=2){
-        for (int j=0; j < dimension; j++){
-            int media = (final.valor_pixel(i-1,j) + final.valor_pixel(i+1,j)) / 2.0;
-            final.asigna_pixel(i,j,media);
+    //creamos las imagenes
+    Imagen source(filas1,columnas1,v_fuente);
+    Imagen target(filas2,columnas2,v_destino);
+    Imagen intermedia(source);
+    // formula de morphing
+    // P(x,y) = a_i*O(x,y) + (1-a_i)*D(x,y)
+    double incremento = 1.0/pasos;
+    int contador = 0;
+    for (double a_i=0.0; a_i < 1.0; a_i+=incremento){
+        for (int i=0; i < filas1; i++){
+            for (int j=0; j < columnas1; j++){
+                double nuevo = a_i*source.valor_pixel(i,j)+(1-a_i)*target.valor_pixel(i,j);
+                intermedia.asigna_pixel(i,j,nuevo);
+            }
         }
+        string nombre_archivo = basename;
+        nombre_archivo += "/res_morphing/" + contador;
+        escribirImagen(intermedia,nombre_archivo.c_str());
+        contador++;
     }
 
-    escribirImagen(final, salida);
 
-    delete[] vector_original;
+    delete [] v_fuente;
+    delete [] v_destino;
 }

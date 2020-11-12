@@ -58,6 +58,16 @@ void escribirVectorPGM(const Imagen &img, byte * vector, int filas, int columnas
 void colorAGris(const char * nombre_ppm, const char * nombre_pgm);
 
 /**
+ * @brief función para escribir en el disco un objeto de la clase imagen
+ * @param img imagen a escribir en disco
+ * @param nombre_archivo el nombre del archivo que se guarda
+ * @pre @a img deber se una imagen inicializada y valida
+ * @pre @a nombre_archivo debe ser un nombre valido
+ * @return true si no ha habido fallos, false en caso contrario
+ */
+bool escribirImagen(const Imagen & img, const char * nombre_archivo);
+
+/**
  * @brief funcion para generar una imagen nueva a partir de una original,
  * basado en un umbral de escala de grises.
  * Si el pixel se encuentra en el intervalo, conserva su color, en caso contrario se vuelve negro
@@ -72,6 +82,18 @@ void colorAGris(const char * nombre_ppm, const char * nombre_pgm);
 void umbralizar_escala_grises(const char* original, const char * salida,int umbral_min, int umbral_max);
 
 /**
+ * @brief funcion para realizar zoom en una porción cuadrada de la imagen
+ * @param entrada nombre del archivo de la imagen de entrada
+ * @param salida nombre del archivo de la imagen de salida
+ * @param x1 posicion x de la esquina superior izquierda
+ * @param y1 posicion y de la esquina superior izquierda
+ * @param x2 posicion x de la esquina inferior derecha
+ * @param y2 posicion y de la esquina inferior derecha
+ * @pre x1 < x2 y y1 < y2. Además debe ser cuadrado, |x1-x2| == |y1-y2|
+ */
+void zoom(const char * entrada, const char * salida, int x1, int y1, int x2, int y2);
+
+/**
  * @brief funcion para contrastar una imagen basado en unos valores @a min y @a max
  * @pre @a min y @a max deben ser >0 y <255
  * @pre @a original debe ser una imagen valida
@@ -83,29 +105,16 @@ void umbralizar_escala_grises(const char* original, const char * salida,int umbr
  */
 void contrastar(const char * original, const char * salida, int minimo, int maximo);
 
-
 /**
- * @brief función para escribir en el disco un objeto de la clase imagen
- * @param img imagen a escribir en disco
- * @param nombre_archivo el nombre del archivo que se guarda
- * @pre @a img deber se una imagen inicializada y valida
- * @pre @a nombre_archivo debe ser un nombre valido
- * @return true si no ha habido fallos, false en caso contrario
+ * @brief funcion para realizar una transicion entre dos imagnenes (morphing)
+ * @param fuente imagen de la que se parte (nombre)
+ * @param destino imagen a la que se va transicionando (nombre)
+ * @param basename nombre basico de los archivos intermedios que se generan. Se generan en una carpeta del directorio actual llamada res_morphing
+ * @param pasos numero de pasos intermedios (e imagenes) que se van a hacer para la transicion
+ * @pre las imagenes deben ser imagenes validas, asi como que basename debe ser un nombre valido para nombre de archivo del so. paso > 0
+ *      las imagenes deben tener tambien el mismo tamaño
  */
-bool escribirImagen(const Imagen & img, const char * nombre_archivo);
-
-
-/**
- * @brief funcion para realizar zoom en una porción cuadrada de la imagen
- * @param entrada nombre del archivo de la imagen de entrada
- * @param salida nombre del archivo de la imagen de salida
- * @param x1 posicion x de la esquina superior izquierda
- * @param y1 posicion y de la esquina superior izquierda
- * @param x2 posicion x de la esquina inferior derecha
- * @param y2 posicion y de la esquina inferior derecha
- * @pre x1 < x2 y y1 < y2. Además debe ser cuadrado, |x1-x2| == |y1-y2|
- */
-void zoom(const char * entrada, const char * salida, int x1, int y1, int x2, int y2);
+void morphing(const char * fuente, const char * destino, const char * basename, int pasos);
 
 #endif
 // fin archivo
