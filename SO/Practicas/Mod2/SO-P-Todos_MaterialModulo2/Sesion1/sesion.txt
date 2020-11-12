@@ -1,0 +1,10 @@
+ej1: 
+escribe abcdefghijABCDEFGHIJ
+ej2:
+ejercicio2.c
+ej3
+stat = informacion sobre el archivo
+lstat = igual que stat, excepto que si le pasamos un enlace simbolico lo que mira es el enlace en si en lugar de a lo que apunta
+ej4
+ejercicio4.c
+
