@@ -3,35 +3,33 @@
  * @author Salvador Romero Cortés
  * @brief Archivo con las definiciones de la suite de funciones sobre el @a TDA_Imagen
  */
-#include <iostream>           //E/S
-#include <cmath>              //round
-#include <imagenES.h>         //TDA Imagen
 #include <funciones_imagen.h> //Declaraciones de las funciones
 #include <string.h>
 using namespace std;
 
 // constantes para transformar de gris a color
+/**
+ * @brief Macro para definir la constante para transformar de rojo a escala de grises
+ */
 const double ROJO_GRIS = 0.2989;
+/**
+ * @brief Macro para definir la constante para transformar de verde a escala de grises
+ */
 const double VERDE_GRIS = 0.587;
+/**
+ * @brief Macro para definir la constante para transformar de azul a escala de grises
+ */
 const double AZUL_GRIS = 0.114;
 
-void error(string mensaje)
+//funcion auxiliar
+void error(std::string mensaje)
 {
     cerr << mensaje << endl;
     exit(1);
 }
 
 /*     FUNCIONES SOBRE EL TIPO IMAGEN  */
-//Innecesaria teniendo el constructor con el vector
-// Imagen leerVectorPGM(byte * vector, int filas, int columnas){
-//     Imagen imagen(filas,columnas);
-//     for (int i=0; i < filas; i++){
-//         for (int j=0; j < columnas; j++){
-//             imagen.asigna_pixel(i,j,vector[i*columnas+j]);
-//         }
-//     }
-//     return imagen;
-// }
+
 //----------------------------------------------------------------
 Imagen leerVectorPPM(byte *vector, int filas, int columnas)
 {

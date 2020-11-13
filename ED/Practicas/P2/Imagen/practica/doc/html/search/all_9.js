@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tipoimagen_20',['TipoImagen',['../imagenES_8h.html#a8914f6544a484741b05c092d9e7522ed',1,'imagenES.h']]]
+  ['operator_3d_27',['operator=',['../classImagen.html#aa8bdc0191ef1b952a6405273edf3f3c8',1,'Imagen']]]
 ];

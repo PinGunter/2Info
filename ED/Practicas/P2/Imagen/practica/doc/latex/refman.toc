@@ -9,9 +9,10 @@
 \contentsline {subsection}{\numberline {3.1.1}Descripción detallada}{5}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}operaciones}{6}{subsection.3.1.2}%
 \contentsline {subsection}{\numberline {3.1.3}Documentación del constructor y destructor}{6}{subsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.3.1}Imagen()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{6}{subsubsection.3.1.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.3.2}Imagen()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{6}{subsubsection.3.1.3.2}%
-\contentsline {subsubsection}{\numberline {3.1.3.3}$\sim $Imagen()}{7}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}Imagen()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{6}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}Imagen()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{6}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}Imagen()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{7}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.4}$\sim $Imagen()}{7}{subsubsection.3.1.3.4}%
 \contentsline {subsection}{\numberline {3.1.4}Documentación de las funciones miembro}{7}{subsection.3.1.4}%
 \contentsline {subsubsection}{\numberline {3.1.4.1}asigna\_pixel()}{7}{subsubsection.3.1.4.1}%
 \contentsline {subsubsection}{\numberline {3.1.4.2}num\_columnas()}{8}{subsubsection.3.1.4.2}%
@@ -19,21 +20,54 @@
 \contentsline {subsubsection}{\numberline {3.1.4.4}operator=()}{8}{subsubsection.3.1.4.4}%
 \contentsline {subsubsection}{\numberline {3.1.4.5}valor\_pixel()}{9}{subsubsection.3.1.4.5}%
 \contentsline {chapter}{\numberline {4}Documentación de archivos}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Referencia del Archivo inc/imagen\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ES.h}{11}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Referencia del Archivo src/imagen\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ES.cpp}{11}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Descripción detallada}{12}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Documentación de las funciones}{12}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}colorAGris()}{12}{subsubsection.4.2.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}error()}{13}{subsubsection.4.2.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}EscribirImagenPGM()}{13}{subsubsection.4.2.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.2.4}EscribirImagenPPM()}{13}{subsubsection.4.2.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.2.5}escribirVectorPGM()}{14}{subsubsection.4.2.2.5}%
-\contentsline {subsubsection}{\numberline {4.2.2.6}LeerImagenPGM()}{14}{subsubsection.4.2.2.6}%
-\contentsline {subsubsection}{\numberline {4.2.2.7}LeerImagenPPM()}{15}{subsubsection.4.2.2.7}%
-\contentsline {subsubsection}{\numberline {4.2.2.8}LeerTipoImagen()}{15}{subsubsection.4.2.2.8}%
-\contentsline {subsubsection}{\numberline {4.2.2.9}leerVectorPGM()}{16}{subsubsection.4.2.2.9}%
-\contentsline {subsubsection}{\numberline {4.2.2.10}leerVectorPPM()}{16}{subsubsection.4.2.2.10}%
-\contentsline {section}{\numberline {4.3}Referencia del Archivo src/main.cpp}{17}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Descripción detallada}{17}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Documentación de las funciones}{17}{subsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}main()}{17}{subsubsection.4.3.2.1}%
+\contentsline {section}{\numberline {4.1}Referencia del Archivo inc/funciones\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}imagen.h}{11}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Descripción detallada}{12}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Documentación de las funciones}{12}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}colorAGris()}{12}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}contrastar()}{13}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}error()}{13}{subsubsection.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}escribirImagen()}{14}{subsubsection.4.1.2.4}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}escribirVectorPGM()}{14}{subsubsection.4.1.2.5}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}leerVectorPGM()}{15}{subsubsection.4.1.2.6}%
+\contentsline {subsubsection}{\numberline {4.1.2.7}leerVectorPPM()}{15}{subsubsection.4.1.2.7}%
+\contentsline {subsubsection}{\numberline {4.1.2.8}morphing()}{16}{subsubsection.4.1.2.8}%
+\contentsline {subsubsection}{\numberline {4.1.2.9}tranformacion\_morph()}{16}{subsubsection.4.1.2.9}%
+\contentsline {subsubsection}{\numberline {4.1.2.10}umbralizar\_escala\_grises()}{16}{subsubsection.4.1.2.10}%
+\contentsline {subsubsection}{\numberline {4.1.2.11}zoom()}{17}{subsubsection.4.1.2.11}%
+\contentsline {section}{\numberline {4.2}Referencia del Archivo inc/imagen\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ES.h}{18}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Descripción detallada}{19}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Documentación de los \textquotesingle {}typedefs\textquotesingle {}}{19}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}byte}{19}{subsubsection.4.2.2.1}%
+\contentsline {subsection}{\numberline {4.2.3}Documentación de las enumeraciones}{19}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}TipoImagen}{19}{subsubsection.4.2.3.1}%
+\contentsline {subsection}{\numberline {4.2.4}Documentación de las funciones}{20}{subsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.4.1}EscribirImagenPGM()}{20}{subsubsection.4.2.4.1}%
+\contentsline {subsubsection}{\numberline {4.2.4.2}EscribirImagenPPM()}{20}{subsubsection.4.2.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.4.3}LeerImagenPGM()}{21}{subsubsection.4.2.4.3}%
+\contentsline {subsubsection}{\numberline {4.2.4.4}LeerImagenPPM()}{21}{subsubsection.4.2.4.4}%
+\contentsline {subsubsection}{\numberline {4.2.4.5}LeerTipoImagen()}{22}{subsubsection.4.2.4.5}%
+\contentsline {section}{\numberline {4.3}Referencia del Archivo src/funciones\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}imagen.cpp}{22}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Descripción detallada}{23}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Documentación de las funciones}{23}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}colorAGris()}{23}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}contrastar()}{24}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}error()}{24}{subsubsection.4.3.2.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}escribirImagen()}{25}{subsubsection.4.3.2.4}%
+\contentsline {subsubsection}{\numberline {4.3.2.5}escribirVectorPGM()}{25}{subsubsection.4.3.2.5}%
+\contentsline {subsubsection}{\numberline {4.3.2.6}leerVectorPPM()}{26}{subsubsection.4.3.2.6}%
+\contentsline {subsubsection}{\numberline {4.3.2.7}morphing()}{26}{subsubsection.4.3.2.7}%
+\contentsline {subsubsection}{\numberline {4.3.2.8}tranformacion\_morph()}{27}{subsubsection.4.3.2.8}%
+\contentsline {subsubsection}{\numberline {4.3.2.9}umbralizar\_escala\_grises()}{27}{subsubsection.4.3.2.9}%
+\contentsline {subsubsection}{\numberline {4.3.2.10}zoom()}{28}{subsubsection.4.3.2.10}%
+\contentsline {section}{\numberline {4.4}Referencia del Archivo src/imagen\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ES.cpp}{28}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Descripción detallada}{29}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Documentación de las funciones}{29}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}EscribirImagenPGM()}{29}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}EscribirImagenPPM()}{30}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}LeerImagenPGM()}{30}{subsubsection.4.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}LeerImagenPPM()}{31}{subsubsection.4.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.4.2.5}LeerTipoImagen()}{31}{subsubsection.4.4.2.5}%
+\contentsline {section}{\numberline {4.5}Referencia del Archivo src/main.cpp}{32}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Descripción detallada}{32}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Documentación de las funciones}{33}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}main()}{33}{subsubsection.4.5.2.1}%

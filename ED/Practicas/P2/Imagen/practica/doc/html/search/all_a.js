@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['valor_5fpixel_21',['valor_pixel',['../classImagen.html#a9f4da242215f29774645d831db3b66cb',1,'Imagen']]]
+  ['rojo_5fgris_28',['ROJO_GRIS',['../funciones__imagen_8cpp.html#adeb9342ec2334dee1f1246be459ac1e9',1,'funciones_imagen.cpp']]]
 ];

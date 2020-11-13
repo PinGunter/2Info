@@ -120,7 +120,7 @@ void morphing(const char * fuente, const char * destino, const char * basename, 
  * @brief funcion que realiza la transformacion de un pixel
  * @param s pixel inicial
  * @param d pixel final
- * @param a_i
+ * @param a_i cociente de transformacion
  * @return la transformacion
  */
 double tranformacion_morph(byte s, byte d, double a_i);

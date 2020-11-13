@@ -8,7 +8,13 @@
 
 #ifndef _IMAGEN_ES_H_
 #define _IMAGEN_ES_H_
+/**
+ * @brief Macro para definir el color blanco
+ */
 #define BLANCO 255
+/**
+ * @brief Macro para definir el color negro
+ */
 #define NEGRO 0
 
 /**

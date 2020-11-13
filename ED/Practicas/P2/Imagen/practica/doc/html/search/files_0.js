@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['imagenes_2ecpp_24',['imagenES.cpp',['../imagenES_8cpp.html',1,'']]],
-  ['imagenes_2eh_25',['imagenES.h',['../imagenES_8h.html',1,'']]]
+  ['funciones_5fimagen_2ecpp_37',['funciones_imagen.cpp',['../funciones__imagen_8cpp.html',1,'']]],
+  ['funciones_5fimagen_2eh_38',['funciones_imagen.h',['../funciones__imagen_8h.html',1,'']]]
 ];

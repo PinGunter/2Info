@@ -16,6 +16,8 @@ clase que representa una imagen digital en escala de grises
 \begin{DoxyCompactList}\small\item\em constructor de la clase \mbox{\hyperlink{classImagen}{Imagen}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classImagen_a33f5f31d610526dbe66d04de0a827f91}{Imagen}} (const \mbox{\hyperlink{classImagen}{Imagen}} \&otra)
 \begin{DoxyCompactList}\small\item\em constructor de copia de la clase \mbox{\hyperlink{classImagen}{Imagen}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImagen_a111536f9fd79ded226d16e68cf958420}{Imagen}} (int filas, int columnas, \mbox{\hyperlink{imagenES_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} $\ast$vector)
+\begin{DoxyCompactList}\small\item\em constructor de la clase imagen \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classImagen_a03dd93c9cf920a9dc0b72f8bd34f2e8a}{$\sim$\+Imagen}} ()
 \begin{DoxyCompactList}\small\item\em destructor de la clase \mbox{\hyperlink{classImagen}{Imagen}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classImagen}{Imagen}} \& \mbox{\hyperlink{classImagen_aa8bdc0191ef1b952a6405273edf3f3c8}{operator=}} (const \mbox{\hyperlink{classImagen}{Imagen}} \&otra)
@@ -48,7 +50,7 @@ Se definen una serie de operaciones\+:
 \mbox{\Hypertarget{classImagen_a7632978f5ae089713e652bb362da1e78}\label{classImagen_a7632978f5ae089713e652bb362da1e78}} 
 \index{Imagen@{Imagen}!Imagen@{Imagen}}
 \index{Imagen@{Imagen}!Imagen@{Imagen}}
-\doxysubsubsection{\texorpdfstring{Imagen()}{Imagen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{Imagen()}{Imagen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily Imagen\+::\+Imagen (\begin{DoxyParamCaption}\item[{int}]{filas,  }\item[{int}]{columnas }\end{DoxyParamCaption})}
 
 
@@ -68,7 +70,7 @@ el objeto nuevo de imagen esta inicializado a una imagen en negro
 MÉ\+T\+O\+D\+OS DE LA C\+L\+A\+SE I\+M\+A\+G\+EN \mbox{\Hypertarget{classImagen_a33f5f31d610526dbe66d04de0a827f91}\label{classImagen_a33f5f31d610526dbe66d04de0a827f91}} 
 \index{Imagen@{Imagen}!Imagen@{Imagen}}
 \index{Imagen@{Imagen}!Imagen@{Imagen}}
-\doxysubsubsection{\texorpdfstring{Imagen()}{Imagen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{Imagen()}{Imagen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily Imagen\+::\+Imagen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classImagen}{Imagen}} \&}]{otra }\end{DoxyParamCaption})}
 
 
@@ -82,6 +84,28 @@ constructor de copia de la clase \mbox{\hyperlink{classImagen}{Imagen}}
 \end{DoxyParams}
 \begin{DoxyReturn}{Devuelve}
 el nuevo objeto, copia de {\itshape otra} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImagen_a111536f9fd79ded226d16e68cf958420}\label{classImagen_a111536f9fd79ded226d16e68cf958420}} 
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{Imagen()}{Imagen()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Imagen\+::\+Imagen (\begin{DoxyParamCaption}\item[{int}]{filas,  }\item[{int}]{columnas,  }\item[{\mbox{\hyperlink{imagenES_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} $\ast$}]{vector }\end{DoxyParamCaption})}
+
+
+
+constructor de la clase imagen 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em filas} & el numero de filas que va a tener \\
+\hline
+{\em columnas} & el numero de columnas que va a tener la imagen \\
+\hline
+{\em vector} & vector unidimensional donde se almacenan todos los pixeles \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+la imagen creada a partir del vector 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classImagen_a03dd93c9cf920a9dc0b72f8bd34f2e8a}\label{classImagen_a03dd93c9cf920a9dc0b72f8bd34f2e8a}} 
 \index{Imagen@{Imagen}!````~Imagen@{$\sim$Imagen}}

@@ -2,7 +2,7 @@
 \label{imagenES_8cpp}\index{src/imagenES.cpp@{src/imagenES.cpp}}
 
 
-Fichero con definiciones para la E/S de imágenes.  
+Fichero con definiciones para la E/S de imágenes Permite la E/S de archivos de tipo P\+GM,P\+PM.  
 
 
 {\ttfamily \#include $<$iostream$>$}\newline
@@ -11,8 +11,13 @@ Fichero con definiciones para la E/S de imágenes.
 {\ttfamily \#include $<$cassert$>$}\newline
 {\ttfamily \#include $<$imagen\+E\+S.\+h$>$}\newline
 {\ttfamily \#include $<$cmath$>$}\newline
-Dependencia gráfica adjunta para imagen\+E\+S.\+cpp\+:
-% FIG 0
+Dependencia gráfica adjunta para imagen\+E\+S.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imagenES_8cpp__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Funciones}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,70 +39,19 @@ unsigned char $\ast$ \mbox{\hyperlink{imagenES_8cpp_a03340a1e1e4a88385c972bb4af4
 bool \mbox{\hyperlink{imagenES_8cpp_ae149be8653b9f8c7321ac40577e7518c}{Escribir\+Imagen\+P\+PM}} (const char $\ast$nombre, const unsigned char $\ast$datos, const int fils, const int cols)
 \begin{DoxyCompactList}\small\item\em Escribe una imagen de tipo P\+PM. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{imagenES_8cpp_a4b649cc272f02649563791d5ed75b557}{Escribir\+Imagen\+P\+GM}} (const char $\ast$nombre, const unsigned char $\ast$datos, const int fils, const int cols)
-\begin{DoxyCompactList}\small\item\em Escribe una imagen de tipo P\+GM. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{imagenES_8cpp_a5f58c4296230b8b7f3a64d79d245bd5a}{error}} (string mensaje)
-\item 
-\mbox{\hyperlink{classImagen}{Imagen}} \mbox{\hyperlink{imagenES_8cpp_a67aa569e325efcee08e39c635767ef78}{leer\+Vector\+P\+GM}} (\mbox{\hyperlink{imagenES_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} $\ast$vector, int filas, int columnas)
-\begin{DoxyCompactList}\small\item\em funcion para obtener una imagen a partir de un vector 1d de una imagen P\+GM \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classImagen}{Imagen}} \mbox{\hyperlink{imagenES_8cpp_a231a8956f205d978f0578dd5b517704b}{leer\+Vector\+P\+PM}} (\mbox{\hyperlink{imagenES_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} $\ast$vector, int filas, int columnas)
-\begin{DoxyCompactList}\small\item\em funcion para obtener una imagen a partir de un vector 1d de una imagen P\+PM \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{imagenES_8cpp_a06ef9d7aeca2096ca2d31f1c181b9026}{escribir\+Vector\+P\+GM}} (const \mbox{\hyperlink{classImagen}{Imagen}} \&img, \mbox{\hyperlink{imagenES_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} $\ast$vector, int \&filas, int \&columnas)
-\begin{DoxyCompactList}\small\item\em funcion para transformar un objeto imagen en un vector unidimensional \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{imagenES_8cpp_afb06e9fa37177e2fffd85054bc75acbb}{color\+A\+Gris}} (const char $\ast$nombre\+\_\+ppm, const char $\ast$nombre\+\_\+pgm)
-\begin{DoxyCompactList}\small\item\em función que permite convertir una imagen P\+PM a una imagen P\+GM \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{imagenES_8cpp_adeb9342ec2334dee1f1246be459ac1e9}\label{imagenES_8cpp_adeb9342ec2334dee1f1246be459ac1e9}} 
-const double {\bfseries R\+O\+J\+O\+\_\+\+G\+R\+IS} = 0.\+2989
-\item 
-\mbox{\Hypertarget{imagenES_8cpp_a8f5c9bbb12dea46bb23e3154e8923176}\label{imagenES_8cpp_a8f5c9bbb12dea46bb23e3154e8923176}} 
-const double {\bfseries V\+E\+R\+D\+E\+\_\+\+G\+R\+IS} = 0.\+587
-\item 
-\mbox{\Hypertarget{imagenES_8cpp_a527e9729a04cbb691845003444571add}\label{imagenES_8cpp_a527e9729a04cbb691845003444571add}} 
-const double {\bfseries A\+Z\+U\+L\+\_\+\+G\+R\+IS} = 0.\+114
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Escribe una imagen de tipo P\+GM. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
-Fichero con definiciones para la E/S de imágenes. 
+Fichero con definiciones para la E/S de imágenes Permite la E/S de archivos de tipo P\+GM,P\+PM. 
 
 \begin{DoxyAuthor}{Autor}
-Salvador Romero Cortés Permite la E/S de archivos de tipo P\+GM,P\+PM 
+Salvador Romero Cortés 
 \end{DoxyAuthor}
 
 
 \doxysubsection{Documentación de las funciones}
-\mbox{\Hypertarget{imagenES_8cpp_afb06e9fa37177e2fffd85054bc75acbb}\label{imagenES_8cpp_afb06e9fa37177e2fffd85054bc75acbb}} 
-\index{imagenES.cpp@{imagenES.cpp}!colorAGris@{colorAGris}}
-\index{colorAGris@{colorAGris}!imagenES.cpp@{imagenES.cpp}}
-\doxysubsubsection{\texorpdfstring{colorAGris()}{colorAGris()}}
-{\footnotesize\ttfamily void color\+A\+Gris (\begin{DoxyParamCaption}\item[{const char $\ast$}]{nombre\+\_\+ppm,  }\item[{const char $\ast$}]{nombre\+\_\+pgm }\end{DoxyParamCaption})}
-
-
-
-función que permite convertir una imagen P\+PM a una imagen P\+GM 
-
-
-\begin{DoxyParams}{Parámetros}
-{\em nombre\+\_\+ppm} & la imagen a color \\
-\hline
-{\em nombre\+\_\+pgm} & la imagen en escala de grises \\
-\hline
-\end{DoxyParams}
-\begin{DoxyPrecond}{Precondición}
-debe existir el archivo con el nombre {\itshape nombre\+\_\+ppm} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-se escribe directamente el archivo desde esta funcion 
-\end{DoxyPostcond}
-\mbox{\Hypertarget{imagenES_8cpp_a5f58c4296230b8b7f3a64d79d245bd5a}\label{imagenES_8cpp_a5f58c4296230b8b7f3a64d79d245bd5a}} 
-\index{imagenES.cpp@{imagenES.cpp}!error@{error}}
-\index{error@{error}!imagenES.cpp@{imagenES.cpp}}
-\doxysubsubsection{\texorpdfstring{error()}{error()}}
-{\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{string}]{mensaje }\end{DoxyParamCaption})}
-
-F\+U\+N\+C\+I\+O\+N\+ES A\+U\+X\+I\+L\+I\+A\+R\+ES \mbox{\Hypertarget{imagenES_8cpp_a4b649cc272f02649563791d5ed75b557}\label{imagenES_8cpp_a4b649cc272f02649563791d5ed75b557}} 
+\mbox{\Hypertarget{imagenES_8cpp_a4b649cc272f02649563791d5ed75b557}\label{imagenES_8cpp_a4b649cc272f02649563791d5ed75b557}} 
 \index{imagenES.cpp@{imagenES.cpp}!EscribirImagenPGM@{EscribirImagenPGM}}
 \index{EscribirImagenPGM@{EscribirImagenPGM}!imagenES.cpp@{imagenES.cpp}}
 \doxysubsubsection{\texorpdfstring{EscribirImagenPGM()}{EscribirImagenPGM()}}
@@ -145,33 +99,6 @@ Escribe una imagen de tipo P\+PM.
 \begin{DoxyReturn}{Devuelve}
 si ha tenido éxito en la escritura. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{imagenES_8cpp_a06ef9d7aeca2096ca2d31f1c181b9026}\label{imagenES_8cpp_a06ef9d7aeca2096ca2d31f1c181b9026}} 
-\index{imagenES.cpp@{imagenES.cpp}!escribirVectorPGM@{escribirVectorPGM}}
-\index{escribirVectorPGM@{escribirVectorPGM}!imagenES.cpp@{imagenES.cpp}}
-\doxysubsubsection{\texorpdfstring{escribirVectorPGM()}{escribirVectorPGM()}}
-{\footnotesize\ttfamily void escribir\+Vector\+P\+GM (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classImagen}{Imagen}} \&}]{img,  }\item[{\mbox{\hyperlink{imagenES_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} $\ast$}]{vector,  }\item[{int \&}]{filas,  }\item[{int \&}]{columnas }\end{DoxyParamCaption})}
-
-
-
-funcion para transformar un objeto imagen en un vector unidimensional 
-
-
-\begin{DoxyParams}{Parámetros}
-{\em img} & la imagen que se va a convertir \\
-\hline
-{\em vector} & el vector donde se escribe la imagen \\
-\hline
-{\em filas} & el número de filas de la imagen \\
-\hline
-{\em columnas} & el número de columnas de la imagen \\
-\hline
-\end{DoxyParams}
-\begin{DoxyPrecond}{Precondición}
-
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-todos los parámetros se modifican menos {\itshape img} 
-\end{DoxyPostcond}
 \mbox{\Hypertarget{imagenES_8cpp_a03340a1e1e4a88385c972bb4af463649}\label{imagenES_8cpp_a03340a1e1e4a88385c972bb4af463649}} 
 \index{imagenES.cpp@{imagenES.cpp}!LeerImagenPGM@{LeerImagenPGM}}
 \index{LeerImagenPGM@{LeerImagenPGM}!imagenES.cpp@{imagenES.cpp}}
@@ -243,47 +170,3 @@ Devuelve el tipo de la imagen en el archivo
 \begin{DoxySeeAlso}{Ver también}
 \mbox{\hyperlink{imagenES_8h_a8914f6544a484741b05c092d9e7522ed}{Tipo\+Imagen}} 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{imagenES_8cpp_a67aa569e325efcee08e39c635767ef78}\label{imagenES_8cpp_a67aa569e325efcee08e39c635767ef78}} 
-\index{imagenES.cpp@{imagenES.cpp}!leerVectorPGM@{leerVectorPGM}}
-\index{leerVectorPGM@{leerVectorPGM}!imagenES.cpp@{imagenES.cpp}}
-\doxysubsubsection{\texorpdfstring{leerVectorPGM()}{leerVectorPGM()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classImagen}{Imagen}} leer\+Vector\+P\+GM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imagenES_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} $\ast$}]{vector,  }\item[{int}]{filas,  }\item[{int}]{columnas }\end{DoxyParamCaption})}
-
-
-
-funcion para obtener una imagen a partir de un vector 1d de una imagen P\+GM 
-
-
-\begin{DoxyParams}{Parámetros}
-{\em vector} & el vector unidimensional que contiene los pixeles de la imagen \\
-\hline
-{\em filas} & el número de filas que tendrá la imagen \\
-\hline
-{\em columnas} & el número de columnas que tendrá la imagen \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Devuelve}
-objeto imagen con los datos del vector 
-\end{DoxyReturn}
-\mbox{\Hypertarget{imagenES_8cpp_a231a8956f205d978f0578dd5b517704b}\label{imagenES_8cpp_a231a8956f205d978f0578dd5b517704b}} 
-\index{imagenES.cpp@{imagenES.cpp}!leerVectorPPM@{leerVectorPPM}}
-\index{leerVectorPPM@{leerVectorPPM}!imagenES.cpp@{imagenES.cpp}}
-\doxysubsubsection{\texorpdfstring{leerVectorPPM()}{leerVectorPPM()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classImagen}{Imagen}} leer\+Vector\+P\+PM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imagenES_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} $\ast$}]{vector,  }\item[{int}]{filas,  }\item[{int}]{columnas }\end{DoxyParamCaption})}
-
-
-
-funcion para obtener una imagen a partir de un vector 1d de una imagen P\+PM 
-
-
-\begin{DoxyParams}{Parámetros}
-{\em vector} & el vector unidimensional que contiene los pixeles de la imagen \\
-\hline
-{\em filas} & el número de filas que tendrá la imagen \\
-\hline
-{\em columnas} & el número de columnas que tendrá la imagen \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Devuelve}
-objeto imagen con los datos del vector (en escala de grises) 
-\end{DoxyReturn}

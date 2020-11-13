@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7eimagen_44',['~Imagen',['../classImagen.html#a03dd93c9cf920a9dc0b72f8bd34f2e8a',1,'Imagen']]]
+  ['umbralizar_5fescala_5fgrises_62',['umbralizar_escala_grises',['../funciones__imagen_8cpp.html#a7bbc9db7e9136fec9dad8c80650021cb',1,'umbralizar_escala_grises(const char *original, const char *salida, int umbral_min, int umbral_max):&#160;funciones_imagen.cpp'],['../funciones__imagen_8h.html#a7bbc9db7e9136fec9dad8c80650021cb',1,'umbralizar_escala_grises(const char *original, const char *salida, int umbral_min, int umbral_max):&#160;funciones_imagen.cpp']]]
 ];

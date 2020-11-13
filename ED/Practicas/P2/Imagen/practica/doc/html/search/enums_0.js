@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tipoimagen_46',['TipoImagen',['../imagenES_8h.html#a8914f6544a484741b05c092d9e7522ed',1,'imagenES.h']]]
+  ['tipoimagen_70',['TipoImagen',['../imagenES_8h.html#a8914f6544a484741b05c092d9e7522ed',1,'imagenES.h']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['num_5fcolumnas_17',['num_columnas',['../classImagen.html#ac28d55c18064aea2a65e6fcf51d86191',1,'Imagen']]],
-  ['num_5ffilas_18',['num_filas',['../classImagen.html#a4cb4faa04f5e2913965e43a6a65acfd1',1,'Imagen']]]
+  ['main_21',['main',['../main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65',1,'main.cpp']]],
+  ['main_2ecpp_22',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['morphing_23',['morphing',['../funciones__imagen_8cpp.html#ae89f8dba7ed34ffbac497f22b8af2b81',1,'morphing(const char *fuente, const char *destino, const char *basename, int pasos):&#160;funciones_imagen.cpp'],['../funciones__imagen_8h.html#ae89f8dba7ed34ffbac497f22b8af2b81',1,'morphing(const char *fuente, const char *destino, const char *basename, int pasos):&#160;funciones_imagen.cpp']]]
 ];
