@@ -109,12 +109,21 @@ void contrastar(const char * original, const char * salida, int minimo, int maxi
  * @brief funcion para realizar una transicion entre dos imagnenes (morphing)
  * @param fuente imagen de la que se parte (nombre)
  * @param destino imagen a la que se va transicionando (nombre)
- * @param basename nombre basico de los archivos intermedios que se generan. Se generan en una carpeta del directorio actual llamada res_morphing
+ * @param basename nombre basico de los archivos intermedios que se generan.
  * @param pasos numero de pasos intermedios (e imagenes) que se van a hacer para la transicion
  * @pre las imagenes deben ser imagenes validas, asi como que basename debe ser un nombre valido para nombre de archivo del so. paso > 0
  *      las imagenes deben tener tambien el mismo tamaño
  */
 void morphing(const char * fuente, const char * destino, const char * basename, int pasos);
+
+/**
+ * @brief funcion que realiza la transformacion de un pixel
+ * @param s pixel inicial
+ * @param d pixel final
+ * @param a_i
+ * @return la transformacion
+ */
+double tranformacion_morph(byte s, byte d, double a_i);
 
 #endif
 // fin archivo

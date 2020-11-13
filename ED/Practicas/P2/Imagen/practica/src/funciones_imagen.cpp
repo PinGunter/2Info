@@ -7,7 +7,7 @@
 #include <cmath>              //round
 #include <imagenES.h>         //TDA Imagen
 #include <funciones_imagen.h> //Declaraciones de las funciones
-
+#include <string.h>
 using namespace std;
 
 // constantes para transformar de gris a color
@@ -245,21 +245,31 @@ void morphing(const char * fuente, const char * destino, const char * basename, 
     // formula de morphing
     // P(x,y) = a_i*O(x,y) + (1-a_i)*D(x,y)
     double incremento = 1.0/pasos;
+    cout << incremento << endl;
     int contador = 0;
-    for (double a_i=0.0; a_i < 1.0; a_i+=incremento){
+
+    for (double a_i = 1.0; a_i >= 0.0; a_i-=incremento){
         for (int i=0; i < filas1; i++){
             for (int j=0; j < columnas1; j++){
-                double nuevo = a_i*source.valor_pixel(i,j)+(1-a_i)*target.valor_pixel(i,j);
-                intermedia.asigna_pixel(i,j,nuevo);
+                double trans = tranformacion_morph(source.valor_pixel(i,j),target.valor_pixel(i,j),a_i);
+                intermedia.asigna_pixel(i,j,trans);
             }
         }
-        string nombre_archivo = basename;
-        nombre_archivo += "/res_morphing/" + contador;
-        escribirImagen(intermedia,nombre_archivo.c_str());
+        char extension [] = ".pgm";
+        char * salida = new char [strlen(basename)+sizeof(contador)+strlen(extension)];
+        sprintf(salida,"%s%d%s",basename,contador,extension);
+        escribirImagen(intermedia,salida);
         contador++;
-    }
 
+
+    }
 
     delete [] v_fuente;
     delete [] v_destino;
+}
+
+
+double tranformacion_morph(byte s, byte d, double a_i){
+    double salida = a_i*s+(1.0-a_i)*d;
+    return salida;
 }
