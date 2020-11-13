@@ -109,7 +109,7 @@ void contrastar(const char * original, const char * salida, int minimo, int maxi
  * @brief funcion para realizar una transicion entre dos imagnenes (morphing)
  * @param fuente imagen de la que se parte (nombre)
  * @param destino imagen a la que se va transicionando (nombre)
- * @param basename nombre basico de los archivos intermedios que se generan.
+ * @param basename nombre basico de los archivos intermedios que se generan. 
  * @param pasos numero de pasos intermedios (e imagenes) que se van a hacer para la transicion
  * @pre las imagenes deben ser imagenes validas, asi como que basename debe ser un nombre valido para nombre de archivo del so. paso > 0
  *      las imagenes deben tener tambien el mismo tamaño

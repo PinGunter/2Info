@@ -192,13 +192,7 @@ void contrastar(const char *original, const char *salida, int minimo, int maximo
         }
     }
 
-    cout << "b: " << static_cast<int>(b) << endl;
-    cout << "a: " << static_cast<int>(a) << endl;
-    cout << "maximo: " << static_cast<int>(maximo) << endl;
-    cout << "minimo: " << static_cast<int>(minimo) << endl;
-
     double constante = (maximo * 1.0 - minimo * 1.0) / (b * 1.0 - a * 1.0);
-    cout << constante << endl;
 
     for (int i = 0; i < img_salida.num_filas(); i++)
     {
@@ -243,7 +237,6 @@ void morphing(const char * fuente, const char * destino, const char * basename, 
     // formula de morphing
     // P(x,y) = a_i*O(x,y) + (1-a_i)*D(x,y)
     double incremento = 1.0/pasos;
-    cout << incremento << endl;
     int contador = 0;
 
     for (double a_i = 1.0; a_i >= 0.0; a_i-=incremento){
