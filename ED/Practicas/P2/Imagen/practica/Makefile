@@ -22,7 +22,7 @@ $(OBJ)/funciones_imagen.o: $(SRC)/funciones_imagen.cpp
 
 clean: 
 	echo Limpiando
-	-rm $(OBJ)/* $(BIN)/*
+	-rm $(OBJ)/* $(BIN)/* $(LIB)/*
 rebuild: clean $(BIN)/main
 documentacion:
 	echo Creando documentacion
