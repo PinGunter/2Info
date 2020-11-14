@@ -28,11 +28,11 @@ public class Paso {
     }
 
     public int getInversion() {
-
+        return inversion;
     }
 
     public int getGanancia() {
-
+        return ganancia;
     }
 
     public void setTerminado(boolean estado) {

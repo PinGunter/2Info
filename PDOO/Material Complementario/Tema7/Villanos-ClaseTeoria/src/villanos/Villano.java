@@ -25,6 +25,8 @@ public class Villano {
     //atributos de referencia
     private ArrayList<Plan> planes;
     Mayordomo mayordomo;
+    
+   // boolean puedoContinuar;
 
     //constructor por defecto
     public Villano(String nombre, String esconditeSecreto, int fortuna) {
@@ -34,6 +36,7 @@ public class Villano {
         this.mayordomo = null;
         this.planes = new ArrayList<>();
         planes.add(new Plan());
+        //this.puedoContinuar = null;
     }
 
     private void setFortuna(int cantidad) {
@@ -41,7 +44,22 @@ public class Villano {
     }
 
     public boolean seguirPlanPrioritario() {
-
+        boolean terminado = false;
+        Plan plan = primerPlanActivo();
+        if (plan != null){
+            boolean puedoContinuar = true;
+            while (!terminado && puedoContinuar){
+                terminado = plan.getTerminado();
+                int gasto = plan.inversionPasoSiguiente();
+                puedoContinuar = gasto <= fortuna;
+                if (puedoContinuar){
+                    int ganancia = plan.darPasoSiguiente();
+                    this.setFortuna(fortuna-gasto+ganancia);
+                }
+            }
+        }
+        terminado = plan != null && terminado;
+        return terminado;
     }
 
     public Plan primerPlanActivo() {

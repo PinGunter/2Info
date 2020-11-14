@@ -49,14 +49,29 @@ public class Plan {
     }
      */
     public boolean getTerminado() {
+
     }
 
     public boolean estaActivo() {
+        
     }
 
-    public void darPasoSiguiente() {
+    //?????????
+    public int darPasoSiguiente() {
+        Paso paso = pasos.get(posicionPasoSiguiente);
+        paso.setTerminado(true);
+        int ganancia = paso.getGanancia();
+        if (posicionPasoSiguiente != pasos.size()-1){
+            posicionPasoSiguiente++;
+        }
+        else
+            terminado = true;
+        //return ganancia;    
     }
 
     public int inversionPasoSiguiente() {
+        Paso paso = pasos.get(posicionPasoSiguiente);
+        int gasto = paso.getInversion();
+        return gasto;
     }
 }

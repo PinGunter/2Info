@@ -1,0 +1,4 @@
+Enlace a vídeo explicando cómo pasar de los diagramas de secuencia a código en Java y Ruby
+
+https://drive.google.com/file/d/1-HeATccCA18gYqs9VKuV38fo7E4SPPD1/view?usp=sharing
+
