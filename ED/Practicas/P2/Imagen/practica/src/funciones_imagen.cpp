@@ -21,14 +21,11 @@ const double VERDE_GRIS = 0.587;
  */
 const double AZUL_GRIS = 0.114;
 
-//funcion auxiliar
-void error(std::string mensaje)
-{
+/*     FUNCIONES AUXILIARES */
+void error(std::string mensaje){
     cerr << mensaje << endl;
     exit(1);
 }
-
-/*     FUNCIONES SOBRE EL TIPO IMAGEN  */
 
 //----------------------------------------------------------------
 Imagen leerVectorPPM(byte *vector, int filas, int columnas)
@@ -41,6 +38,7 @@ Imagen leerVectorPPM(byte *vector, int filas, int columnas)
     delete[] vector_gris;
     return gris;
 }
+
 //----------------------------------------------------------------
 void escribirVectorPGM(const Imagen &img, byte *vector, int filas, int columnas)
 {
@@ -52,6 +50,24 @@ void escribirVectorPGM(const Imagen &img, byte *vector, int filas, int columnas)
         }
     }
 }
+
+//------------------------
+bool escribirImagen(const Imagen &img, const char *nombre_archivo)
+{
+    byte *vector_salida = new byte[img.num_filas() * img.num_columnas()];
+    escribirVectorPGM(img, vector_salida, img.num_filas(), img.num_columnas());
+    bool ok = EscribirImagenPGM(nombre_archivo, vector_salida, img.num_filas(), img.num_columnas());
+    delete[] vector_salida;
+    return ok;
+}
+//----------------------------
+double tranformacion_morph(byte s, byte d, double a_i){
+    double salida = a_i*s+(1.0-a_i)*d;
+    return salida;
+}
+
+/*     FUNCIONES SOBRE EL TIPO IMAGEN  */
+
 //----------------------------------------------------------------
 void colorAGris(const char *nombre_ppm, const char *nombre_pgm)
 {
@@ -70,16 +86,6 @@ void colorAGris(const char *nombre_ppm, const char *nombre_pgm)
     delete[] pgm;
 }
 
-
-//------------------------
-bool escribirImagen(const Imagen &img, const char *nombre_archivo)
-{
-    byte *vector_salida = new byte[img.num_filas() * img.num_columnas()];
-    escribirVectorPGM(img, vector_salida, img.num_filas(), img.num_columnas());
-    bool ok = EscribirImagenPGM(nombre_archivo, vector_salida, img.num_filas(), img.num_columnas());
-    delete[] vector_salida;
-    return ok;
-}
 
 //----------------------------------------------------------------
 
@@ -102,7 +108,10 @@ void umbralizar_escala_grises(const char *original, const char *salida, int umbr
         }
     }
     //escribimos la imagen de salida
-    escribirImagen(img_salida, salida);
+    if (!escribirImagen(img_salida, salida)){
+        delete [] vector_original;
+        error("Error al escribir la imagen");
+    }
     delete[] vector_original;
 }
 
@@ -125,6 +134,7 @@ void zoom(const char *entrada, const char *salida, int x1, int y1, int x2, int y
     Imagen original(filas, columnas, vector_original);
 
     Imagen interpo_colum(tam_recorte, dimension);
+    Imagen final(dimension, dimension);
     //Primero copiamos los valores originales
     for (int i = 0, x_orig = x1; i < tam_recorte; i++){
         for (int j = 0, y_orig = y1; j < dimension; j += 2){
@@ -142,7 +152,6 @@ void zoom(const char *entrada, const char *salida, int x1, int y1, int x2, int y
     }
     
     //terminamos la imagen con las filas
-    Imagen final(dimension, dimension);
 
     for (int i=0; i < dimension; i+=2){
         for (int j=0; j < dimension; j++){
@@ -157,7 +166,10 @@ void zoom(const char *entrada, const char *salida, int x1, int y1, int x2, int y
         }
     }
 
-    escribirImagen(final, salida);
+    if (!escribirImagen(final, salida)){
+        delete [] vector_original;
+        error("Error al escribir la imagen");
+    }
 
     delete[] vector_original;
 }
@@ -194,10 +206,8 @@ void contrastar(const char *original, const char *salida, int minimo, int maximo
 
     double constante = (maximo * 1.0 - minimo * 1.0) / (b * 1.0 - a * 1.0);
 
-    for (int i = 0; i < img_salida.num_filas(); i++)
-    {
-        for (int j = 0; j < img_salida.num_columnas(); j++)
-        {
+    for (int i = 0; i < img_salida.num_filas(); i++){
+        for (int j = 0; j < img_salida.num_columnas(); j++){
             double actual = img_salida.valor_pixel(i, j);
             double nuevo = (actual - a) * constante + minimo;
             if (nuevo > 255)
@@ -207,8 +217,10 @@ void contrastar(const char *original, const char *salida, int minimo, int maximo
     }
 
     //escribimos la imagen de salida
-    if (!escribirImagen(img_salida, salida))
+    if (!escribirImagen(img_salida, salida)){
+        delete [] vector_original;
         error("Error escribiendo la imagen");
+    }
     delete[] vector_original;
 }
 
@@ -238,6 +250,8 @@ void morphing(const char * fuente, const char * destino, const char * basename, 
     // P(x,y) = a_i*O(x,y) + (1-a_i)*D(x,y)
     double incremento = 1.0/pasos;
     int contador = 0;
+    char extension [] = ".pgm";
+    char * salida = new char [strlen(basename)+sizeof(int)+strlen(extension)];
 
     for (double a_i = 1.0; a_i >= 0.0; a_i-=incremento){
         for (int i=0; i < filas1; i++){
@@ -246,21 +260,17 @@ void morphing(const char * fuente, const char * destino, const char * basename, 
                 intermedia.asigna_pixel(i,j,trans);
             }
         }
-        char extension [] = ".pgm";
-        char * salida = new char [strlen(basename)+sizeof(contador)+strlen(extension)];
         sprintf(salida,"%s%d%s",basename,contador,extension);
-        escribirImagen(intermedia,salida);
+        if (!escribirImagen(intermedia,salida)){
+            delete [] salida;
+            delete [] v_fuente;
+            delete [] v_destino;
+            error("Error escribiendo las imágenes");
+        }
         contador++;
-
-
     }
-
+    delete [] salida;
     delete [] v_fuente;
     delete [] v_destino;
 }
 
-
-double tranformacion_morph(byte s, byte d, double a_i){
-    double salida = a_i*s+(1.0-a_i)*d;
-    return salida;
-}

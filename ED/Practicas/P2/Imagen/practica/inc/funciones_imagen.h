@@ -18,17 +18,6 @@
  **/
 void error(std::string mensaje);
 
-
-
-/*     FUNCIONES SOBRE EL TIPO IMAGEN  */
-/**
- * @brief funcion para obtener una imagen a partir de un vector 1d de una imagen PGM
- * @param vector el vector unidimensional que contiene los pixeles de la imagen
- * @param filas el número de filas que tendrá la imagen
- * @param columnas el número de columnas que tendrá la imagen
- * @return objeto imagen con los datos del vector
- **/
-Imagen leerVectorPGM(byte * vector, int filas, int columnas);
 /**
  * @brief funcion para obtener una imagen a partir de un vector 1d de una imagen PPM
  * @param vector el vector unidimensional que contiene los pixeles de la imagen
@@ -49,14 +38,13 @@ Imagen leerVectorPPM(byte * vector, int filas, int columnas);
 void escribirVectorPGM(const Imagen &img, byte * vector, int filas, int columnas);
 
 /**
- * @brief función que permite convertir una imagen PPM a una imagen PGM
- * @param nombre_ppm la imagen a color
- * @param nombre_pgm la imagen en escala de grises
- * @pre debe existir el archivo con el nombre @a nombre_ppm
- * @post se escribe directamente el archivo desde esta funcion
- **/
-void colorAGris(const char * nombre_ppm, const char * nombre_pgm);
-
+ * @brief funcion que realiza la transformacion de un pixel
+ * @param s pixel inicial
+ * @param d pixel final
+ * @param a_i cociente de transformacion
+ * @return la transformacion
+ */
+double tranformacion_morph(byte s, byte d, double a_i);
 /**
  * @brief función para escribir en el disco un objeto de la clase imagen
  * @param img imagen a escribir en disco
@@ -66,6 +54,17 @@ void colorAGris(const char * nombre_ppm, const char * nombre_pgm);
  * @return true si no ha habido fallos, false en caso contrario
  */
 bool escribirImagen(const Imagen & img, const char * nombre_archivo);
+
+/*     FUNCIONES SOBRE EL TIPO IMAGEN  */
+
+/**
+ * @brief función que permite convertir una imagen PPM a una imagen PGM
+ * @param nombre_ppm la imagen a color
+ * @param nombre_pgm la imagen en escala de grises
+ * @pre debe existir el archivo con el nombre @a nombre_ppm
+ * @post se escribe directamente el archivo desde esta funcion
+ **/
+void colorAGris(const char * nombre_ppm, const char * nombre_pgm);
 
 /**
  * @brief funcion para generar una imagen nueva a partir de una original,
@@ -116,14 +115,6 @@ void contrastar(const char * original, const char * salida, int minimo, int maxi
  */
 void morphing(const char * fuente, const char * destino, const char * basename, int pasos);
 
-/**
- * @brief funcion que realiza la transformacion de un pixel
- * @param s pixel inicial
- * @param d pixel final
- * @param a_i cociente de transformacion
- * @return la transformacion
- */
-double tranformacion_morph(byte s, byte d, double a_i);
 
 #endif
 // fin archivo

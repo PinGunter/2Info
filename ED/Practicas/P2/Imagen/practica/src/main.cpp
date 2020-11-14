@@ -15,7 +15,7 @@ using namespace std;
 /**
  * @brief funcion principal del programa. Se encarga de la ejecución del programa
  * @param argc el número de parametros pasados en la ejecucion
- * @param args el vector de los parametros pasados en la ejecucion, esto es imagen_entrada,imagen_salida,min,max
+ * @param args el vector de los parametros pasados en la ejecucion, esto es imagen_entrada,imagen_salida
  **/
 int main(int argc, char *args[]){   
    if (argc != 3){
