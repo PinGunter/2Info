@@ -127,7 +127,6 @@ void zoom(const char *entrada, const char *salida, int x1, int y1, int x2, int y
     int tam_recorte = x2 - x1;           // N
     int dimension = 2 * tam_recorte - 1; // 2N+1
     int filas, columnas;
-    cout << dimension << endl;
 
     //lectura de datos
     byte *vector_original = LeerImagenPGM(entrada, filas, columnas);
@@ -251,7 +250,8 @@ void morphing(const char * fuente, const char * destino, const char * basename, 
     double incremento = 1.0/pasos;
     int contador = 0;
     char extension [] = ".pgm";
-    char * salida = new char [strlen(basename)+sizeof(int)+strlen(extension)];
+    char carpeta [] = "res_morphing/";
+    char * salida = new char [strlen(basename)+sizeof(int)+strlen(extension)+strlen(carpeta)];
 
     for (double a_i = 1.0; a_i >= 0.0; a_i-=incremento){
         for (int i=0; i < filas1; i++){
@@ -260,7 +260,7 @@ void morphing(const char * fuente, const char * destino, const char * basename, 
                 intermedia.asigna_pixel(i,j,trans);
             }
         }
-        sprintf(salida,"%s%d%s",basename,contador,extension);
+        sprintf(salida,"%s%s%d%s",carpeta,basename,contador,extension);
         if (!escribirImagen(intermedia,salida)){
             delete [] salida;
             delete [] v_fuente;

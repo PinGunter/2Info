@@ -365,6 +365,8 @@ void contrastar(const char *original, const char *salida, int minimo, int maximo
 
 Esta función realiza una transformación lineal sobre los píxeles de la imagen de manera que una imagen va lentamente transicionando hacia otra.
 
+:warning: **SE NECESITA CREAR UN DIRECTORIO LLAMADO `res_morphing` EN EL DIRECTORIO ACTUAL PARA GUARDAR LAS IMÁGENES INTERMEDIAS** :warning:
+
 La cabecera de la función es la siguiente. 
 
 ```c++
@@ -407,17 +409,17 @@ void morphing(const char * fuente, const char * destino,
   double incremento = 1.0/pasos;
   int contador = 0;
   char extension [] = ".pgm";
-  char * salida = new char [strlen(basename)+sizeof(int)+strlen(extension)];
+  char carpeta [] = "res_morphing/";
+  char * salida = new char [strlen(basename)+sizeof(int)+strlen(extension)+strlen(carpeta)];
   
   for (double a_i = 1.0; a_i >= 0.0; a_i-=incremento){
       for (int i=0; i < filas1; i++){
           for (int j=0; j < columnas1; j++){
-              double trans = tranformacion_morph(source.valor_pixel(i,j),
-                                                 target.valor_pixel(i,j),a_i);
+              double trans = tranformacion_morph(source.valor_pixel(i,j),target.valor_pixel(i,j),a_i);
               intermedia.asigna_pixel(i,j,trans);
           }
       }
-      sprintf(salida,"%s%d%s",basename,contador,extension);
+      sprintf(salida,"%s%s%d%s",carpeta,basename,contador,extension);
       if (!escribirImagen(intermedia,salida)){
           delete [] salida;
           delete [] v_fuente;
@@ -462,3 +464,101 @@ Para facilitar el uso y añadir funcionalidad externa al proyecto se han diseña
 
 * **`a_gris.sh`**
 
+  Este script se encarga de compilar el archivo `src/color_a_gris.cpp` y ejecutar el archivo correspondiente. Para ello existe una regla de construcción concreta en el Makefile para que sólo se encargue de ese archivo. 
+
+  El programa se encarga de llamar a la función `void colorAGris(const char * nombre_ppm, const char * nombre_pgm);` que se encarga de transformar una imagen a color a una imagen en escala de grises. 
+
+  Para ello usa las siguientes constantes (definidas como macros en el código)
+
+  ```c++
+  const double ROJO_GRIS = 0.2989;
+  const double VERDE_GRIS = 0.587;
+  const double AZUL_GRIS = 0.114;
+  ```
+
+  El cambio de color a gris se hace mediante la siguiente fórmula:
+
+  ​										$G(i,j) = 0.2989 · R(i,j) + 0.587 · G(i,j) + 0.114 · B(i,j)$
+
+  El script recorre todos los archivos de tipo PPM en el directorio imagenes_entrada y guarda su versión PGM en el directorio imagenes_salida.
+
+* **`animar.sh`**
+
+  Dependencias:
+
+  - Paquete `imagemagick`
+
+  Este script se encarga de convertir todas las imágenes intermedias generadas por el morphing en un gif para ver mejor la transición.
+
+  El uso de este script es el siguiente
+
+  ```bash
+  scripts/animar.sh <directorio-imagenes> <archivo-salida> <tiempo-en-ms-entre-frame>
+  ```
+
+* **`gen_doc.sh`**
+
+  Dependencias:
+
+  * doxygen: para generar la documentación 
+
+  * graphviz: paquete para generar grafos de dependencia entre los distintos objetos y ficheros
+
+  * pdflatex: paquete para generar la documentacion en pdf
+
+  El script borra la documentación generada anteriormente en el directorio `doc/` y usa doxygen para generar la documentación en pdf y en html. Se crea un enlace simbólico al archivo `index.html` que se encuentra dentro de `doc/html`. En el caso de pdf copia el resultado en el directorio actual.
+
+#### Imágenes de prueba
+
+Primero hemos pasado todas las fotos de color a escala de grises con `scripts/a_gris.sh`.
+
+* Pruebas umbral:
+
+  Probamos a hacer la operación de umbral en el rango 10,100 en las fotos: `mandrill.pgm`, `niveles.pgm` y `flores.pgm`
+
+  | Original                                                     | Umbral                                                       |
+  | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | ![](capturas/mandril_cap.png)                                | ![](capturas/mandril_umbral_cap.png)                         |
+  | ![](/home/salva/2Info/ED/Practicas/P2/Imagen/practica/capturas/niveles_cap.png) | ![](/home/salva/2Info/ED/Practicas/P2/Imagen/practica/capturas/niveles_umbral_cap.png) |
+| ![](capturas/flores_cap.png)                                 | ![](capturas/flores_umbral_cap.png)                          |
+  Podemos ver que los resultados son los esperados
+
+* Pruebas zoom:
+
+  Probamos las imagenes: `alhambra.pgm`, `vacas.pgm` y `cameraman.pgm`
+
+  | Original                       | Zoom                                | Coordenadas (argumentos) |
+  | ------------------------------ | ----------------------------------- | ------------------------ |
+  | ![](capturas/alhambra_cap.png) | ![](capturas/alhambra_zoom_cap.png) | (220,540), (337,657)     |
+  | ![](capturas/vacas_cap.png)    | ![](capturas/vacas_zoom_cap.png)    | (81,139),(167,225)       |
+  | ![](capturas/camera_cap.png)   | ![](capturas/camera_zoom_cap.png)   | (32,90),(82,140)         |
+
+  Vemos que funciona correctamente.
+
+* Pruebas contraste
+
+  Para probar la función de contraste elegiremos imágenes con poco contraste para comprobarlo: `celulas.pgm`, `saturno.pgm`y `helechos.pgm`.
+
+  El rango de la nueva foto es 0,400 en los tres ejemplos.
+
+  | Original                       | Contraste 0,400                     |
+  | ------------------------------ | ----------------------------------- |
+  | ![](capturas/celulas_cap.png)  | ![](capturas/celulas_cont_cap.png)  |
+  | ![](capturas/saturno_cap.png)  | ![](capturas/saturno_cont_cap.png)  |
+  | ![](capturas/helechos_cap.png) | ![](capturas/helechos_cont_cap.png) |
+
+  Vemos que las nuevas imágenes tienen más contraste.
+
+
+
+
+
+
+
+* Pruebas morphing
+
+  Para el morphing necesitamos dos imágenes que sean del mismo tamaño. Usaremos `helechos.pgm` con `bosque.pgm` y `celulas.pgm` con `vacas.pgm`. Ambos con 100 pasos intermedios. Como no puedo ni poner 100 imagenes ni un gif en un pdf, puede comprobar el resultado en el directorio `resultados/res_morphing_helecho`  y `resultados/res_morphing_celula`. Puede probar el script `scripts/animar.sh` para generar una animación gif.
+
+  
+
+*Todas las imágenes generadas por el programa para estos ejemplos están en la carpeta `resultados`. En las tablas aparecen capturas de pantalla debido a que el programa que estoy utilizando para este pdf no admite imágenes del formato pgm.*

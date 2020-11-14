@@ -32,7 +32,7 @@ int main(int argc, char *args[]){
             "1. Umbralizar imagen en una escala de grises" << endl << 
             "2. Hacer zoom a un recorte cuadrado de la imagen" << endl << 
             "3. Aplicar una trasnformacion lineal sobre el contraste de la imagen" << endl << 
-            "4. Realizar Morphing entre dos imagenes" << endl;
+            "4. Realizar Morphing entre dos imagenes. Requiere carpeta llamada res_morphing en el directorio actual" << endl;
 
     cin >> eleccion;
 
@@ -60,17 +60,19 @@ int main(int argc, char *args[]){
             contrastar(args[1],args[2],min,max);
             break;
         case 4:
+            cout << "Recuerda crear la carpeta res_morphing si no la tienes ya en el directorio actual" << endl;
             cout << "Introduce el nombre base de las imágenes intermedias." << endl;
             cin >> base;
             cout << "Introduce el numero de pasos intermedios" << endl;
             cin >> pasos;
             morphing(args[1],args[2],base.c_str(),pasos);
+            cout << "Completado. Imágenes generadas en res_morphing" << endl;
             break;
         default:
             error("Entrada no válida");
             break;
 
     }
-
-    cout << "Completado. " << endl;
+    if (eleccion != 4)
+      cout << "Completado. " << endl;
 }

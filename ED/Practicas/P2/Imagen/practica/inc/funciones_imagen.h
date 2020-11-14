@@ -106,6 +106,7 @@ void contrastar(const char * original, const char * salida, int minimo, int maxi
 
 /**
  * @brief funcion para realizar una transicion entre dos imagnenes (morphing)
+ * @pre debe existir un directorio llamado res_morphing para guardar las imagenes intermedias
  * @param fuente imagen de la que se parte (nombre)
  * @param destino imagen a la que se va transicionando (nombre)
  * @param basename nombre basico de los archivos intermedios que se generan. 

@@ -31,7 +31,7 @@ documentacion:
 color_gris: $(BIN)/color_a_gris
 
 $(BIN)/color_a_gris: $(OBJ)/color_a_gris.o $(OBJ)/imagenES.o $(OBJ)/funciones_imagen.o
-	echo Creando Binario Color -> Gris
+	echo Creando Binario Color a Gris
 	g++ $^ -o $@
 
 $(OBJ)/color_a_gris.o: $(SRC)/color_a_gris.cpp 
