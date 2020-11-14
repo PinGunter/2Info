@@ -11,4 +11,7 @@ package aerolinea;
  */
 public class Avion {
     
+    public Asiento eligeAsientoLibre(){
+        
+    }
 }

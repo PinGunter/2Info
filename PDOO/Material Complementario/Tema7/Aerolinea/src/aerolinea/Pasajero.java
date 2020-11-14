@@ -11,4 +11,9 @@ package aerolinea;
  */
 public class Pasajero {
     
+
+    public void seguroProtocoloSeguridad(){
+
+    }
+
 }
