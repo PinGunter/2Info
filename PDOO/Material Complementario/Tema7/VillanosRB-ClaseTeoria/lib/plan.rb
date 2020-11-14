@@ -9,9 +9,35 @@ module Villanos
       @prioridad = p
       @posicion_paso_siguiente = pps
       @terminado = t
-      @pasos = set_pasos # asumiendo que exista
+      @pasos = Array.new  # set_pasos # asumiendo que exista
       @objetivo_maligno = nil
 
+    end
+    
+    def get_terminado
+      @terminado
+    end
+    
+    def esta_activo
+      
+    end
+    
+    def dar_pasos_siguiente
+      paso = @pasos.at(@posicion_paso_siguiente)
+      paso.set_terminado(true)
+      ganancia = paso.get_ganancia
+      if @posicion_paso_siguiente != @pasos.size() -1
+        posicion_paso_siguiente +=1
+      else
+        @terminado = true
+      end
+      ganancia
+    end
+    
+    def inversion_paso_siguiente
+      paso = @pasos.at(@posicion_paso_siguiente)
+      gasto = paso.get_inversion
+      return gasto
     end
   end
 end

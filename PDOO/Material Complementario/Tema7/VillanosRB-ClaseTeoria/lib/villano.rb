@@ -19,7 +19,22 @@ module Villanos
     end
 
     def seguir_plan_prioritario()
-
+      terminado = false
+      plan = primer_plan_activo
+      if plan != nil
+        puedo_continuar = true
+        while !terminado and puedo_continuar
+          terminado = plan.get_terminado
+          gasto = plan.inversion_paso_siguiente
+          puedo_continuar = gasto <= @fortuna
+          if puedo_continuar
+            ganancia = plan.dar_paso_siguiente
+            set_fortuna(@fortuna-gasto+ganancia)
+          end
+        end
+      end
+      terminado = plan != nil and terminado
+      return terminado
     end
 
     def primer_plan_activo()
