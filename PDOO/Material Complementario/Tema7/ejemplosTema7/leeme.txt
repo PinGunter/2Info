@@ -1,0 +1,1 @@
+Implementación de los ejemplos de los diagramas de secuencia e interacción de la carpeta de diagramas
