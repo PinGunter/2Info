@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <imagenES.h>
+#include <imagen.h>
 #include <cmath>
 
 /** FUNCIONES AUXILIARES **/

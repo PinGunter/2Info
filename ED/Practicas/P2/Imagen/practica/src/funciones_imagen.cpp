@@ -5,6 +5,7 @@
  */
 #include <funciones_imagen.h> //Declaraciones de las funciones
 #include <string.h>
+#include <imagenES.h>
 using namespace std;
 
 // constantes para transformar de gris a color

@@ -5,6 +5,7 @@
  **/
 #include <iostream>
 #include <imagenES.h>
+#include <imagen.h>
 #include <funciones_imagen.h>
 
 
