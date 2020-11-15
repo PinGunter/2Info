@@ -1,0 +1,6 @@
+
+package ejemplodcomunicacion;
+
+class Pasaporte {
+    
+}
