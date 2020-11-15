@@ -1,9 +1,0 @@
-<map id="src/imagen.cpp" name="src/imagen.cpp">
-<area shape="rect" id="node1" title="definiciones de los métodos de la clase Imagen" alt="" coords="141,5,262,32"/>
-<area shape="rect" id="node2" href="$imagen_8h.html" title="contiene las declaraciones de la clase y de los metódos de Imagen" alt="" coords="5,155,88,181"/>
-<area shape="rect" id="node3" href="$imagenES_8h.html" title="Fichero cabecera para la E/S de imágenes Permite la E/S de archivos de tipo PGM,PPM." alt="" coords="112,155,211,181"/>
-<area shape="rect" id="node4" href="$funciones__imagen_8h.html" title="Archivo con la suite de funciones sobre el TDA_Imagen." alt="" coords="182,80,335,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="360,80,429,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="235,155,315,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="339,155,402,181"/>
-</map>

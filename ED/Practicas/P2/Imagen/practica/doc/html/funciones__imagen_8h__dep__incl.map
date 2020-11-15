@@ -1,6 +1,0 @@
-<map id="inc/funciones_imagen.h" name="inc/funciones_imagen.h">
-<area shape="rect" id="node1" title="Archivo con la suite de funciones sobre el TDA_Imagen." alt="" coords="193,5,369,32"/>
-<area shape="rect" id="node2" href="$funciones__imagen_8cpp.html" title="Archivo con las definiciones de la suite de funciones sobre el TDA_Imagen." alt="" coords="5,80,196,107"/>
-<area shape="rect" id="node3" href="$imagen_8cpp.html" title="definiciones de los métodos de la clase Imagen" alt="" coords="220,80,341,107"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="archivo que se encarga de transformar imagenes a color a escala de grises" alt="" coords="365,80,471,107"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="inc/imagenES.h" name="inc/imagenES.h">
-<area shape="rect" id="node1" title="Fichero cabecera para la E/S de imágenes Permite la E/S de archivos de tipo PGM,PPM." alt="" coords="225,5,347,32"/>
-<area shape="rect" id="node2" href="$funciones__imagen_8cpp.html" title="Archivo con las definiciones de la suite de funciones sobre el TDA_Imagen." alt="" coords="5,155,196,181"/>
-<area shape="rect" id="node3" href="$imagen_8cpp.html" title="definiciones de los métodos de la clase Imagen" alt="" coords="220,155,341,181"/>
-<area shape="rect" id="node4" href="$imagenES_8cpp.html" title="Fichero con definiciones para la E/S de imágenes Permite la E/S de archivos de tipo PGM,..." alt="" coords="449,80,587,107"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title="archivo que se encarga de transformar imagenes a color a escala de grises" alt="" coords="365,155,471,181"/>
-<area shape="rect" id="node6" href="$funciones__imagen_8h.html" title="Archivo con la suite de funciones sobre el TDA_Imagen." alt="" coords="198,80,374,107"/>
-</map>
