@@ -1,0 +1,3 @@
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/cmake-build-debug/CMakeFiles/Listas_ListasDobles.dir

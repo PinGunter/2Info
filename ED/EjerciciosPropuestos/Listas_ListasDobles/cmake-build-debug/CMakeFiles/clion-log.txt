@@ -1,0 +1,4 @@
+/home/salva/Clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/cmake-build-debug

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.cpp
+Lista.h
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.h
+cassert
+-
+
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.h
+
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/main.cpp
+iostream
+-
+Lista.h
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.h
+
