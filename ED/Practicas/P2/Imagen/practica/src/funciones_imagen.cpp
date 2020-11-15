@@ -5,6 +5,7 @@
  */
 #include <funciones_imagen.h> //Declaraciones de las funciones
 #include <string.h>
+#include <imagen.h>
 #include <imagenES.h>
 using namespace std;
 

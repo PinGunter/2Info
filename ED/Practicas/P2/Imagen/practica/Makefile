@@ -12,16 +12,16 @@ $(OBJ)/main.o: $(SRC)/main.cpp
 	g++ -g -c -I./$(INC) $< -o $@
 -lfunciones:	$(OBJ)/imagenES.o $(OBJ)/funciones_imagen.o $(OBJ)/imagen.o
 	echo Creando biblioteca
-	ar rvs $(LIB)/libfunciones.a $(OBJ)/imagenES.o $(OBJ)/funciones_imagen.o
+	ar rvs $(LIB)/libfunciones.a $(OBJ)/imagenES.o $(OBJ)/funciones_imagen.o $(OBJ)/imagen.o
 
 $(OBJ)/imagenES.o: $(SRC)/imagenES.cpp
 	echo Creando imagenES.o
 	g++ -g -c -I./$(INC) $< -o $@
 $(OBJ)/funciones_imagen.o: $(SRC)/funciones_imagen.cpp
 	g++ -g -c -I./$(INC) $< -o $@
-	
-$(OBJ)/imagen.o:	$(SRC)/imagen.cpp
-	echo Creando imagen.obj
+
+$(OBJ)/imagen.o: $(SRC)/imagen.cpp
+	echo Creando imagen.o
 	g++ -g -c -I./$(INC) $< -o $@
 
 clean: 

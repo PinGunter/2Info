@@ -1,0 +1,312 @@
+\hypertarget{funciones__imagen_8cpp}{}\doxysection{Referencia del Archivo src/funciones\+\_\+imagen.cpp}
+\label{funciones__imagen_8cpp}\index{src/funciones\_imagen.cpp@{src/funciones\_imagen.cpp}}
+
+
+Archivo con las definiciones de la suite de funciones sobre el {\itshape T\+D\+A\+\_\+\+Imagen}.  
+
+
+{\ttfamily \#include $<$funciones\+\_\+imagen.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$imagen.\+h$>$}\newline
+{\ttfamily \#include $<$imagen\+E\+S.\+h$>$}\newline
+Dependencia gráfica adjunta para funciones\+\_\+imagen.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funciones__imagen_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{funciones__imagen_8cpp_a1619ea9a64c017d9bf879fe878927d9c}{error}} (std\+::string mensaje)
+\begin{DoxyCompactList}\small\item\em funcion para mostrar los mensajes de error \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImagen}{Imagen}} \mbox{\hyperlink{funciones__imagen_8cpp_a231a8956f205d978f0578dd5b517704b}{leer\+Vector\+P\+PM}} (byte $\ast$vector, int filas, int columnas)
+\begin{DoxyCompactList}\small\item\em funcion para obtener una imagen a partir de un vector 1d de una imagen P\+PM \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funciones__imagen_8cpp_a40fc3db59679e8d664b771f09f8ea13a}{escribir\+Vector\+P\+GM}} (const \mbox{\hyperlink{classImagen}{Imagen}} \&img, byte $\ast$vector, int filas, int columnas)
+\begin{DoxyCompactList}\small\item\em funcion para transformar un objeto imagen en un vector unidimensional \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{funciones__imagen_8cpp_a04b32466bc7305c182c7749cf722145d}{escribir\+Imagen}} (const \mbox{\hyperlink{classImagen}{Imagen}} \&img, const char $\ast$nombre\+\_\+archivo)
+\begin{DoxyCompactList}\small\item\em función para escribir en el disco un objeto de la clase imagen \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{funciones__imagen_8cpp_a9257ed34d7ee947979fc1bf0c81edef6}{tranformacion\+\_\+morph}} (byte s, byte d, double a\+\_\+i)
+\begin{DoxyCompactList}\small\item\em funcion que realiza la transformacion de un pixel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funciones__imagen_8cpp_afb06e9fa37177e2fffd85054bc75acbb}{color\+A\+Gris}} (const char $\ast$nombre\+\_\+ppm, const char $\ast$nombre\+\_\+pgm)
+\begin{DoxyCompactList}\small\item\em función que permite convertir una imagen P\+PM a una imagen P\+GM \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funciones__imagen_8cpp_a7bbc9db7e9136fec9dad8c80650021cb}{umbralizar\+\_\+escala\+\_\+grises}} (const char $\ast$original, const char $\ast$salida, int umbral\+\_\+min, int umbral\+\_\+max)
+\begin{DoxyCompactList}\small\item\em funcion para generar una imagen nueva a partir de una original, basado en un umbral de escala de grises. Si el pixel se encuentra en el intervalo, conserva su color, en caso contrario se vuelve negro \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funciones__imagen_8cpp_a33aa600fa5b75b951207e8a062afed7a}{zoom}} (const char $\ast$entrada, const char $\ast$salida, int x1, int y1, int x2, int y2)
+\begin{DoxyCompactList}\small\item\em funcion para realizar zoom en una porción cuadrada de la imagen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funciones__imagen_8cpp_a035ed2f66950559846a7835eeb4ca040}{contrastar}} (const char $\ast$original, const char $\ast$salida, int minimo, int maximo)
+\begin{DoxyCompactList}\small\item\em funcion para contrastar una imagen basado en unos valores {\itshape min} y {\itshape max} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funciones__imagen_8cpp_ae89f8dba7ed34ffbac497f22b8af2b81}{morphing}} (const char $\ast$fuente, const char $\ast$destino, const char $\ast$basename, int pasos)
+\begin{DoxyCompactList}\small\item\em funcion para realizar una transicion entre dos imagnenes (morphing) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{funciones__imagen_8cpp_adeb9342ec2334dee1f1246be459ac1e9}\label{funciones__imagen_8cpp_adeb9342ec2334dee1f1246be459ac1e9}} 
+const double \mbox{\hyperlink{funciones__imagen_8cpp_adeb9342ec2334dee1f1246be459ac1e9}{R\+O\+J\+O\+\_\+\+G\+R\+IS}} = 0.\+2989
+\begin{DoxyCompactList}\small\item\em Macro para definir la constante para transformar de rojo a escala de grises. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{funciones__imagen_8cpp_a8f5c9bbb12dea46bb23e3154e8923176}\label{funciones__imagen_8cpp_a8f5c9bbb12dea46bb23e3154e8923176}} 
+const double \mbox{\hyperlink{funciones__imagen_8cpp_a8f5c9bbb12dea46bb23e3154e8923176}{V\+E\+R\+D\+E\+\_\+\+G\+R\+IS}} = 0.\+587
+\begin{DoxyCompactList}\small\item\em Macro para definir la constante para transformar de verde a escala de grises. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{funciones__imagen_8cpp_a527e9729a04cbb691845003444571add}\label{funciones__imagen_8cpp_a527e9729a04cbb691845003444571add}} 
+const double \mbox{\hyperlink{funciones__imagen_8cpp_a527e9729a04cbb691845003444571add}{A\+Z\+U\+L\+\_\+\+G\+R\+IS}} = 0.\+114
+\begin{DoxyCompactList}\small\item\em Macro para definir la constante para transformar de azul a escala de grises. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Archivo con las definiciones de la suite de funciones sobre el {\itshape T\+D\+A\+\_\+\+Imagen}. 
+
+\begin{DoxyAuthor}{Autor}
+Salvador Romero Cortés 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{funciones__imagen_8cpp_afb06e9fa37177e2fffd85054bc75acbb}\label{funciones__imagen_8cpp_afb06e9fa37177e2fffd85054bc75acbb}} 
+\index{funciones\_imagen.cpp@{funciones\_imagen.cpp}!colorAGris@{colorAGris}}
+\index{colorAGris@{colorAGris}!funciones\_imagen.cpp@{funciones\_imagen.cpp}}
+\doxysubsubsection{\texorpdfstring{colorAGris()}{colorAGris()}}
+{\footnotesize\ttfamily void color\+A\+Gris (\begin{DoxyParamCaption}\item[{const char $\ast$}]{nombre\+\_\+ppm,  }\item[{const char $\ast$}]{nombre\+\_\+pgm }\end{DoxyParamCaption})}
+
+
+
+función que permite convertir una imagen P\+PM a una imagen P\+GM 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\+\_\+ppm} & la imagen a color \\
+\hline
+{\em nombre\+\_\+pgm} & la imagen en escala de grises \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+debe existir el archivo con el nombre {\itshape nombre\+\_\+ppm} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se escribe directamente el archivo desde esta funcion 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{funciones__imagen_8cpp_a035ed2f66950559846a7835eeb4ca040}\label{funciones__imagen_8cpp_a035ed2f66950559846a7835eeb4ca040}} 
+\index{funciones\_imagen.cpp@{funciones\_imagen.cpp}!contrastar@{contrastar}}
+\index{contrastar@{contrastar}!funciones\_imagen.cpp@{funciones\_imagen.cpp}}
+\doxysubsubsection{\texorpdfstring{contrastar()}{contrastar()}}
+{\footnotesize\ttfamily void contrastar (\begin{DoxyParamCaption}\item[{const char $\ast$}]{original,  }\item[{const char $\ast$}]{salida,  }\item[{int}]{minimo,  }\item[{int}]{maximo }\end{DoxyParamCaption})}
+
+
+
+funcion para contrastar una imagen basado en unos valores {\itshape min} y {\itshape max} 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape min} y {\itshape max} deben ser $>$0 y $<$255 
+
+{\itshape original} debe ser una imagen valida 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parámetros}
+{\em original} & nombre de la imagen original a partir de la cual se genera la imagen contrastada \\
+\hline
+{\em salida} & nombre de la imagen contrastada \\
+\hline
+{\em minimo} & inicio del intervalo \\
+\hline
+{\em maximo} & final del intervalo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondición}
+se escribe en disco la imagen {\itshape salida} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{funciones__imagen_8cpp_a1619ea9a64c017d9bf879fe878927d9c}\label{funciones__imagen_8cpp_a1619ea9a64c017d9bf879fe878927d9c}} 
+\index{funciones\_imagen.cpp@{funciones\_imagen.cpp}!error@{error}}
+\index{error@{error}!funciones\_imagen.cpp@{funciones\_imagen.cpp}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{std\+::string}]{mensaje }\end{DoxyParamCaption})}
+
+
+
+funcion para mostrar los mensajes de error 
+
+F\+U\+N\+C\+I\+O\+N\+ES A\+U\+X\+I\+L\+I\+A\+R\+ES 
+\begin{DoxyParams}{Parámetros}
+{\em mensaje} & el mensaje de error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{funciones__imagen_8cpp_a04b32466bc7305c182c7749cf722145d}\label{funciones__imagen_8cpp_a04b32466bc7305c182c7749cf722145d}} 
+\index{funciones\_imagen.cpp@{funciones\_imagen.cpp}!escribirImagen@{escribirImagen}}
+\index{escribirImagen@{escribirImagen}!funciones\_imagen.cpp@{funciones\_imagen.cpp}}
+\doxysubsubsection{\texorpdfstring{escribirImagen()}{escribirImagen()}}
+{\footnotesize\ttfamily bool escribir\+Imagen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classImagen}{Imagen}} \&}]{img,  }\item[{const char $\ast$}]{nombre\+\_\+archivo }\end{DoxyParamCaption})}
+
+
+
+función para escribir en el disco un objeto de la clase imagen 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em img} & imagen a escribir en disco \\
+\hline
+{\em nombre\+\_\+archivo} & el nombre del archivo que se guarda \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+{\itshape img} deber se una imagen inicializada y valida 
+
+{\itshape nombre\+\_\+archivo} debe ser un nombre valido 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Devuelve}
+true si no ha habido fallos, false en caso contrario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{funciones__imagen_8cpp_a40fc3db59679e8d664b771f09f8ea13a}\label{funciones__imagen_8cpp_a40fc3db59679e8d664b771f09f8ea13a}} 
+\index{funciones\_imagen.cpp@{funciones\_imagen.cpp}!escribirVectorPGM@{escribirVectorPGM}}
+\index{escribirVectorPGM@{escribirVectorPGM}!funciones\_imagen.cpp@{funciones\_imagen.cpp}}
+\doxysubsubsection{\texorpdfstring{escribirVectorPGM()}{escribirVectorPGM()}}
+{\footnotesize\ttfamily void escribir\+Vector\+P\+GM (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classImagen}{Imagen}} \&}]{img,  }\item[{byte $\ast$}]{vector,  }\item[{int}]{filas,  }\item[{int}]{columnas }\end{DoxyParamCaption})}
+
+
+
+funcion para transformar un objeto imagen en un vector unidimensional 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em img} & la imagen que se va a convertir \\
+\hline
+{\em vector} & el vector donde se escribe la imagen \\
+\hline
+{\em filas} & el número de filas de la imagen \\
+\hline
+{\em columnas} & el número de columnas de la imagen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+todos los parámetros se modifican menos {\itshape img} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{funciones__imagen_8cpp_a231a8956f205d978f0578dd5b517704b}\label{funciones__imagen_8cpp_a231a8956f205d978f0578dd5b517704b}} 
+\index{funciones\_imagen.cpp@{funciones\_imagen.cpp}!leerVectorPPM@{leerVectorPPM}}
+\index{leerVectorPPM@{leerVectorPPM}!funciones\_imagen.cpp@{funciones\_imagen.cpp}}
+\doxysubsubsection{\texorpdfstring{leerVectorPPM()}{leerVectorPPM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImagen}{Imagen}} leer\+Vector\+P\+PM (\begin{DoxyParamCaption}\item[{byte $\ast$}]{vector,  }\item[{int}]{filas,  }\item[{int}]{columnas }\end{DoxyParamCaption})}
+
+
+
+funcion para obtener una imagen a partir de un vector 1d de una imagen P\+PM 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em vector} & el vector unidimensional que contiene los pixeles de la imagen \\
+\hline
+{\em filas} & el número de filas que tendrá la imagen \\
+\hline
+{\em columnas} & el número de columnas que tendrá la imagen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+objeto imagen con los datos del vector (en escala de grises) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{funciones__imagen_8cpp_ae89f8dba7ed34ffbac497f22b8af2b81}\label{funciones__imagen_8cpp_ae89f8dba7ed34ffbac497f22b8af2b81}} 
+\index{funciones\_imagen.cpp@{funciones\_imagen.cpp}!morphing@{morphing}}
+\index{morphing@{morphing}!funciones\_imagen.cpp@{funciones\_imagen.cpp}}
+\doxysubsubsection{\texorpdfstring{morphing()}{morphing()}}
+{\footnotesize\ttfamily void morphing (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fuente,  }\item[{const char $\ast$}]{destino,  }\item[{const char $\ast$}]{basename,  }\item[{int}]{pasos }\end{DoxyParamCaption})}
+
+
+
+funcion para realizar una transicion entre dos imagnenes (morphing) 
+
+\begin{DoxyPrecond}{Precondición}
+debe existir un directorio llamado res\+\_\+morphing para guardar las imagenes intermedias 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parámetros}
+{\em fuente} & imagen de la que se parte (nombre) \\
+\hline
+{\em destino} & imagen a la que se va transicionando (nombre) \\
+\hline
+{\em basename} & nombre basico de los archivos intermedios que se generan. \\
+\hline
+{\em pasos} & numero de pasos intermedios (e imagenes) que se van a hacer para la transicion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+las imagenes deben ser imagenes validas, asi como que basename debe ser un nombre valido para nombre de archivo del so. paso $>$ 0 las imagenes deben tener tambien el mismo tamaño 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{funciones__imagen_8cpp_a9257ed34d7ee947979fc1bf0c81edef6}\label{funciones__imagen_8cpp_a9257ed34d7ee947979fc1bf0c81edef6}} 
+\index{funciones\_imagen.cpp@{funciones\_imagen.cpp}!tranformacion\_morph@{tranformacion\_morph}}
+\index{tranformacion\_morph@{tranformacion\_morph}!funciones\_imagen.cpp@{funciones\_imagen.cpp}}
+\doxysubsubsection{\texorpdfstring{tranformacion\_morph()}{tranformacion\_morph()}}
+{\footnotesize\ttfamily double tranformacion\+\_\+morph (\begin{DoxyParamCaption}\item[{byte}]{s,  }\item[{byte}]{d,  }\item[{double}]{a\+\_\+i }\end{DoxyParamCaption})}
+
+
+
+funcion que realiza la transformacion de un pixel 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em s} & pixel inicial \\
+\hline
+{\em d} & pixel final \\
+\hline
+{\em a\+\_\+i} & cociente de transformacion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+la transformacion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{funciones__imagen_8cpp_a7bbc9db7e9136fec9dad8c80650021cb}\label{funciones__imagen_8cpp_a7bbc9db7e9136fec9dad8c80650021cb}} 
+\index{funciones\_imagen.cpp@{funciones\_imagen.cpp}!umbralizar\_escala\_grises@{umbralizar\_escala\_grises}}
+\index{umbralizar\_escala\_grises@{umbralizar\_escala\_grises}!funciones\_imagen.cpp@{funciones\_imagen.cpp}}
+\doxysubsubsection{\texorpdfstring{umbralizar\_escala\_grises()}{umbralizar\_escala\_grises()}}
+{\footnotesize\ttfamily void umbralizar\+\_\+escala\+\_\+grises (\begin{DoxyParamCaption}\item[{const char $\ast$}]{original,  }\item[{const char $\ast$}]{salida,  }\item[{int}]{umbral\+\_\+min,  }\item[{int}]{umbral\+\_\+max }\end{DoxyParamCaption})}
+
+
+
+funcion para generar una imagen nueva a partir de una original, basado en un umbral de escala de grises. Si el pixel se encuentra en el intervalo, conserva su color, en caso contrario se vuelve negro 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em original} & el nombre de la imagen de la que se parte \\
+\hline
+{\em salida} & el nombre de la imagen nueva \\
+\hline
+{\em umbral\+\_\+min} & el minimo del intervalo umbral \\
+\hline
+{\em umbral\+\_\+max} & el maximo del intervalo umbral \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+{\itshape original} debe ser una imagen valida 
+
+{\itshape umbral\+\_\+min} $<$ {\itshape umbral\+\_\+max} además de ser ambos entre 0 y 255 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+{\itshape salida} se guarda como imagen valida en disco 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{funciones__imagen_8cpp_a33aa600fa5b75b951207e8a062afed7a}\label{funciones__imagen_8cpp_a33aa600fa5b75b951207e8a062afed7a}} 
+\index{funciones\_imagen.cpp@{funciones\_imagen.cpp}!zoom@{zoom}}
+\index{zoom@{zoom}!funciones\_imagen.cpp@{funciones\_imagen.cpp}}
+\doxysubsubsection{\texorpdfstring{zoom()}{zoom()}}
+{\footnotesize\ttfamily void zoom (\begin{DoxyParamCaption}\item[{const char $\ast$}]{entrada,  }\item[{const char $\ast$}]{salida,  }\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2 }\end{DoxyParamCaption})}
+
+
+
+funcion para realizar zoom en una porción cuadrada de la imagen 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em entrada} & nombre del archivo de la imagen de entrada \\
+\hline
+{\em salida} & nombre del archivo de la imagen de salida \\
+\hline
+{\em x1} & posicion x de la esquina superior izquierda \\
+\hline
+{\em y1} & posicion y de la esquina superior izquierda \\
+\hline
+{\em x2} & posicion x de la esquina inferior derecha \\
+\hline
+{\em y2} & posicion y de la esquina inferior derecha \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+x1 $<$ x2 y y1 $<$ y2. Además debe ser cuadrado, $\vert$x1-\/x2$\vert$ == $\vert$y1-\/y2$\vert$ 
+\end{DoxyPrecond}
