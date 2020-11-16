@@ -12,25 +12,24 @@ import java.util.ArrayList;
  * @author pingu
  */
 public class Vuelo {
+
     ArrayList<Viaje> viajes;
     Avion a;
-    
-    public Vuelo(){
+
+    public Vuelo() {
         viajes = new ArrayList<>();
         a = null;
     }
-    
-    public void reservar(Pasajero pasajero){
-      boolean plazas = plazasLibres();
-      if (plazas){
-        Asiento s =a.eligeAsientoLibre();
-        Viaje elViaje = new Viaje (pasajero,s);
-        elViaje.setPasajero(pasajero);
-        pasajero.seguroProtocoloSeguridad();
-        if (p > 0)
-            viajes.add(elViaje);
-      }
-      
-        
+
+    public void reservar(Pasajero pasajero) {
+        boolean plazas = plazasLibres();
+        if (plazas) {
+            Asiento s = a.eligeAsientoLibre();
+            Viaje elViaje = new Viaje(pasajero, s);
+            if (plazas) { //Esto estaba mal en el diagrama
+                viajes.add(elViaje);
+            }
+        }
+
     }
 }

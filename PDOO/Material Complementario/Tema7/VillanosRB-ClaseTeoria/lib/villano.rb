@@ -23,7 +23,7 @@ module Villanos
       plan = primer_plan_activo
       if plan != nil
         puedo_continuar = true
-        while !terminado and puedo_continuar
+        while !terminado and puedo_continuar do
           terminado = plan.get_terminado
           gasto = plan.inversion_paso_siguiente
           puedo_continuar = gasto <= @fortuna

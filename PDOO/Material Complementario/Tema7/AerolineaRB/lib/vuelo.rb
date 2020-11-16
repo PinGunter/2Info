@@ -8,15 +8,13 @@ module Compania_aerea
       @viajes = Array.new
       @a = nil
     end
-    
+
     def reservar(pasajero)
       plazas = plazas_libres
       if plazas
         s = a.elige_asiento_libre
         el_viaje = Viaje.new(pasajero,@a)
-        el_viaje.set_pasajero(pasajero)
-        pasajero.seguro_protocolo_seguridad
-        if p>0
+        if plazas # esto estaba mal en el diagrama
           @viajes << el_viaje
         end
       end

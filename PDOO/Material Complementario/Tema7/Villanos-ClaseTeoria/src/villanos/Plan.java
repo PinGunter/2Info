@@ -53,7 +53,7 @@ public class Plan {
     }
 
     public boolean estaActivo() {
-        
+
     }
 
     //?????????
@@ -61,12 +61,12 @@ public class Plan {
         Paso paso = pasos.get(posicionPasoSiguiente);
         paso.setTerminado(true);
         int ganancia = paso.getGanancia();
-        if (posicionPasoSiguiente != pasos.size()-1){
+        if (posicionPasoSiguiente != pasos.size() - 1) {
             posicionPasoSiguiente++;
-        }
-        else
+        } else {
             terminado = true;
-        //return ganancia;    
+        }
+        return ganancia;
     }
 
     public int inversionPasoSiguiente() {

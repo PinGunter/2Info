@@ -10,11 +10,13 @@ package aerolinea;
  * @author pingu
  */
 public class Viaje {
-    public Viaje(Pasajero pasajero, Asiento s){
-        
+
+    public Viaje(Pasajero pasajero, Asiento s) {
+        setPasajero(pasajero);
+        pasajero.seguroProtocoloSeguridad();
     }
-    
-    public void setPasajero(Pasajero pasajero){
-        
+
+    public void setPasajero(Pasajero pasajero) {
+
     }
 }

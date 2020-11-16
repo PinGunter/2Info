@@ -5,12 +5,12 @@
 module Compania_aerea
   class Viaje
     def initialize(pasajero,s)
-      @pasajero = pasajero
-      @plaza = s
+      set_pasajero(pasajero)
+      pasajero.seguro_protocolo_seguridad
     end
-    
+
     def set_pasajero(pasajero)
-      
+
     end
   end
 end
