@@ -14,6 +14,8 @@ doxygen doxyfile
 ln -s doc/html/index.html doc.html
 
 # ahora generamos la documentacion en pdf
+# AVISO: se solicitará varias veces interacción con usuario, pulsar enter las veces necesairas
+# la documentación se sigue generando sin problema
 cd doc/latex && make
 cp refman.pdf ../../
 cd ../../

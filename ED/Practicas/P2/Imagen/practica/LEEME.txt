@@ -1,0 +1,6 @@
+AVISO:
+Si ejecuta el script gen_doc.sh, verá que pedirá interacción con el usuario, simplemente pulsar la tecla "enter" las veces que sea necesario. Esto es debido a la generación del pdf y no afecta a la generación de la documentación.
+
+Aunque viene en doxygen, para ejecutar el programa principal los argumentos del main son el archivo_de_entrada.pgm y archivo_de_salida.pgm (en caso del morphing es la imagen desde la que se parte y a la que se transiciona)
+
+El resto de la práctica viene explicada en el pdf "TDA Imagen.pdf" y comentada con doxygen.

@@ -4,9 +4,10 @@
 
 #include "Lista.h"
 #include <cassert>
+#include <utility>
 template <typename T>
 Lista<T>::iterator::iterator() {
-
+	puntero = nullptr;
 }
 
 template <typename T>
@@ -100,7 +101,7 @@ T Lista<T>::get(const iterator &p) const {
 }
 
 template <typename T>
-typename Lista<T>::iterator Lista<T>::insert(const iterator &p, const T &e) {
+typename Lista<T>::iterator Lista<T>::insert(iterator p, const T &e) {
     CeldaLista<T> * q = new CeldaLista<T>;
     q->elemento = e;
     q->anterior = p.puntero-> anterior;
@@ -111,7 +112,7 @@ typename Lista<T>::iterator Lista<T>::insert(const iterator &p, const T &e) {
     return p;
 }
 template <typename T>
-typename Lista<T>::iterator Lista<T>::erase(const iterator &p) {
+typename Lista<T>::iterator Lista<T>::erase(iterator p) {
     assert(p!=end());
     CeldaLista<T> * q = p.puntero;
     q->anterior->siguiente = q->siguiente;

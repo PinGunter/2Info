@@ -33,7 +33,6 @@ Imagen leerVectorPPM(byte * vector, int filas, int columnas);
  * @param vector el vector donde se escribe la imagen
  * @param filas el número de filas de la imagen
  * @param columnas el número de columnas de la imagen
- * @pre 
  * @post todos los parámetros se modifican menos @a img
  **/
 void escribirVectorPGM(const Imagen &img, byte * vector, int filas, int columnas);
@@ -108,12 +107,12 @@ void contrastar(const char * original, const char * salida, int minimo, int maxi
 /**
  * @brief funcion para realizar una transicion entre dos imagnenes (morphing)
  * @pre debe existir un directorio llamado res_morphing para guardar las imagenes intermedias
+  * @pre las imagenes deben ser imagenes validas, asi como que basename debe ser un nombre valido para nombre de archivo del so. paso > 0
+ *      las imagenes deben tener tambien el mismo tamaño
  * @param fuente imagen de la que se parte (nombre)
  * @param destino imagen a la que se va transicionando (nombre)
  * @param basename nombre basico de los archivos intermedios que se generan. 
  * @param pasos numero de pasos intermedios (e imagenes) que se van a hacer para la transicion
- * @pre las imagenes deben ser imagenes validas, asi como que basename debe ser un nombre valido para nombre de archivo del so. paso > 0
- *      las imagenes deben tener tambien el mismo tamaño
  */
 void morphing(const char * fuente, const char * destino, const char * basename, int pasos);
 
