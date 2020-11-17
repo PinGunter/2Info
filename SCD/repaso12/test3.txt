@@ -1,0 +1,128 @@
+Estanquera produce ingrediente:                   Fumador 0 espera para recoger su ingrediente3
+
+                  Fumador 1 espera para recoger su ingrediente
+                  Fumador 2 espera para recoger su ingrediente
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 3 recoge su ingrediente
+                  Fumador 3 empieza a fumar
+                  Fumador 4 espera para recoger su ingrediente
+                  Fumador 3 deja de fumar
+Estanquera produce ingrediente: 4
+                  Fumador 3 espera para recoger su ingrediente
+                  Fumador 4 recoge su ingrediente
+                  Fumador 4 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 4 deja de fumar
+Estanquera produce ingrediente:                   Fumador 4 espera para recoger su ingrediente
+1
+                  Fumador 1 recoge su ingrediente
+                  Fumador 1 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 1 deja de fumar
+Estanquera produce ingrediente: 1
+                  Fumador 1 espera para recoger su ingrediente
+                  Fumador 1 recoge su ingrediente
+                  Fumador 1 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 1 deja de fumar
+Estanquera produce ingrediente:                   Fumador 1 espera para recoger su ingrediente
+0
+                  Fumador 0 recoge su ingrediente
+                  Fumador 0 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 0 deja de fumar
+Estanquera produce ingrediente: 2
+                  Fumador 0 espera para recoger su ingrediente
+                  Fumador 2 recoge su ingrediente
+                  Fumador 2 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 2 deja de fumar
+Estanquera produce ingrediente:                   Fumador 2 espera para recoger su ingrediente
+3
+                  Fumador 3 recoge su ingrediente
+                  Fumador 3 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 3 deja de fumar
+Estanquera produce ingrediente: 1
+                  Fumador 3 espera para recoger su ingrediente
+                  Fumador 1 recoge su ingrediente
+                  Fumador 1 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 1 deja de fumar
+Estanquera produce ingrediente: 2
+                  Fumador 1 espera para recoger su ingrediente
+                  Fumador 2 recoge su ingrediente
+                  Fumador 2 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 2 deja de fumar
+Estanquera produce ingrediente:                   Fumador 2 espera para recoger su ingrediente
+1
+                  Fumador 1 recoge su ingrediente
+                  Fumador 1 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 1 deja de fumar
+Estanquera produce ingrediente: 0
+                  Fumador 1 espera para recoger su ingrediente
+                  Fumador 0 recoge su ingrediente
+                  Fumador 0 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 0 deja de fumar
+Estanquera produce ingrediente: 0
+                  Fumador 0 espera para recoger su ingrediente
+                  Fumador 0 recoge su ingrediente
+                  Fumador 0 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 0 deja de fumar
+Estanquera produce ingrediente: 3
+                  Fumador 0 espera para recoger su ingrediente
+                  Fumador 3 recoge su ingrediente
+                  Fumador 3 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 3 deja de fumar
+Estanquera produce ingrediente: 4
+                  Fumador 3 espera para recoger su ingrediente
+                  Fumador 4 recoge su ingrediente
+                  Fumador 4 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 4 deja de fumar
+Estanquera produce ingrediente:                   Fumador 4 espera para recoger su ingrediente
+4
+                  Fumador 4 recoge su ingrediente
+                  Fumador 4 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 4 deja de fumar
+Estanquera produce ingrediente: 4
+                  Fumador 4 espera para recoger su ingrediente
+                  Fumador 4 recoge su ingrediente
+                  Fumador 4 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 4 deja de fumar
+Estanquera produce ingrediente:                   Fumador 44 espera para recoger su ingrediente
+
+                  Fumador 4 recoge su ingrediente
+                  Fumador 4 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 4 deja de fumar
+Estanquera produce ingrediente:                   Fumador 4 espera para recoger su ingrediente
+3
+                  Fumador 3 recoge su ingrediente
+                  Fumador 3 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 3 deja de fumar
+Estanquera produce ingrediente: 1
+                  Fumador 3 espera para recoger su ingrediente
+                  Fumador 1 recoge su ingrediente
+                  Fumador 1 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 1 deja de fumar
+Estanquera produce ingrediente: 1
+                  Fumador 1 espera para recoger su ingrediente
+                  Fumador 1 recoge su ingrediente
+                  Fumador 1 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
+                  Fumador 1 deja de fumar
+Estanquera produce ingrediente: 1
+                  Fumador 1 espera para recoger su ingrediente
+                  Fumador 1 recoge su ingrediente
+                  Fumador 1 empieza a fumar
+Estanquero ha puesto ingrediente y espera que se recoja
