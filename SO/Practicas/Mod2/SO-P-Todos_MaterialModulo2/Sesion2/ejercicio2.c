@@ -27,7 +27,8 @@ int main(int argc, char * args[]){
 		printf("Error, no se puede abrir el directorio\n");
 		exit(EXIT_FAILURE);
 	}
-	direntp = readdir(dir);
+	direntp = readdir(dir);	//saltamos el primero porque es el "." por tanto haciendo chmod a el todos los archivos obtiene esos permisos
+							//podriamos hacer chmod en a este en lugar de hacer un bucle.
 	while ((direntp = readdir(dir)) != NULL){
 		umask(022);
 		char nombre[500] ;
