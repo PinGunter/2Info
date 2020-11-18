@@ -57,5 +57,5 @@ int main(int argc, char * args[]){
     }
     const char * path = args[1];
     recorrer(path);
-    printf("Tamano de %d\n", tamanio);
+    printf("Tamano de %d bytes\n", tamanio);
 }

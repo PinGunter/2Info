@@ -1,47 +1,33 @@
-#define _XOPEN_SOURCE 500
-       #include <ftw.h>
-       #include <stdio.h>
-       #include <stdlib.h>
-       #include <string.h>
-       #include <stdint.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <string.h>
+#include <ftw.h>
 
-       static int
-       display_info(const char *fpath, const struct stat *sb,
-                    int tflag, struct FTW *ftwbuf)
-       {
-           printf("%-3s %2d ",
-                   (tflag == FTW_D) ?   "d"   : (tflag == FTW_DNR) ? "dnr" :
-                   (tflag == FTW_DP) ?  "dp"  : (tflag == FTW_F) ?   "f" :
-                   (tflag == FTW_NS) ?  "ns"  : (tflag == FTW_SL) ?  "sl" :
-                   (tflag == FTW_SLN) ? "sln" : "???",
-                   ftwbuf->level);
+int tamanio = 0;
+long int permisos = S_IXOTH | S_IXGRP; //Permisos de ejecucion de grupo y de otros
 
-           if (tflag == FTW_NS)
-               printf("-------");
-           else
-               printf("%7jd", (intmax_t) sb->st_size);
-
-           printf("   %-40s %d %s\n",
-                   fpath, ftwbuf->base, fpath + ftwbuf->base);
-
-           return 0;           /* To tell nftw() to continue */
-       }
-
-       int
-       main(int argc, char *argv[])
-       {
-           int flags = 0;
-
-           if (argc > 2 && strchr(argv[2], 'd') != NULL)
-               flags |= FTW_DEPTH;
-           if (argc > 2 && strchr(argv[2], 'p') != NULL)
-               flags |= FTW_PHYS;
-
-           if (nftw((argc < 2) ? "." : argv[1], display_info, 20, flags)
-                   == -1) {
-               perror("nftw");
-               exit(EXIT_FAILURE);
-           }
-
-           exit(EXIT_SUCCESS);
-       }
+int visitar(const char *path, const struct stat *stat, int flags, struct FTW *ftw)
+{
+    struct stat * atributo = stat;
+    long int mascara = atributo->st_mode & 777;
+    mascara = mascara & permisos;
+    if (mascara)
+    {
+        printf("%s\t\t\t %lu\n", path, atributo->st_ino);
+        tamanio += atributo->st_size;
+    }
+   return 0;
+}
+int main(int argc, char **argv)
+{
+    if (nftw(argc >= 2 ? argv[1] : ".", visitar, 10, 0) != 0)
+    {
+        perror("nftw");
+    }
+    printf("Tamano de %d bytes\n", tamanio);
+}
