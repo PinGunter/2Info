@@ -1,0 +1,6 @@
+./dir_prueba/b.txt 9044151
+./dir_prueba/a.txt 9044150
+./dir_prueba/c.txt 9044152
+./ejercicio2 7748280
+./ejercicio3 7748285
+Tamano de 34688
