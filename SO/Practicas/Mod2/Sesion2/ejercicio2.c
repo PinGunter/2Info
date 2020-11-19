@@ -51,6 +51,11 @@ int main(int argc, char * args[]){
 
 
 
+	if (closedir(dir) == -1) {
+		printf("Error %d\n", errno);
+		printf("Error en closedir\n");
+		exit(-1);
+	}
 	free(directorio);
 	return EXIT_SUCCESS;
 }

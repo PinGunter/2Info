@@ -14,6 +14,7 @@
 
 long int permisos = S_IXOTH | S_IXGRP; //Permisos de ejecucion de grupo y de otros
 int tamanio = 0;
+int n_reg = 0;
 void recorrer(const char * path){
     struct dirent* file;
     struct stat atributo;
@@ -23,25 +24,27 @@ void recorrer(const char * path){
         exit(EXIT_FAILURE);
     }
     while ((file = readdir(directory)) != NULL){
-        if (!(file->d_name[0] == '.' && (file->d_name[1] == '.'  || file->d_name[1] == '\0'))){
+        if (strcmp(file->d_name,".") && strcmp(file->d_name,"..")){
             char * nuevo = malloc(sizeof(char)*strlen(path)+(2+strlen(file->d_name)));
             sprintf(nuevo,"%s/%s",path,file->d_name);
+           
             if (stat(nuevo,&atributo) < 0){
                 printf("Erro de stat\n");
                 exit(EXIT_FAILURE);
             }
             long int perm = atributo.st_mode & 777;
             long int mascara = perm & permisos;
-            // printf("%s\n",nuevo);
-            // printf("permisos\n%ld\t%ld\n", perm, permisos);
-            // printf("mascara\n%ld\n", mascara);
-
+       
             if (S_ISDIR(atributo.st_mode)){
                 recorrer(nuevo);
+                closedir(directory);
             }
             else if (mascara){
                 printf("%s %lu\n", nuevo, atributo.st_ino);
-                tamanio += atributo.st_size;
+                if (S_ISREG(atributo.st_mode)){
+                    n_reg++;
+                    tamanio += atributo.st_size;
+                }
             }       
             free(nuevo);
         }
@@ -51,11 +54,13 @@ void recorrer(const char * path){
 
 
 int main(int argc, char * args[]){
-    if (argc != 2){
-        printf("Número de parámetros incorrecto.\nDebe introducir un directorio\n");
-        exit(EXIT_FAILURE);
-    }
-    const char * path = args[1];
+    char * path;
+    if (argc == 2)
+        path = args[1];
+    else
+        path = ".";
+    
     recorrer(path);
-    printf("Tamano de %d bytes\n", tamanio);
+    printf("Hay %d archivos regulares con los permisos de ejecución para grupos y otros\n", n_reg);
+    printf("Tamaño de %d bytes\n", tamanio);
 }
