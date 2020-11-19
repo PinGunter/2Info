@@ -94,12 +94,12 @@ clean: CMakeFiles/Listas_ListasDobles.dir/clean
 CMakeFiles/Listas_ListasDobles.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Listas_ListasDobles.dir/build.make CMakeFiles/Listas_ListasDobles.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Listas_ListasDobles.dir/build.make CMakeFiles/Listas_ListasDobles.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target Listas_ListasDobles"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Listas_ListasDobles"
 .PHONY : CMakeFiles/Listas_ListasDobles.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Listas_ListasDobles.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Listas_ListasDobles.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Listas_ListasDobles.dir/rule

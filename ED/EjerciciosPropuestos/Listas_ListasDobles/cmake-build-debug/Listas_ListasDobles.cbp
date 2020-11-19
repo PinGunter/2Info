@@ -82,12 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.cpp">
-			<Option target="Listas_ListasDobles"/>
-		</Unit>
-		<Unit filename="/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.h">
-			<Option target="Listas_ListasDobles"/>
-		</Unit>
 		<Unit filename="/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/main.cpp">
 			<Option target="Listas_ListasDobles"/>
 		</Unit>

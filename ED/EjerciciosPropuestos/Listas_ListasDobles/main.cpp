@@ -10,7 +10,7 @@ bool vacia(Lista<char> &l)
 void todo_minuscula(Lista<char> &l)
 {
     for (typename Lista<char>::iterator p = l.begin(); p != l.end(); ++p)
-        l.set(p, tolower(l.get(p)));
+        *p = tolower(*p);
 }
 void escribir(const Lista<char> &l)
 {
@@ -75,7 +75,7 @@ bool palindromo(const Lista<char> &l)
 ostream & operator<< (ostream & flujo, const Lista<char> &l){
     typename Lista<char>::iterator p;
     for (p=l.begin(); p!=l.end(); p++){
-        flujo << l.get(p);
+        flujo << *p;
     }
     flujo << endl;
     return flujo;

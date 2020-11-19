@@ -143,33 +143,6 @@ Listas_ListasDobles/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Listas_ListasDobles.dir/build.make CMakeFiles/Listas_ListasDobles.dir/build
 .PHONY : Listas_ListasDobles/fast
 
-Lista.o: Lista.cpp.o
-
-.PHONY : Lista.o
-
-# target to build an object file
-Lista.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Listas_ListasDobles.dir/build.make CMakeFiles/Listas_ListasDobles.dir/Lista.cpp.o
-.PHONY : Lista.cpp.o
-
-Lista.i: Lista.cpp.i
-
-.PHONY : Lista.i
-
-# target to preprocess a source file
-Lista.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Listas_ListasDobles.dir/build.make CMakeFiles/Listas_ListasDobles.dir/Lista.cpp.i
-.PHONY : Lista.cpp.i
-
-Lista.s: Lista.cpp.s
-
-.PHONY : Lista.s
-
-# target to generate assembly for a file
-Lista.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Listas_ListasDobles.dir/build.make CMakeFiles/Listas_ListasDobles.dir/Lista.cpp.s
-.PHONY : Lista.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -206,9 +179,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Listas_ListasDobles"
-	@echo "... Lista.o"
-	@echo "... Lista.i"
-	@echo "... Lista.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

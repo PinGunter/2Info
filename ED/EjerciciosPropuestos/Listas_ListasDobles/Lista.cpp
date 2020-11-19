@@ -2,23 +2,21 @@
 // Created by salva on 15/11/20.
 //
 
-#include "Lista.h"
+#include "Lista.hpp"
 #include <cassert>
-#include <utility>
+#include <algorithm>
 template <typename T>
-Lista<T>::iterator::iterator() {
-	puntero = nullptr;
-}
+Lista<T>::iterator::iterator():puntero(0){}
 
 template <typename T>
 typename Lista<T>::iterator & Lista<T>::iterator::operator++() {
     puntero = puntero->siguiente;
-    return *this;
+    return (*this);
 }
 
 template <typename T>
 typename Lista<T>::iterator  Lista<T>::iterator::operator++(int) {
-    iterator p(*this);
+    Lista<T>::iterator p(*this);
     ++(*this);
     return p;
 }
@@ -26,28 +24,28 @@ typename Lista<T>::iterator  Lista<T>::iterator::operator++(int) {
 template <typename T>
 typename Lista<T>::iterator & Lista<T>::iterator::operator--() {
     puntero = puntero->anterior;
-    return *this;
+    return (*this);
 }
 
 template <typename T>
 typename Lista<T>::iterator  Lista<T>::iterator::operator--(int) {
-    iterator p(*this);
+    Lista<T>::iterator p(*this);
     --(*this);
     return p;
 }
 
 template <typename T>
-bool Lista<T>::iterator::operator==(const Lista<T>::iterator p) const {
+bool Lista<T>::iterator::operator==(const Lista<T>::iterator & p) const {
     return (puntero==p.puntero);
 }
 
 template <typename T>
-bool Lista<T>::iterator::operator!=(const Lista<T>::iterator p) const {
+bool Lista<T>::iterator::operator!=(const Lista<T>::iterator & p) const {
     return (puntero!=p.puntero);
 }
 
 template<typename T>
-T Lista<T>::iterator::operator*() const {
+T & Lista<T>::iterator::operator*() {
     return puntero->elemento;
 }
 
@@ -86,7 +84,7 @@ Lista<T>::~Lista(){
 template <typename T>
 Lista<T> & Lista<T>::operator=(const Lista<T> &l){
     Lista aux(l);
-    swap(this->cabecera, aux.cabecera);
+    std::swap(this->cabecera, aux.cabecera);
     return *this;
 }
 
@@ -132,14 +130,14 @@ int Lista<T>::size() const {
 
 template <typename T>
 typename Lista<T>::iterator Lista<T>::begin() const {
-    iterator p;
+    Lista<T>::iterator p;
     p.puntero = cabecera->siguiente;
     return p;
 }
 
 template <typename T>
 typename Lista<T>::iterator Lista<T>::end() const {
-    iterator p;
+    Lista<T>::iterator p;
     p.puntero = cabecera;
     return p;
 }

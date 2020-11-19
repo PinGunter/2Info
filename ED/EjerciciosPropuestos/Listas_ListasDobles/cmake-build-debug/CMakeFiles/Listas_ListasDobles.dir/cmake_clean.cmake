@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Listas_ListasDobles.dir/Lista.cpp.o"
   "CMakeFiles/Listas_ListasDobles.dir/main.cpp.o"
   "Listas_ListasDobles"
   "Listas_ListasDobles.pdb"

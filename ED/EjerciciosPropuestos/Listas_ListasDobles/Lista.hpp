@@ -8,8 +8,8 @@
 template <typename T>
 struct CeldaLista{
     T elemento;
-    CeldaLista * anterior;
-    CeldaLista * siguiente;
+    CeldaLista<T> * anterior;
+    CeldaLista<T> * siguiente;
 };
 template <typename T>
 class Lista{
@@ -25,10 +25,10 @@ class Lista{
         iterator operator++(int);
         iterator & operator--();
         iterator operator--(int);
-        bool operator==(const iterator p) const;
-        bool operator!=(const iterator p) const;
-        T operator*() const;
-        friend class Lista<T>;
+        bool operator==(const iterator & p) const;
+        bool operator!=(const iterator & p) const;
+        T & operator*();
+        friend class Lista;
     };
 private:
     CeldaLista<T> * cabecera;

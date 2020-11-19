@@ -7,16 +7,20 @@
 #IncludeRegexTransform: 
 
 /home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.cpp
-Lista.h
-/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.h
+Lista.hpp
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.hpp
 cassert
 -
+algorithm
+-
 
-/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.h
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.hpp
+Lista.cpp
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.cpp
 
 /home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/main.cpp
 iostream
 -
-Lista.h
-/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.h
+Lista.hpp
+/home/salva/2Info/ED/EjerciciosPropuestos/Listas_ListasDobles/Lista.hpp
 
