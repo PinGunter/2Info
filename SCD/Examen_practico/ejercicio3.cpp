@@ -136,7 +136,7 @@ int Buffer::leer(){
 }
 
 void Buffer::escribir(int dato){
-    if (n_items == capacidad)
+    if (n_items == capacidad-1)
         escritura.wait();
     vector[pos_escritura] = dato;
     pos_escritura = (pos_escritura+1) % capacidad;
