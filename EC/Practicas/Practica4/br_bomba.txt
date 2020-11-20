@@ -1,0 +1,5 @@
+#comparaciones		#saltos
+br *main+117		br *main+119	0x4012ad
+br *main+151		br *main+155	
+br *main+240		br *main+244	0x40132a
+br *main+276		br *main+280
