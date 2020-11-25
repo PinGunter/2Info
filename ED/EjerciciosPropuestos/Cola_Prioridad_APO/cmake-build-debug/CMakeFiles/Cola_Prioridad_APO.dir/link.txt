@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Cola_Prioridad_APO.dir/main.cpp.o  -o Cola_Prioridad_APO 
