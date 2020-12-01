@@ -28,12 +28,156 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="444a158e-a835-4ef6-89ef-f274c343c760" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Practica/Doxyfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/colas/cola.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/colas/cola.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/colas/makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/colas/usocolas" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/colas/usocolas.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/ejercicio.colasconlistas/Cola.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/ejercicio.colasconlistas/Cola.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/ejercicio.colasconlistas/Cola2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/ejercicio.colasconlistas/makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/ejercicio.colasconlistas/usocolas.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/pilas/makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/pilas/pila.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/pilas/pila.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/pilas/usopilas" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/pilas/usopilas.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/vdinamico/VDG.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/vdinamico/VDG.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/vdinamico/makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/vdinamico/usovd.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/vdinamico/vector_dinamico.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/Material/vdinamico/vector_dinamico.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/bin/main_cola" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/bin/main_vd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/Pila__max__Cola_8h_source.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/Pila__max__VD_8h.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/Pila__max__VD_8h__incl.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/Pila__max__VD_8h__incl.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/Pila__max__VD_8h__incl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/Pila__max__VD_8h_source.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/annotated.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/bc_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/bdwn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/classPila__max-members.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/classPila__max.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/classes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/closed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/dir_000001_000000.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/dir_68267d1309a1af8e8297ef4c3efbcdba.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/dir_68267d1309a1af8e8297ef4c3efbcdba_dep.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/dir_68267d1309a1af8e8297ef4c3efbcdba_dep.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/dir_bfccd401955b95cf8c75461437045ac0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/doc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/doxygen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/doxygen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/dynsections.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/files.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/folderclosed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/folderopen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/functions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/functions_func.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/functions_vars.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/graph_legend.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/graph_legend.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/graph_legend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/main_8cpp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/menudata.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/nav_f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/nav_g.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/nav_h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/all_5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/classes_0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/classes_0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/classes_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/classes_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/files_0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/files_0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/files_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/files_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/functions_0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/functions_0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/functions_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/functions_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/functions_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/functions_2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/functions_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/functions_3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/mag_sel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/nomatches.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/search_l.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/search_m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/search_r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/searchdata.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/variables_0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/variables_0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/variables_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/search/variables_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/splitbar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/structelemento-members.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/structelemento.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/sync_off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/sync_on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/tab_a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/tab_b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/tab_h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/tab_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/html/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/Pila__max__VD_8h.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/Pila__max__VD_8h__incl.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/Pila__max__VD_8h__incl.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/annotated.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/classPila__max.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/doxygen.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/files.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/longtable_doxygen.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/main_8cpp.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/refman.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/structelemento.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/doc/latex/tabu_doxygen.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/inc/Pila_max_Cola.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/inc/Pila_max_VD.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/inc/cola.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/lib/libcola.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/lib/libvd.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/obj/Pila_max_Cola.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/obj/Pila_max_VD.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/obj/main_cola.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/obj/main_vd.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/src/Pila_max_Cola.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/src/Pila_max_VD.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/src/cola.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/src/main_cola.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practica/src/main_vd.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Calculo/Practica3/03-prog.wxmx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Calculo/Practica3/03-prog.wxmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Calculo/Practica5/05-biseccion.wxmx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Calculo/Practica5/05-biseccion.wxmx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practica/inc/ColaConMaximoVector.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../EC/Practicas/Practica4/profesor/b3_contrasena" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../EC/Practicas/Practica4/profesor/copia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../EC/Practicas/Practica4/profesor/copia2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Practica/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Practica/makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practica/src/PilaConMaximoVector.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica/src/main.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../PDOO/Material Complementario/Tema 1/Peluqueria/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PDOO/Material Complementario/Tema 1/Peluqueria/nbproject/build-impl.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../PDOO/Material Complementario/Tema 1/Peluqueria/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../PDOO/Material Complementario/Tema 1/Peluqueria/nbproject/genfiles.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../SCD/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../SCD/.vscode/settings.json" afterDir="false" />
@@ -60,13 +204,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Practica" />
+    <property name="settings.editor.selected.configurable" value="CLionExternalConfigurable" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Practica" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -77,6 +221,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606328666457</updated>
       <workItem from="1606328667929" duration="229000" />
+      <workItem from="1606505897201" duration="88000" />
     </task>
     <servers />
   </component>
@@ -93,5 +238,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="738" y="397" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606505979445">
+      <screen x="0" y="38" width="2560" height="1402" />
+    </state>
+    <state x="738" y="397" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.38.2560.1402@0.38.2560.1402" timestamp="1606505979445" />
+    <state x="769" y="374" width="1022" height="732" key="SettingsEditor" timestamp="1606505978684">
+      <screen x="0" y="38" width="2560" height="1402" />
+    </state>
+    <state x="769" y="374" width="1022" height="732" key="SettingsEditor/0.38.2560.1402@0.38.2560.1402" timestamp="1606505978684" />
   </component>
 </project>
