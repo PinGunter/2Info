@@ -1,0 +1,1 @@
+Cambia que tarea7 usa dup y tarea8 usa dup2. En dup se duplica el dispositivo al siguiente identificador disponible. En dup2 se duplica en el identificador especificado por el parametro
