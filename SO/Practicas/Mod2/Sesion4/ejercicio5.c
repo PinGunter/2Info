@@ -22,6 +22,7 @@ int main(int argc, char * args[]){
     int a,b;
     int primo = 1;
     int fd[2];
+    pipe(fd);
     int leido;
     pid_t PID = getpid();
 
@@ -32,9 +33,9 @@ int main(int argc, char * args[]){
         }
               
         if (PID == 0){    //Esto lo ejecuta el hijo
-            //close(fd[0]);
-            //dup2(fd[1],STDOUT_FILENO);
-            //printf("hola");
+            close(fd[0]);
+            dup2(fd[1],STDOUT_FILENO);
+           // printf("hola");
             if (i==0){
                 a = minimo;
                 b = maximo/2;
@@ -63,9 +64,9 @@ int main(int argc, char * args[]){
     if (PID != 0){ // esto lo ejecuta el padre
      //   wait(NULL); wait(NULL);
         dup2(fd[0],STDIN_FILENO);
-        close(fd[1]);
+        //close(fd[1]);
         while ((leido=read(fd[0], &buf, 4)) > 0){
-            write(STDOUT_FILENO, &buf, 4);
+            write(fd[1], &buf, 4);
         }
         if (leido < 0)
             printf("error read\n");
