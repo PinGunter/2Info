@@ -8,11 +8,16 @@
 #define SIZE 100
 #define TLIM 5
 
+char pass [] = "stwhmzstw";
 
 void cifrar(char * inseguro, int desp){
-    for (int i=0; i < strlen(inseguro); i++)
-        inseguro[i] += desp;
-    inseguro[strlen(inseguro)-1] = '\0';    //borramos el \n
+    for (int i=0; i < inseguro[i] != '\0'; i++){
+        if (inseguro[i]+desp > 'z'){
+            inseguro[i] = 'a' + ((inseguro[i]+desp)-'z') -1;
+        }else{
+            inseguro[i] += desp;
+        }
+    }
 }
 
 void explota(){
@@ -81,27 +86,21 @@ exit(0);
 
 
 int main(){
-    
-    //variable con el desplazamiento que se aplicara a la contraseña
-    // lo aumentamos con un bucle para que no se pueda averiguar hasta algo avanzado el programa.
-    int desp = 0;
-    for (int i=0; i <= 9; i++)
-        desp++;
     //construimos la contraseña con desplazamiento
-    char pass [10]  ={'n'+desp,'o'+desp,'x'+desp,'p'+desp,'l'+desp,'o'+desp,'t'+desp,'a'+desp,'\0'};
+    // la contraseña es "noxplota", esta cifrada con desplazamiento -1. Le hacemos +10 para que sea el mismo 
+    // desplazamiento que la introducida por el usuario
+    cifrar(pass,10);
     int codigos[4] = { 5, 2, 1, 0};
     codigos[3] = 2*codigos[0] + codigos[1] + codigos[1]*3 +200; //codigo final 218
     char pw[100];
     int pc, n;
-
     struct timeval tv1, tv2;
     gettimeofday(&tv1, NULL);
 
     do printf("Introduce la contraseña: ");
     while (fgets(pw, 100, stdin) == NULL );
-    
-    cifrar(pw,desp);
-    if (strncmp(pw,pass,sizeof(pass)))
+    cifrar(pw,9);
+    if (strncmp(pw,pass,sizeof(pass)-1))
         explota();
     
     gettimeofday(&tv2, NULL);
