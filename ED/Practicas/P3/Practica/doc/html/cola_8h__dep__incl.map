@@ -1,5 +1,0 @@
-<map id="inc/cola.h" name="inc/cola.h">
-<area shape="rect" id="node1" title="Fichero cabecera del TDA Cola." alt="" coords="40,5,124,32"/>
-<area shape="rect" id="node2" href="$Pila__max__Cola_8h.html" title="Archivo con las cabeceras y la interfaz de la clase pila con máximo (vector)" alt="" coords="5,80,159,107"/>
-<area shape="rect" id="node3" href="$main__cola_8cpp.html" title="programa principal para probar la pila (implementacion con cola)" alt="" coords="13,155,151,181"/>
-</map>

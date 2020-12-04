@@ -1,8 +1,0 @@
-
-* Hemos situado el archivo cola.cpp en el directorio "/inc" porque no se compila
-al ser template y así evitar el error al final de cola.h (#include <cola.cpp>)
-
-
-* Para cada main (main_vd.cpp y main_cola.cpp) hemos añadido otra versión de pila
-con números aleatorios y con una salida más estética. Estas versiones se encuentran
-comentadas en su respectivo main.
