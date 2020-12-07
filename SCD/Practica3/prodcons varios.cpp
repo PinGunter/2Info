@@ -1,3 +1,7 @@
+/**
+ * @author Salvador Romero Cortés
+ */
+
 // -----------------------------------------------------------------------------
 //
 // Sistemas concurrentes y Distribuidos.
@@ -58,7 +62,7 @@ int producir(int orden)
    static int contador = orden*(num_items/np) ;
    sleep_for( milliseconds( aleatorio<10,100>()) );
    contador++ ;
-   cout << "Productor "<< orden << " ha producido valor " << contador << endl << flush;
+   cout << "Productor ha producido valor " << contador << endl << flush;
    return contador ;
 }
 // ---------------------------------------------------------------------
@@ -70,21 +74,21 @@ void funcion_productor(int orden)
       // producir valor
       int valor_prod = producir(orden);
       // enviar valor
-      cout << "Productor " << orden << " va a enviar valor " << valor_prod << endl << flush;
+      cout << "Productor va a enviar valor " << valor_prod << endl << flush;
       MPI_Ssend( &valor_prod, 1, MPI_INT, id_buffer, tag_prod, MPI_COMM_WORLD );
    }
 }
 // ---------------------------------------------------------------------
 
-void consumir( int valor_cons, int orden )
+void consumir( int valor_cons)
 {
    // espera bloqueada
    sleep_for( milliseconds( aleatorio<110,200>()) );
-   cout << "Consumidor "<< orden <<"  ha consumido valor " << valor_cons << endl << flush ;
+   cout << "Consumidor ha consumido valor " << valor_cons << endl << flush ;
 }
 // ---------------------------------------------------------------------
 
-void funcion_consumidor(int orden)
+void funcion_consumidor()
 {
    int         peticion,
                valor_rec = 1 ;
@@ -94,8 +98,8 @@ void funcion_consumidor(int orden)
    {
       MPI_Ssend( &peticion,  1, MPI_INT, id_buffer, tag_cons, MPI_COMM_WORLD);
       MPI_Recv ( &valor_rec, 1, MPI_INT, id_buffer, tag_cons, MPI_COMM_WORLD,&estado );
-      cout << "Consumidor "<< orden <<" ha recibido valor " << valor_rec << endl << flush ;
-      consumir( valor_rec, orden );
+      cout << "Consumidor ha recibido valor " << valor_rec << endl << flush ;
+      consumir( valor_rec );
    }
 }
 // ---------------------------------------------------------------------
@@ -167,11 +171,11 @@ int main( int argc, char *argv[] )
    {
       // ejecutar la operación apropiada a 'id_propio'
       if ( id_propio < np )
-         funcion_productor(id_propio);
+         funcion_productor(orden++);
       else if ( id_propio == id_buffer )
          funcion_buffer();
       else if (id_propio > id_buffer)
-         funcion_consumidor(id_propio-id_buffer);
+         funcion_consumidor();
    }
    else
    {
