@@ -132,7 +132,7 @@ void funcion_buffer()
 
       // 3. procesar el mensaje recibido
 
-      switch( tag ) // leer emisor del mensaje en metadatos
+      switch( estado.MPI_TAG ) // leer emisor del mensaje en metadatos
       {
          case tag_prod: // si ha sido el productor: insertar en buffer
             buffer[primera_libre] = valor ;
@@ -141,12 +141,12 @@ void funcion_buffer()
             cout << "Buffer ha recibido valor " << valor << endl ;
             break;
 
-         case tag_cons: // si ha sido el consumidor: extraer y enviarle
+         case tag_cons: // si ha sido el consumidor: extraer y enviarle 
             valor = buffer[primera_ocupada] ;
             primera_ocupada = (primera_ocupada+1) % tam_vector ;
             num_celdas_ocupadas-- ;
             cout << "Buffer va a enviar valor " << valor << endl ;
-            MPI_Ssend( &valor, 1, MPI_INT, estado.MPI_SOURCE, tag, MPI_COMM_WORLD);
+            MPI_Ssend( &valor, 1, MPI_INT, estado.MPI_SOURCE, tag_cons, MPI_COMM_WORLD);
             break;
       }
    }
