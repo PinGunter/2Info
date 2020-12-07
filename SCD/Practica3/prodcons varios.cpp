@@ -29,12 +29,12 @@ const int nc = 5;
 // np es el buffer
 // np+1 <-> np+nc son consumidores
 
-const int tag_prod = 1;
-const int tag_cons = 2;
+const int tag_prod = 0;
+const int tag_cons = 1;
 
 const int
    id_buffer = np,
-   num_procesos_esperado = 10 ,
+   num_procesos_esperado = np+nc+1 ,
    num_items             = np*nc,
    tam_vector            = 10;
 
@@ -55,47 +55,47 @@ template< int min, int max > int aleatorio()
 // y lleva espera aleatorio
 int producir(int orden)
 {
-   static int contador = orden ;
+   static int contador = orden*(num_items/np) ;
    sleep_for( milliseconds( aleatorio<10,100>()) );
-   //contador++ ;
-   cout << "Productor ha producido valor " << contador << endl << flush;
+   contador++ ;
+   cout << "Productor "<< orden << " ha producido valor " << contador << endl << flush;
    return contador ;
 }
 // ---------------------------------------------------------------------
 
 void funcion_productor(int orden)
 {
-   for ( unsigned int i= (num_items/np)*orden ; i <= (num_items/np)*orden + num_items/np -1 ; i++ )
+   for ( int i=0; i < (num_items/np) ; i++ )
    {
       // producir valor
-      int valor_prod = producir(i);
+      int valor_prod = producir(orden);
       // enviar valor
-      cout << "Productor va a enviar valor " << valor_prod << endl << flush;
+      cout << "Productor " << orden << " va a enviar valor " << valor_prod << endl << flush;
       MPI_Ssend( &valor_prod, 1, MPI_INT, id_buffer, tag_prod, MPI_COMM_WORLD );
    }
 }
 // ---------------------------------------------------------------------
 
-void consumir( int valor_cons )
+void consumir( int valor_cons, int orden )
 {
    // espera bloqueada
    sleep_for( milliseconds( aleatorio<110,200>()) );
-   cout << "Consumidor ha consumido valor " << valor_cons << endl << flush ;
+   cout << "Consumidor "<< orden <<"  ha consumido valor " << valor_cons << endl << flush ;
 }
 // ---------------------------------------------------------------------
 
-void funcion_consumidor()
+void funcion_consumidor(int orden)
 {
    int         peticion,
                valor_rec = 1 ;
    MPI_Status  estado ;
 
-   for( unsigned int i=0 ; i < num_items; i++ )
+   for( unsigned int i=0 ; i < (num_items/nc); i++ )
    {
       MPI_Ssend( &peticion,  1, MPI_INT, id_buffer, tag_cons, MPI_COMM_WORLD);
       MPI_Recv ( &valor_rec, 1, MPI_INT, id_buffer, tag_cons, MPI_COMM_WORLD,&estado );
-      cout << "Consumidor ha recibido valor " << valor_rec << endl << flush ;
-      consumir( valor_rec );
+      cout << "Consumidor "<< orden <<" ha recibido valor " << valor_rec << endl << flush ;
+      consumir( valor_rec, orden );
    }
 }
 // ---------------------------------------------------------------------
@@ -107,28 +107,27 @@ void funcion_buffer()
               primera_libre       = 0, // índice de primera celda libre
               primera_ocupada     = 0, // índice de primera celda ocupada
               num_celdas_ocupadas = 0, // número de celdas ocupadas
-              id_emisor_aceptable ;    // identificador de emisor aceptable
+              tag_emisor_aceptable ;    // identificador de emisor aceptable
    MPI_Status estado ;                 // metadatos del mensaje recibido
 
    for( unsigned int i=0 ; i < num_items*2 ; i++ )
    {
       // 1. determinar si puede enviar solo prod., solo cons, o todos
-      int tag;
       if ( num_celdas_ocupadas == 0 ){               // si buffer vacío
          // id_emisor_aceptable = id_productor ;       // $~~~$ solo prod.
-         tag = tag_prod;
+         tag_emisor_aceptable = tag_prod;
       }
       else if ( num_celdas_ocupadas == tam_vector ){ // si buffer lleno
          // id_emisor_aceptable = id_consumidor ;      // $~~~$ solo cons.
-         tag = tag_cons;
+         tag_emisor_aceptable = tag_cons;
       }
       else{                                          // si no vacío ni lleno
-         id_emisor_aceptable = MPI_ANY_SOURCE ;     // $~~~$ cualquiera
-         tag = MPI_ANY_TAG;
+        // id_emisor_aceptable = MPI_ANY_SOURCE ;     // $~~~$ cualquiera
+         tag_emisor_aceptable = MPI_ANY_TAG;
       }
       // 2. recibir un mensaje del emisor o emisores aceptables
 
-      MPI_Recv( &valor, 1, MPI_INT, MPI_ANY_SOURCE, tag, MPI_COMM_WORLD, &estado );
+      MPI_Recv( &valor, 1, MPI_INT, MPI_ANY_SOURCE, tag_emisor_aceptable, MPI_COMM_WORLD, &estado );
 
       // 3. procesar el mensaje recibido
 
@@ -168,11 +167,11 @@ int main( int argc, char *argv[] )
    {
       // ejecutar la operación apropiada a 'id_propio'
       if ( id_propio < np )
-         funcion_productor(orden++);
-      else if ( id_propio == np )
+         funcion_productor(id_propio);
+      else if ( id_propio == id_buffer )
          funcion_buffer();
-      else
-         funcion_consumidor();
+      else if (id_propio > id_buffer)
+         funcion_consumidor(id_propio-id_buffer);
    }
    else
    {
