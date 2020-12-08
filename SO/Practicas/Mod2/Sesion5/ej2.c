@@ -25,7 +25,7 @@ int main()
     struct sigaction sa;
     sa.sa_handler = handler; 
 
-    printf("No manejo las señales 9 y 19\n");
+    printf("No manejo las señales 9, 19 y 20\n");
     for (int i = 1; i <= 64; i++)
     {
         if (i != 9 && i != 19 && i != 20)
