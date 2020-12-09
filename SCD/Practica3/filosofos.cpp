@@ -72,6 +72,37 @@ void funcion_filosofos(int id)
       sleep_for(milliseconds(aleatorio<50, 300>()));
    }
 }
+
+// ---------------------------------------------------------------------
+
+void funcion_filosofo_asimetrico(int id)
+{
+   int id_ten_izq = (id + 1) % num_procesos,                //id. tenedor izq.
+       id_ten_der = (id + num_procesos - 1) % num_procesos; //id. tenedor der.
+   int valor;
+   while (true)
+   {
+      cout << "Filósofo " << id << " solicita ten. der." << id_ten_der << endl;
+      // ... solicitar tenedor derecho (completar)
+      MPI_Ssend(&valor, 1, MPI_INT, id_ten_der, id_ten_der, MPI_COMM_WORLD);
+
+      cout << "Filósofo " << id << " solicita ten. izq." << id_ten_izq << endl;
+      // ... solicitar tenedor izquierdo (completar)
+      MPI_Ssend(&valor, 1, MPI_INT, id_ten_izq, id_ten_izq, MPI_COMM_WORLD);
+
+      cout << "Filósofo " << id << " comienza a comer" << endl;
+      sleep_for(milliseconds(aleatorio<50, 300>()));
+
+      cout << "Filósofo " << id << " suelta ten. izq. " << id_ten_izq << endl;
+      // ... soltar el tenedor derecho (completar)
+      MPI_Ssend(&valor, 1, MPI_INT, id_ten_der, id_ten_der, MPI_COMM_WORLD);
+      cout << "Filosofo " << id << " comienza a pensar" << endl;
+      // ... soltar el tenedor izquierdo (completar)
+      MPI_Ssend(&valor, 1, MPI_INT, id_ten_izq, id_ten_izq, MPI_COMM_WORLD);
+      cout << "Filósofo " << id << " suelta ten. der. " << id_ten_der << endl;
+      sleep_for(milliseconds(aleatorio<50, 300>()));
+   }
+}
 // ---------------------------------------------------------------------
 
 void funcion_tenedores(int id)
@@ -105,7 +136,9 @@ int main(int argc, char **argv)
    if (num_procesos == num_procesos_actual)
    {
       // ejecutar la función correspondiente a 'id_propio'
-      if (id_propio % 2 == 0)          // si es par
+      if (id_propio == 0)
+         funcion_filosofo_asimetrico(id_propio);
+      else if (id_propio % 2 == 0)          // si es par
          funcion_filosofos(id_propio); //   es un filósofo
       else                             // si es impar
          funcion_tenedores(id_propio); //   es un tenedor
