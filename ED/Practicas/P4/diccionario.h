@@ -183,20 +183,20 @@ public:
 	/*Funciones begin y end asociadas al diccionario*/
 	typename list<data<T, U>>::iterator &begin()
 	{
-		datos.begin();
+		return datos.begin();
 	}
 	typename list<data<T, U>>::iterator &end()
 	{
-		datos.end();
+		return datos.end();
 	}
 
-	typename list<data<T, U>>::const_iterator &begin() const
+	typename list<data<T, U>>::const_iterator begin() const
 	{
-		datos.begin();
+		return datos.cbegin();
 	}
-	typename list<data<T, U>>::const_iterator &end() const
+	typename list<data<T, U>>::const_iterator end() const
 	{
-		datos.end();
+		return datos.cend();
 	}
 
 
@@ -242,8 +242,14 @@ public:
 		 * @return una referencia al objeto actual
 		 */
 		iterator & operator=(const iterator & otro);
+
+		/**
+		 * @brief operador de consulta
+		 * @return el elemento de la posicion del iterador
+		 */
+		list<data<T,U>> & operator*();
 		friend class Diccionario<T,U>;
-		friend operator!=(const iterator & uno, const iterator & otro);
+		friend bool operator!=<>(const typename Diccionario<T,U>::iterator & uno, const typename Diccionario<T,U>::iterator & otro);
 	};
 
 		/**
@@ -287,9 +293,53 @@ public:
 		 * @return una referencia al objeto actual
 		 */
 		const_iterator & operator=(const const_iterator & otro);
+
+		/**
+		 * @brief operador de consulta
+		 * @return el elemento de la posicion del iterador
+		 */
+		list<data<T,U>>  operator*();
 		friend class Diccionario<T,U>;
-		friend operator!=(const iterator & uno, const iterator & otro);
+		friend bool operator!=<>(const typename Diccionario<T,U>::const_iterator & uno, const typename Diccionario<T,U>::const_iterator & otro);
 	};
+
+
+	/**
+	 * @brief metodo para eliminar un elemento del diccionario por su clave
+	 * @param clave la clave del elemento que se borra
+	 * @return true si se ha podido eliminar
+	 * 		   false si no esta en el diccionario y no se ha podido eliminar
+	 */
+	bool borrar_por_clave(T clave);
+
+	/**
+	 * @brief metodo para unir dos diccionarios, el objeto llamador no se modifica
+	 * @param nuevo el diccionario que se une al objeto que llama al metodo
+	 * @return la union de diccionarios
+	 */
+	Diccionario<T,U> union_dic(const Diccionario<T,U> & nuevo);
+
+	/**
+	 * @brief metodo que devuelve los elementos dentro de un rango de claves
+	 * @param inicio clave desde la que se empieza
+	 * @param fin ultima clave del rango
+	 * @return subdiccionario de las claves entre @e inicio y @e fin
+	 */
+	Diccionario<T,U> subdiccionario_entre(const T & inicio, const T & fin);
+
+	/**
+	 * @brief metodo para hacer la diferencia de diccionarios, el diccionario llamador no se modifica
+	 * @param otro diccionario que se le resta al actual
+	 * @return diccionario diferencia
+	 */
+	Diccionario<T,U> diferencia(const Diccionario<T,U> & otro);
+
+	/**
+	 * @brief metodo que devuelve la clave en la posicion del iterador del diccionario
+	 * @param it posicion de la clave
+	 * @return la clave
+	 */
+	T getClave(const iterator & it);
 };
 
 	/**
@@ -302,5 +352,15 @@ public:
 	template <typename T, typename U>
 	bool operator!=(const typename Diccionario<T,U>::iterator & uno,const typename Diccionario<T,U>::iterator & otro);
 
-#include <diccionario.cpp>
+	/**
+	 * @brief operador de desigualdad de iteradores constantes
+	 * @param uno uno de los iteradores
+	 * @param otro el segundo iterador con el que se compara
+	 * @return true si uno != otro
+	 * 		   false si uno == otro
+	 */
+	template <typename T, typename U>
+	bool operator!=(const typename Diccionario<T,U>::const_iterator & uno,const typename Diccionario<T,U>::const_iterator & otro);
+
+#include "diccionario.cpp"
 #endif
