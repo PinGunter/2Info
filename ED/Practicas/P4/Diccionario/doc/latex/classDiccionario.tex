@@ -1,0 +1,181 @@
+\hypertarget{classDiccionario}{}\doxysection{Referencia de la plantilla de la Clase Diccionario$<$ T, U $>$}
+\label{classDiccionario}\index{Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}}
+\doxysubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classDiccionario_1_1const__iterator}{const\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em clase iteradora que sirve para recorrer el diccionario, versión constante \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classDiccionario_1_1iterator}{iterator}}
+\begin{DoxyCompactList}\small\item\em clase iteradora que sirve para recorrer el diccionario, versión no constante \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDiccionario_ad8917f4e401b473139403dc5964e8307}\label{classDiccionario_ad8917f4e401b473139403dc5964e8307}} 
+{\bfseries Diccionario} (const \mbox{\hyperlink{classDiccionario}{Diccionario}} \&D)
+\item 
+\mbox{\Hypertarget{classDiccionario_a5fa4a649047e6d270132bf0448a05915}\label{classDiccionario_a5fa4a649047e6d270132bf0448a05915}} 
+\mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$ \& {\bfseries operator=} (const \mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$ \&D)
+\item 
+\mbox{\Hypertarget{classDiccionario_a2f126e4e198fe7f6f36929c8a728caff}\label{classDiccionario_a2f126e4e198fe7f6f36929c8a728caff}} 
+bool {\bfseries Esta\+\_\+\+Clave} (const T \&p, typename list$<$ \mbox{\hyperlink{structdata}{data}}$<$ T, U $>$$>$\+::\mbox{\hyperlink{classDiccionario_1_1iterator}{iterator}} \&it\+\_\+out)
+\item 
+\mbox{\Hypertarget{classDiccionario_af520b73907852cc8002260ddf9fb822c}\label{classDiccionario_af520b73907852cc8002260ddf9fb822c}} 
+void {\bfseries Insertar} (const T \&clave, const list$<$ U $>$ \&info)
+\item 
+\mbox{\Hypertarget{classDiccionario_a7e167da231bff610001df3c20cc9b7a7}\label{classDiccionario_a7e167da231bff610001df3c20cc9b7a7}} 
+void {\bfseries Add\+Significado\+\_\+\+Palabra} (const U \&s, const T \&p)
+\item 
+\mbox{\Hypertarget{classDiccionario_ad262cd8d8e11286beecfa4851ec2c948}\label{classDiccionario_ad262cd8d8e11286beecfa4851ec2c948}} 
+list$<$ U $>$ {\bfseries get\+Info\+\_\+\+Asoc} (const T \&p)
+\item 
+\mbox{\Hypertarget{classDiccionario_aa576b001759429fd58210ca57257d6f8}\label{classDiccionario_aa576b001759429fd58210ca57257d6f8}} 
+int {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classDiccionario_aeabfd4ee16523c3f83d592b4495734fd}\label{classDiccionario_aeabfd4ee16523c3f83d592b4495734fd}} 
+list$<$ \mbox{\hyperlink{structdata}{data}}$<$ T, U $>$ $>$\+::\mbox{\hyperlink{classDiccionario_1_1iterator}{iterator}} \& {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classDiccionario_ad15c703ef6071b8357be76517e0f0883}\label{classDiccionario_ad15c703ef6071b8357be76517e0f0883}} 
+list$<$ \mbox{\hyperlink{structdata}{data}}$<$ T, U $>$ $>$\+::\mbox{\hyperlink{classDiccionario_1_1iterator}{iterator}} \& {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classDiccionario_ac3eac281a3ca308296d1d0c6a4230344}\label{classDiccionario_ac3eac281a3ca308296d1d0c6a4230344}} 
+list$<$ \mbox{\hyperlink{structdata}{data}}$<$ T, U $>$ $>$\+::\mbox{\hyperlink{classDiccionario_1_1const__iterator}{const\+\_\+iterator}} {\bfseries cbegin} () const
+\item 
+\mbox{\Hypertarget{classDiccionario_aea325403f50d404b498ec24f515f4b0c}\label{classDiccionario_aea325403f50d404b498ec24f515f4b0c}} 
+list$<$ \mbox{\hyperlink{structdata}{data}}$<$ T, U $>$ $>$\+::\mbox{\hyperlink{classDiccionario_1_1const__iterator}{const\+\_\+iterator}} {\bfseries cend} () const
+\item 
+bool \mbox{\hyperlink{classDiccionario_a97568d27395999bfca0c1cfbe1d8f4ba}{borrar\+\_\+por\+\_\+clave}} (const T \&clave)
+\begin{DoxyCompactList}\small\item\em metodo para eliminar un elemento del diccionario por su clave \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$ \mbox{\hyperlink{classDiccionario_af4e47ba35045b526ca905d79074da8a6}{union\+\_\+dic}} (\mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$ nuevo)
+\begin{DoxyCompactList}\small\item\em metodo para unir dos diccionarios, el objeto llamador no se modifica \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$ \mbox{\hyperlink{classDiccionario_a31c6ff09e13757761d47826f7a4b5ab3}{subdiccionario\+\_\+entre}} (const T \&inicio, const T \&fin)
+\begin{DoxyCompactList}\small\item\em metodo que devuelve los elementos dentro de un rango de claves \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$ \mbox{\hyperlink{classDiccionario_a9283bc8c2c071646c67539a7983451b1}{diferencia}} (const \mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$ \&otro)
+\begin{DoxyCompactList}\small\item\em metodo para hacer la diferencia de diccionarios, el diccionario llamador no se modifica \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classDiccionario_ac8f9988501ec07464253ad95cb4a1c5a}{get\+Clave}} (const \mbox{\hyperlink{classDiccionario_1_1iterator}{iterator}} \&it) const
+\begin{DoxyCompactList}\small\item\em metodo que devuelve la clave en la posicion del iterador del diccionario \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classDiccionario_af96ed9e8cc3d45b42e6a5b8dc99650cd}{get\+Clave}} (const \mbox{\hyperlink{classDiccionario_1_1const__iterator}{const\+\_\+iterator}} \&it) const
+\begin{DoxyCompactList}\small\item\em metodo que devuelve la clave en la posicion del iterador del diccionario (version it constante) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classDiccionario_a97568d27395999bfca0c1cfbe1d8f4ba}\label{classDiccionario_a97568d27395999bfca0c1cfbe1d8f4ba}} 
+\index{Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}!borrar\_por\_clave@{borrar\_por\_clave}}
+\index{borrar\_por\_clave@{borrar\_por\_clave}!Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{borrar\_por\_clave()}{borrar\_por\_clave()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+bool \mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$\+::borrar\+\_\+por\+\_\+clave (\begin{DoxyParamCaption}\item[{const T \&}]{clave }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+metodo para eliminar un elemento del diccionario por su clave 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em clave} & la clave del elemento que se borra \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se ha podido eliminar false si no esta en el diccionario y no se ha podido eliminar 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiccionario_a9283bc8c2c071646c67539a7983451b1}\label{classDiccionario_a9283bc8c2c071646c67539a7983451b1}} 
+\index{Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}!diferencia@{diferencia}}
+\index{diferencia@{diferencia}!Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{diferencia()}{diferencia()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\mbox{\hyperlink{classDiccionario}{Diccionario}}$<$T,U$>$ \mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$\+::diferencia (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$ \&}]{otro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+metodo para hacer la diferencia de diccionarios, el diccionario llamador no se modifica 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em otro} & diccionario que se le resta al actual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+diccionario diferencia 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiccionario_af96ed9e8cc3d45b42e6a5b8dc99650cd}\label{classDiccionario_af96ed9e8cc3d45b42e6a5b8dc99650cd}} 
+\index{Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}!getClave@{getClave}}
+\index{getClave@{getClave}!Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{getClave()}{getClave()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+T \mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$\+::get\+Clave (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDiccionario_1_1const__iterator}{const\+\_\+iterator}} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+metodo que devuelve la clave en la posicion del iterador del diccionario (version it constante) 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em it} & posicion de la clave (constante) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+la clave 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiccionario_ac8f9988501ec07464253ad95cb4a1c5a}\label{classDiccionario_ac8f9988501ec07464253ad95cb4a1c5a}} 
+\index{Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}!getClave@{getClave}}
+\index{getClave@{getClave}!Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{getClave()}{getClave()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+T \mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$\+::get\+Clave (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDiccionario_1_1iterator}{iterator}} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+metodo que devuelve la clave en la posicion del iterador del diccionario 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em it} & posicion de la clave \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+la clave 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiccionario_a31c6ff09e13757761d47826f7a4b5ab3}\label{classDiccionario_a31c6ff09e13757761d47826f7a4b5ab3}} 
+\index{Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}!subdiccionario\_entre@{subdiccionario\_entre}}
+\index{subdiccionario\_entre@{subdiccionario\_entre}!Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{subdiccionario\_entre()}{subdiccionario\_entre()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\mbox{\hyperlink{classDiccionario}{Diccionario}}$<$T,U$>$ \mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$\+::subdiccionario\+\_\+entre (\begin{DoxyParamCaption}\item[{const T \&}]{inicio,  }\item[{const T \&}]{fin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+metodo que devuelve los elementos dentro de un rango de claves 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em inicio} & clave desde la que se empieza \\
+\hline
+{\em fin} & ultima clave del rango \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+subdiccionario de las claves entre {\itshape inicio} y {\itshape fin} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiccionario_af4e47ba35045b526ca905d79074da8a6}\label{classDiccionario_af4e47ba35045b526ca905d79074da8a6}} 
+\index{Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}!union\_dic@{union\_dic}}
+\index{union\_dic@{union\_dic}!Diccionario$<$ T, U $>$@{Diccionario$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{union\_dic()}{union\_dic()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+\mbox{\hyperlink{classDiccionario}{Diccionario}}$<$T,U$>$ \mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$\+::union\+\_\+dic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDiccionario}{Diccionario}}$<$ T, U $>$}]{nuevo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+metodo para unir dos diccionarios, el objeto llamador no se modifica 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nuevo} & el diccionario que se une al objeto que llama al metodo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+la union de diccionarios 
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{diccionario_8h}{diccionario.\+h}}\end{DoxyCompactItemize}
