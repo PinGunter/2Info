@@ -55,7 +55,7 @@ ostream & operator<<(ostream & os, const Diccionario<string,string> & D){
 }
 
 int main(){
-    Diccionario<string,string> dic1, dic2, dic_union;
+    Diccionario<string,string> dic1, dic2, dic_union, sub_dic, dic_difer;
     list<string> definiciones;
     int np,nd; 
     string palabra, borrado, definicion;
@@ -69,8 +69,15 @@ int main(){
     // cout << dic2;
 
     dic_union = dic1.union_dic(dic2);
+
+	sub_dic = dic_union.subdiccionario_entre("Feo","Libro");
     cout << "******************** DICCIONARIO UNION ************************" << endl;
     cout << dic_union;
+	cout << "******************** SUBDICCIONARIO ************************" << endl;
+    cout << sub_dic;
+	dic_difer = dic_union.diferencia(sub_dic);
+	cout << "******************** DIFERENCIA ************************" << endl;
+    cout << dic_difer;
     // cout << "Introduce el elemento que quieras borrar: " << endl;
     // getline(cin,borrado);
     // dic1.borrar_por_clave(borrado);

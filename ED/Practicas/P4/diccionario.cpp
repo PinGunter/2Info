@@ -5,34 +5,35 @@
 #include "diccionario.h"
 #include <cassert>
 // iterador no constante
-template <typename T, typename U>
-Diccionario<T,U>::iterator::iterator():it(){}
+// template <typename T, typename U>
+// Diccionario<T,U>::iterator::iterator():it(){}
 
-template <typename T, typename U>
-Diccionario<T,U>::iterator::iterator(const iterator & otro):it(otro.it){}
+// template <typename T, typename U>
+// Diccionario<T,U>::iterator::iterator(const iterator & otro):it(otro.it){}
 
-template <typename T, typename U>
-Diccionario<T,U>::iterator::iterator(typename list<data<T,U>>::iterator otro):it(otro){}
+// template <typename T, typename U>
+// Diccionario<T,U>::iterator::iterator(typename list<data<T,U>>::iterator otro):it(otro){}
 
-template <typename T, typename U>
-typename Diccionario<T,U>::iterator & Diccionario<T,U>::iterator::operator++(){
-    return ++it;
-}
+// template <typename T, typename U>
+// typename Diccionario<T,U>::iterator & Diccionario<T,U>::iterator::operator++(){
+//     return ++it;
+// }
 
-template <typename T, typename U>
-typename Diccionario<T,U>::iterator Diccionario<T,U>::iterator::operator++(int){
-    return it++;
-}
+// template <typename T, typename U>
+// typename Diccionario<T,U>::iterator Diccionario<T,U>::iterator::operator++(int){
+//     return it++;
+// }
 
-template <typename T, typename U>
-typename Diccionario<T,U>::iterator & Diccionario<T,U>::iterator::operator=(const iterator & otro){
-    it = otro.it;
-}
+// template <typename T, typename U>
+// typename Diccionario<T,U>::iterator & Diccionario<T,U>::iterator::operator=(const iterator & otro){
+//     it = otro.it;
+//     return *this;
+// }
 
-template <typename T, typename U>
-list<data<T,U>> & Diccionario<T,U>::iterator::operator*(){
-    return (*it);
-}
+// template <typename T, typename U>
+// data<T,U> & Diccionario<T,U>::iterator::operator*(){
+//     return (*it);
+// }
 
 template <typename T, typename U>
 list<data<T,U>> Diccionario<T,U>::const_iterator::operator*() const {
@@ -120,7 +121,7 @@ Diccionario<T,U> Diccionario<T,U>::union_dic( Diccionario<T,U> nuevo){
 
 
 template <typename T, typename U>
-Diccionario<T,U> Diccionario<T,U>::subdiccionario_entre(const T & inicio, const T & fin) const{
+Diccionario<T,U> Diccionario<T,U>::subdiccionario_entre(const T & inicio, const T & fin){
     typename list<data<T,U>>::iterator inicio_it;
     typename list<data<T,U>>::iterator fin_it;
     assert(Esta_Clave(inicio,inicio_it));
@@ -134,8 +135,17 @@ Diccionario<T,U> Diccionario<T,U>::subdiccionario_entre(const T & inicio, const 
 }
 
 template <typename T, typename U>
-Diccionario<T,U> Diccionario<T,U>::diferencia(const Diccionario<T,U> & otro) const{
-
+Diccionario<T,U> Diccionario<T,U>::diferencia(const Diccionario<T,U> & otro) {
+    Diccionario<T,U> resultado(*this);
+    for (typename list<data<T,U>>::const_iterator it=otro.cbegin(); it != otro.cend(); ++it){
+        typename Diccionario<T,U>::const_iterator it_dic(it);
+        typename list<data<T,U>>::iterator it_basura;
+        T clave = otro.getClave(it_dic);
+        if (Esta_Clave(clave,it_basura)){
+            resultado.borrar_por_clave(clave);
+        }
+    }
+    return resultado;
 }
 
 

@@ -187,11 +187,11 @@ public:
 	}
 
 	/*Funciones begin y end asociadas al diccionario*/
-	typename list<data<T, U>>::iterator &begin() 
+	typename list<data<T, U>>::iterator &begin()
 	{
 		return datos.begin();
 	}
-	typename list<data<T, U>>::iterator &end() 
+	typename list<data<T, U>>::iterator &end()  
 	{
 		return datos.end();
 	}
@@ -217,43 +217,44 @@ public:
 			 * @brief constructor privado del iterador
 			 * @param otro un interador de la clase list de la stl
 			 */
-			iterator(typename list<data<T,U>>::iterator otro);
+			iterator(typename list<data<T,U>>::iterator otro):it(otro){}
 		public:
 		/**
 		 * @brief constructor por defecto
 		 */
-		iterator();
+		iterator() = default;
 
 		/**
 		 * @brief constructor de copia
 		 * @param otro el objeto que se copia
 		 */
-		iterator(const iterator & otro);
+		iterator(const iterator & otro):it(otro.it){}
 
 		/**
 		 * @brief operador para continuar en la iteracion, es el operador prefijo
 		 * @return una referencia al objeto
 		 */
 
-		iterator & operator++();
+		iterator & operator++(){ return ++it; }
 		/**
 		 * @brief operador para continuar en la iteracion, es el operador posfijo
 		 * @return una copia del objeto
 		 */
-		iterator operator++(int);
+		iterator operator++(int){ return it++; }
 
 		/**
 		 * @brief operador de asignacion
 		 * @param otro el que se le asigna
 		 * @return una referencia al objeto actual
 		 */
-		iterator & operator=(const iterator & otro);
+		iterator & operator=(const iterator & otro){ it = otro.it; return *this;}
+
 
 		/**
 		 * @brief operador de consulta
 		 * @return el elemento de la posicion del iterador
 		 */
-		list<data<T,U>> & operator*();
+		data<T,U> & operator*() { return (*it); }
 		friend class Diccionario<T,U>;
 		friend bool operator!=(const typename Diccionario<T,U>::iterator & uno, const typename Diccionario<T,U>::iterator & otro);
 	};
@@ -331,14 +332,14 @@ public:
 	 * @param fin ultima clave del rango
 	 * @return subdiccionario de las claves entre @e inicio y @e fin
 	 */
-	Diccionario<T,U> subdiccionario_entre(const T & inicio, const T & fin) const ;
+	Diccionario<T,U> subdiccionario_entre(const T & inicio, const T & fin)  ;
 
 	/**
 	 * @brief metodo para hacer la diferencia de diccionarios, el diccionario llamador no se modifica
 	 * @param otro diccionario que se le resta al actual
 	 * @return diccionario diferencia
 	 */
-	Diccionario<T,U> diferencia(const Diccionario<T,U> & otro) const ;
+	Diccionario<T,U> diferencia(const Diccionario<T,U> & otro)  ;
 
 	/**
 	 * @brief metodo que devuelve la clave en la posicion del iterador del diccionario
