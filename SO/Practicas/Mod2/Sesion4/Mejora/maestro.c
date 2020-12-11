@@ -51,6 +51,7 @@ int main(int argc, char *argv[])
 			execl("./esclavo", "esclavo", NULL);
 			exit(EXIT_SUCCESS);
 		} else{
+			dup2(fd_padre[0],STDIN_FILENO);
 			minI = i*por_hijo + min;
 			maxI = minI+1 + por_hijo;
 			close(fd_padre[1]);
