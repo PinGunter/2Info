@@ -10,7 +10,7 @@ ostream & operator<<(ostream & os, const Diccionario<string,string> & D){
 	  
 	  list<data<string,string> >::const_iterator it;
 	  
-	  for (it=D.begin(); it!=D.end(); ++it){
+	  for (it=D.cbegin(); it!=D.cend(); ++it){
 	  
 		    list<string>::const_iterator it_s;
 		    

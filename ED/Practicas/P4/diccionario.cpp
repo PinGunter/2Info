@@ -1,5 +1,9 @@
+/**
+ * @file diccionario.cpp
+ * @author Salvador Romero Cortés
+ */
 #include "diccionario.h"
-
+#include <cassert>
 // iterador no constante
 template <typename T, typename U>
 Diccionario<T,U>::iterator::iterator():it(){}
@@ -31,7 +35,7 @@ list<data<T,U>> & Diccionario<T,U>::iterator::operator*(){
 }
 
 template <typename T, typename U>
-list<data<T,U>> Diccionario<T,U>::const_iterator::operator*(){
+list<data<T,U>> Diccionario<T,U>::const_iterator::operator*() const {
     return (*it);
 }
 
@@ -61,47 +65,54 @@ typename Diccionario<T,U>::const_iterator & Diccionario<T,U>::const_iterator::op
 }
 
 template <typename T, typename U>
-bool operator==(const typename Diccionario<T,U>::iterator & uno, const typename Diccionario<T,U>::iterator & otro){
-    return uno.it == otro.it;
+bool operator!=(const typename Diccionario<T,U>::iterator & uno, const typename Diccionario<T,U>::iterator & otro){
+    return uno.it != otro.it;
 }
 
 
 template <typename T, typename U>
-bool operator==(const typename Diccionario<T,U>::const_iterator & uno, const typename Diccionario<T,U>::const_iterator & otro){
-    return uno.it == otro.it;
+bool operator!=(const typename Diccionario<T,U>::const_iterator & uno, const typename Diccionario<T,U>::const_iterator & otro){
+    return uno.it != otro.it;
 }
 
 // metodos nuevos
 template <typename T, typename U>
-T Diccionario<T,U>::getClave(const typename Diccionario<T,U>::iterator & it){
-    return (*it).clave;
+T Diccionario<T,U>::getClave(const typename Diccionario<T,U>::iterator & iterador)const{
+    return (*iterador.it).clave;
 }
 
 template <typename T, typename U>
-bool Diccionario<T,U>::borrar_por_clave(T clave){
+T Diccionario<T,U>::getClave(const typename Diccionario<T,U>::const_iterator & iterador)const{
+    return (*iterador.it).clave;
+}
+
+template <typename T, typename U>
+bool Diccionario<T,U>::borrar_por_clave(const T & clave){
     //primero comprobamos que realmente esté la clave en el diccionario
     typename list<data<T, U>>::iterator posicion;
     bool esta_clave = Esta_Clave(clave,posicion);
     if (esta_clave){
-        datos.remove(clave);
+        datos.erase(posicion);
     }
     return esta_clave;
 }
 
-
 template <typename T, typename U>
-Diccionario<T,U> Diccionario<T,U>::union_dic(const Diccionario<T,U> & nuevo){
+Diccionario<T,U> Diccionario<T,U>::union_dic( Diccionario<T,U> nuevo){
     Diccionario<T,U> aux(*this);
-    typename list<data<U,T>>::iterator it;
-    for (it=nuevo.datos.begin(); it != nuevo.datos.end(); ++it){
-        list<U> definiciones;
-        if (aux.Esta_Clave(aux.getClave(it),NULL)){
-            definiciones = aux.getInfo_Asoc(aux.getClave(it));
-            for (typename list<U>::iterator iterador_def = definiciones.begin(); iterador_def != definiciones.end(); ++iterador_def)
-                aux.AddSignificado_Palabra((*iterador_def),aux.getClave(it));
+    typename list<data<U,T>>::iterator it_aux;
+    for (auto it=nuevo.cbegin(); it != nuevo.cend(); ++it){
+        typename Diccionario<T,U>::const_iterator it_dic(it);
+        T clave = nuevo.getClave(it_dic);
+        list<U> definiciones(nuevo.getInfo_Asoc(clave));
+        if (aux.Esta_Clave(clave,it_aux)){
+            for (typename list<U>::const_iterator iterador_def = definiciones.cbegin(); iterador_def != definiciones.cend(); ++iterador_def){
+                if (!esta_dentro((*it_aux).info_asoci,(*iterador_def)))
+                   aux.AddSignificado_Palabra((*iterador_def),clave);
+            }
         }
         else{
-            aux.Insertar(aux.getClave(it),aux.getInfo_Asoc(aux.getClave(it)));
+            aux.Insertar(clave,nuevo.getInfo_Asoc(clave));
         }
     }   
     return aux;
@@ -109,11 +120,32 @@ Diccionario<T,U> Diccionario<T,U>::union_dic(const Diccionario<T,U> & nuevo){
 
 
 template <typename T, typename U>
-Diccionario<T,U> Diccionario<T,U>::subdiccionario_entre(const T & inicio, const T & fin){
-
+Diccionario<T,U> Diccionario<T,U>::subdiccionario_entre(const T & inicio, const T & fin) const{
+    typename list<data<T,U>>::iterator inicio_it;
+    typename list<data<T,U>>::iterator fin_it;
+    assert(Esta_Clave(inicio,inicio_it));
+    assert(Esta_Clave(fin,fin_it));
+    Diccionario<T,U> nuevo;
+    for (typename list<data<T,U>>::iterator it=inicio_it; it != fin_it; ++it){
+        nuevo.Insertar((*it).clave,(*it).info_asoci);
+    }
+    nuevo.Insertar((*fin_it).clave,(*fin_it).info_asoci);
+    return nuevo;
 }
 
 template <typename T, typename U>
-Diccionario<T,U> Diccionario<T,U>::diferencia(const Diccionario<T,U> & otro){
+Diccionario<T,U> Diccionario<T,U>::diferencia(const Diccionario<T,U> & otro) const{
 
+}
+
+
+template <typename U>
+bool esta_dentro(const list<U> & lista, const U & elemento){
+    typename list<U>::const_iterator it;
+    bool encontrado = false;
+    for (it=lista.cbegin(); it != lista.cend() && !encontrado; ++it){
+        if ((*it) == elemento)
+            encontrado = true;
+    }
+    return encontrado;
 }

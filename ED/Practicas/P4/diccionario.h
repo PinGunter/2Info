@@ -1,3 +1,7 @@
+/**
+ * @file diccionario.h
+ * @author Profesores de ED y Salvador Romero Cortés
+ */
 #ifndef _DICCIONARIO_H
 #define _DICCIONARIO_H
 
@@ -87,7 +91,7 @@ public:
 		dónde está clave. Si no está, devuelve end() y deja el iterador de salida
 		apuntando al sitio dónde debería estar la clave
 		*/
-	bool Esta_Clave(const T &p, typename list<data<T, U>>::iterator &it_out)
+	bool Esta_Clave(const T &p, typename list<data<T, U>>::iterator &it_out) 
 	{
 
 		if (datos.size() > 0)
@@ -142,13 +146,15 @@ public:
 		 la nueva información se inserta al final de la lista de información.
                   Si no esta la clave la inserta y añade la informacion asociada. 
 		 */
-	void AddSignificado_Palabra(const U &s, const T &p)
+	void AddSignificado_Palabra(const U &s, const T & p)
 	{
 		typename list<data<T, U>>::iterator it;
-
 		if (!Esta_Clave(p, it))
 		{
-			datos.insert(it, p);
+			list<U> lista_temp;
+			lista_temp.insert(lista_temp.begin(), s);
+			data<T,U> nuevo = {p,lista_temp};
+			datos.insert(it,nuevo);
 		}
 
 		//Insertamos el siginificado al final
@@ -181,20 +187,20 @@ public:
 	}
 
 	/*Funciones begin y end asociadas al diccionario*/
-	typename list<data<T, U>>::iterator &begin()
+	typename list<data<T, U>>::iterator &begin() 
 	{
 		return datos.begin();
 	}
-	typename list<data<T, U>>::iterator &end()
+	typename list<data<T, U>>::iterator &end() 
 	{
 		return datos.end();
 	}
 
-	typename list<data<T, U>>::const_iterator begin() const
+	typename list<data<T, U>>::const_iterator cbegin() const
 	{
 		return datos.cbegin();
 	}
-	typename list<data<T, U>>::const_iterator end() const
+	typename list<data<T, U>>::const_iterator cend() const
 	{
 		return datos.cend();
 	}
@@ -249,7 +255,7 @@ public:
 		 */
 		list<data<T,U>> & operator*();
 		friend class Diccionario<T,U>;
-		friend bool operator!=<>(const typename Diccionario<T,U>::iterator & uno, const typename Diccionario<T,U>::iterator & otro);
+		friend bool operator!=(const typename Diccionario<T,U>::iterator & uno, const typename Diccionario<T,U>::iterator & otro);
 	};
 
 		/**
@@ -298,9 +304,9 @@ public:
 		 * @brief operador de consulta
 		 * @return el elemento de la posicion del iterador
 		 */
-		list<data<T,U>>  operator*();
+		list<data<T,U>>  operator*() const;
 		friend class Diccionario<T,U>;
-		friend bool operator!=<>(const typename Diccionario<T,U>::const_iterator & uno, const typename Diccionario<T,U>::const_iterator & otro);
+		friend bool operator!=(const typename Diccionario<T,U>::const_iterator & uno, const typename Diccionario<T,U>::const_iterator & otro);
 	};
 
 
@@ -310,14 +316,14 @@ public:
 	 * @return true si se ha podido eliminar
 	 * 		   false si no esta en el diccionario y no se ha podido eliminar
 	 */
-	bool borrar_por_clave(T clave);
+	bool borrar_por_clave(const T & clave);
 
 	/**
 	 * @brief metodo para unir dos diccionarios, el objeto llamador no se modifica
 	 * @param nuevo el diccionario que se une al objeto que llama al metodo
 	 * @return la union de diccionarios
 	 */
-	Diccionario<T,U> union_dic(const Diccionario<T,U> & nuevo);
+	Diccionario<T,U> union_dic( Diccionario<T,U>  nuevo);
 
 	/**
 	 * @brief metodo que devuelve los elementos dentro de un rango de claves
@@ -325,21 +331,28 @@ public:
 	 * @param fin ultima clave del rango
 	 * @return subdiccionario de las claves entre @e inicio y @e fin
 	 */
-	Diccionario<T,U> subdiccionario_entre(const T & inicio, const T & fin);
+	Diccionario<T,U> subdiccionario_entre(const T & inicio, const T & fin) const ;
 
 	/**
 	 * @brief metodo para hacer la diferencia de diccionarios, el diccionario llamador no se modifica
 	 * @param otro diccionario que se le resta al actual
 	 * @return diccionario diferencia
 	 */
-	Diccionario<T,U> diferencia(const Diccionario<T,U> & otro);
+	Diccionario<T,U> diferencia(const Diccionario<T,U> & otro) const ;
 
 	/**
 	 * @brief metodo que devuelve la clave en la posicion del iterador del diccionario
 	 * @param it posicion de la clave
 	 * @return la clave
 	 */
-	T getClave(const iterator & it);
+	T getClave(const iterator & it) const;
+
+	/**
+	 * @brief metodo que devuelve la clave en la posicion del iterador del diccionario (version it constante)
+	 * @param it posicion de la clave (constante)
+	 * @return la clave
+	 */
+	T getClave(const const_iterator & it) const;
 };
 
 	/**
@@ -361,6 +374,16 @@ public:
 	 */
 	template <typename T, typename U>
 	bool operator!=(const typename Diccionario<T,U>::const_iterator & uno,const typename Diccionario<T,U>::const_iterator & otro);
+
+	/**
+	 * @brief funcion para saber si un elemento está dentro de una lista
+	 * @param lista la lista donde se busca
+	 * @param elemento el elemento a buscar
+	 * @return true si se encuentra
+	 * 		   false si no se encuentra
+	 */
+	template <typename U>
+	bool esta_dentro(const list<U> & lista, const U & elemento);
 
 #include "diccionario.cpp"
 #endif
