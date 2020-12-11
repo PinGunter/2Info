@@ -12,9 +12,10 @@
 
 using namespace std;
 
-/*Tipo elemento que define el diccionario. T es el tipo de dato asociado a una clave que
-no se repite (DNI p.ej.) y list<U> es una lista de datos (string p.ej) asociados a la clave
-de tipo T. El diccionario está ordenado de menor a mayor clave.
+/**
+ * @brief Tipo elemento que define el diccionario. 
+ * @e T es el tipo de dato asociado a una clave que no se repite (DNI p.ej.) 
+ * @e list<U> es una lista de datos (string p.ej) asociados a la clave de tipo T. El diccionario está ordenado de menor a mayor clave.
 */
 template <class T, class U>
 struct data
@@ -23,8 +24,10 @@ struct data
 	list<U> info_asoci;
 };
 
-/*Comparador de datos. Ordena 2 registros de acuerdo a la clave de tipo T. Puede usarse como
- un funtor.
+/**
+ * @brief Comparador de datos. Ordena 2 registros de acuerdo a la clave de tipo T. Puede usarse como un funtor.
+ * @param d1 uno de los diccionarios que se comparan
+ * @param d2 el otro diccionario con el que se compara
  */
 template <class T, class U>
 bool operator<(const data<T, U> &d1, const data<T, U> &d2)
@@ -54,11 +57,10 @@ bool esta_dentro(const list<U> & lista, const U & elemento){
 }
 
 
-/*Un diccionario es una lista de datos de los definidos anteriormente. Cuidado porque se
-manejan listas de listas. Se añaden 2 funciones privadas que hacen más facil la implementación
-de algunos operadores o funciones de la parte pública. Copiar copia un diccioario en
-otro y borrar elimina todos los elementos de un diccionario. La implementación de copiar
-puede hacerse usando iteradores o directamente usando la función assign.
+/**
+ * @brief Un diccionario es una lista de datos de los definidos anteriormente.  Se añaden 2 funciones privadas que hacen más facil la implementación de algunos operadores o funciones de la parte pública. 
+ * Copiar copia un diccioario en otro y borrar elimina todos los elementos de un diccionario. La implementación de copiar puede hacerse usando iteradores o directamente usando la función assign.
+* @warning Cuidado porque se manejan listas de listas.
 */
 template <class T, class U>
 class Diccionario
@@ -66,6 +68,10 @@ class Diccionario
 private:
 	list<data<T, U>> datos;
 
+	/**
+	 * @brief metodo para copiar un diccionario @e D en @e this
+	 * @param D el diccionario que se copia
+	 */
 	void Copiar(const Diccionario<T, U> &D)
 	{
 		/*typename list<data<T,U> >::const_iterator it_d;
@@ -78,6 +84,9 @@ private:
 			   }*/
 	}
 
+	/**
+	 * @brief metodo para borrar los elementos del diccionario
+	 */
 	void Borrar()
 	{
 
@@ -85,19 +94,30 @@ private:
 	}
 
 public:
-	/* Constructor por defecto*/
+	/**
+	 * @brief Constructor por defecto
+	 */
 	Diccionario() : datos(list<data<T, U>>()) {}
 
-	/* Constructor de copias*/
+	/**
+	 * @brief Constructor de copias
+	 * @param D el diccionario que se copia
+	 * */
 	Diccionario(const Diccionario &D)
 	{
 		Copiar(D);
 	}
 
-	/* Desstructor*/
+	/**
+	 * @brief  Destructor
+	 **/
 	~Diccionario() {}
 
-	/* Operador de asignación*/
+	/**
+	 * @brief Operador de asignación
+	 * @param D el diccionario que se asigna a @e this
+	 * @return una referencia al objeto
+	 * */
 	Diccionario<T, U> &operator=(const Diccionario<T, U> &D)
 	{
 		if (this != &D)
@@ -108,10 +128,10 @@ public:
 		return *this;
 	}
 
-	/* Busca la clave p en el diccionario. Si está devuelve un iterador a
-		dónde está clave. Si no está, devuelve end() y deja el iterador de salida
-		apuntando al sitio dónde debería estar la clave
-		*/
+	/**
+	 * @brief Busca la clave p en el diccionario. 
+	 * @return Si está devuelve un iterador a dónde está clave. Si no está, devuelve end() y deja el iterador de salida apuntando al sitio dónde debería estar la clave
+	*/
 	bool Esta_Clave(const T &p, typename list<data<T, U>>::iterator &it_out) 
 	{
 
@@ -144,10 +164,12 @@ public:
 		}
 	}
 
-	/* Inserta un nuevo registro en el diccionario. Lo hace a través de la clave
-		 e inserta la lista con toda la información asociada a esa clave. Si el 
-		 diccionario no estuviera ordenado habría que usar la función sort() 
-		 */
+	/**
+	 * @brief Inserta un nuevo registro en el diccionario. Lo hace a través de la clave e inserta la lista con toda la información asociada a esa clave. 
+	 * @warning Si el diccionario no estuviera ordenado habría que usar la función sort() 
+	 * @param clave la clave de la nueva entrada
+	 * @param info la lista de definiciones asocida a la @e clave
+	 */ 
 	void Insertar(const T &clave, const list<U> &info)
 	{
 
@@ -163,10 +185,9 @@ public:
 		}
 	}
 
-	/*Añade una nueva informacion asocida a una clave que está en el diccionario.
-		 la nueva información se inserta al final de la lista de información.
-                  Si no esta la clave la inserta y añade la informacion asociada. 
-		 */
+	/**
+	 * @brief Añade una nueva informacion asocida a una clave que está en el diccionario la nueva información se inserta al final de la lista de información. Si no esta la clave la inserta y añade la informacion asociada. 
+	*/
 	void AddSignificado_Palabra(const U &s, const T & p)
 	{
 		typename list<data<T, U>>::iterator it;
@@ -182,11 +203,14 @@ public:
 		(*it).info_asoci.insert((*it).info_asoci.end(), s);
 	}
 
-	/* Devuelve la información (una lista) asociada a una clave p. Podrían 
+	/**
+	 * @brief Devuelve la información (una lista) asociada a una clave p. Podrían 
 		 haberse definido operator[] como
 		 data<T,U> & operator[](int pos){ return datos.at(pos);}
 		 const data<T,U> & operator[](int pos)const { return datos.at(pos);}
-		  */
+	* @param p la clave del diccionario
+	* @return una lista con las definiciones	
+	*/
 	list<U> getInfo_Asoc(const T &p)
 	{
 		typename list<data<T, U>>::iterator it;
@@ -201,26 +225,45 @@ public:
 		}
 	}
 
-	/*Devuelve el tamaño del diccionario*/
+	/**
+	 * @brief metodo que devuelve el tamaño del diccionario
+	 * @return el tamaño del diccionario
+	 **/
+
 	int size() const
 	{
 		return datos.size();
 	}
 
 	/*Funciones begin y end asociadas al diccionario*/
+	/**
+	 * @brief método begin no constante
+	 * @return una referencia al begin no constante de @e datos
+	 */
 	typename list<data<T, U>>::iterator &begin()
 	{
 		return datos.begin();
 	}
+	/**
+	 * @brief método end no constante
+	 * @return una referencia al end no constante de @e datos
+	 */	
 	typename list<data<T, U>>::iterator &end()  
 	{
 		return datos.end();
 	}
-
+	/**
+	 * @brief método begin constante
+	 * @return una referencia al begin constante de @e datos
+	 */
 	typename list<data<T, U>>::const_iterator cbegin() const
 	{
 		return datos.cbegin();
 	}
+	/**
+	 * @brief método end constante
+	 * @return una referencia al end constante de @e datos
+	 */
 	typename list<data<T, U>>::const_iterator cend() const
 	{
 		return datos.cend();
