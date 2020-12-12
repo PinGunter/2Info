@@ -122,22 +122,6 @@ void funcion_camarero()
     int id_esperando;
     int tag_aceptable;
     while (true){
-        // MPI_Iprobe(MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &flag, &estado);
-        // if (flag > 0){
-        //     switch (estado.MPI_TAG){
-        //         case etiq_sentarse:
-        //             if (num_filosofos_sentados < 4){
-        //                 MPI_Recv(&valor, 1 , MPI_INT, estado.MPI_SOURCE, etiq_sentarse, MPI_COMM_WORLD, &estado);
-        //                 num_filosofos_sentados++;
-        //                 // MPI_Ssend(&valor, 1, MPI_INT, estado.MPI_SOURCE, etiq_sentarse, MPI_COMM_WORLD);
-        //             }
-        //         break;
-        //         case etiq_levantarse:
-        //             MPI_Recv(&valor, 1 , MPI_INT, estado.MPI_SOURCE, etiq_levantarse, MPI_COMM_WORLD, &estado);
-        //             num_filosofos_sentados--;
-        //             break;
-        //     }
-        // }
 
         if (num_filosofos_sentados < 4){
             tag_aceptable = MPI_ANY_SOURCE;
@@ -160,7 +144,7 @@ void funcion_camarero()
         }
         
 
-
+        // INTENTO INICIAL - El que se queda esperando nunca entra
         // MPI_Recv(&valor,1, MPI_INT, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &estado);
         // switch(estado.MPI_TAG){
         //     case etiq_sentarse:
