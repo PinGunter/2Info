@@ -124,18 +124,18 @@ void funcion_buffer()
          // id_emisor_aceptable = id_productor ;       // $~~~$ solo prod.
          tag_emisor_aceptable = tag_prod;
          while (!encontrado_emisor && !acabar){
-            for (int i=0; i <= np/2 && !encontrado_emisor; i+=2){
-                MPI_Iprobe(i,tag_prod,MPI_COMM_WORLD,&flag,&buffer_vacio);
+            for (int j=0; j <= np/2 && !encontrado_emisor; j+=2){
+                MPI_Iprobe(j,tag_prod,MPI_COMM_WORLD,&flag,&buffer_vacio);
                 if (flag > 0){
                     encontrado_emisor = true;
-                    id_productor = i;
+                    id_productor = j;
                 }
             }
-            for (int i=1; i < np && !encontrado_emisor; i+=2){
-                MPI_Iprobe(i,tag_prod,MPI_COMM_WORLD,&flag,&buffer_vacio);
+            for (int j=1; i < np && !encontrado_emisor; j+=2){
+                MPI_Iprobe(j,tag_prod,MPI_COMM_WORLD,&flag,&buffer_vacio);
                 if (flag > 0){
                     encontrado_emisor = true;
-                    id_productor = i;
+                    id_productor = j;
                 }
             }
             acabar = true;          //variable acabar para que no se pueda bloquear      
