@@ -182,7 +182,7 @@ int main(int argc, char **argv)
     {
         // ejecutar la función correspondiente a 'id_propio'
         if (id_propio == id_camarero)
-            funcion_camarero();
+            funcion_camarero();                 // si es camarero
         else if (id_propio % 2 == 0)           // si es par
             funcion_filosofos(id_propio); //   es un filósofo
         else                              // si es impar
