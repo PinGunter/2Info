@@ -292,6 +292,9 @@ También cambia la función de los filófos y el main.
 Cambios en los filósofos:
 
 ```c++
+//nuevos ids de tenedores
+int id_ten_izq = (id + 1) % (num_procesos-1), //id. tenedor izq.
+id_ten_der = (id + num_procesos - 2) % (num_procesos-1);
 //... código anterior al bucle while sigue igual
 cout << "Filósofo " << id << " solicita sentarse" << endl;
 MPI_Ssend(&valor, 1, MPI_INT, id_camarero, etiq_sentarse, MPI_COMM_WORLD);
@@ -316,4 +319,4 @@ else                              // si es impar
 
 Captura de ejecución:
 
-![](/home/salva/2Info/SCD/Practica3/camareror.png)
+![](/home/salva/2Info/SCD/Practica3/camarero.png)
