@@ -50,8 +50,9 @@ int aleatorio()
 
 void funcion_filosofos(int id)
 {
-    int id_ten_izq = (id + 1) % num_procesos,                //id. tenedor izq.
-        id_ten_der = (id + num_procesos - 1) % num_procesos; //id. tenedor der.
+    int id_ten_izq = (id + 1) % (num_procesos-1), //id. tenedor izq.
+        id_ten_der = (id + num_procesos - 2) % (num_procesos-1);
+
     int valor;
     MPI_Status estado;
     while (true)
