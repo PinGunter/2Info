@@ -263,7 +263,7 @@ void funcion_camarero()
     while (true){
 
         if (num_filosofos_sentados < 4){
-            tag_aceptable = MPI_ANY_SOURCE;
+            tag_aceptable = MPI_ANY_TAG;
         } else
         {
             tag_aceptable = etiq_levantarse;
