@@ -122,10 +122,23 @@ void funcion_camarero()
     MPI_Status estado;
     int id_esperando;
     int tag_aceptable;
+    int suma = 0;
     while (true){
 
+        /** Versión profesor (más corta)
         if (num_filosofos_sentados < 4){
-            tag_aceptable = MPI_ANY_SOURCE;
+            MPI_Recv(&valor, 1 , MPI_INT, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &estado);
+            suma = (estado.MPI_TAG == etiq_levantarse) ? -1 : 1;
+            num_filosofos_sentados += suma;
+        } else{
+            MPI_Recv(&valor, 1 , MPI_INT, MPI_ANY_SOURCE, etiq_levantarse, MPI_COMM_WORLD, &estado);
+            suma = -1;
+            num_filosofos_sentados += suma;
+        }
+        */
+
+        if (num_filosofos_sentados < 4){
+            tag_aceptable = MPI_ANY_TAG;
         } else
         {
             tag_aceptable = etiq_levantarse;
