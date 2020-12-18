@@ -432,6 +432,38 @@ public:
 		}
 	}
 
+	/**
+	 * @brief metodo para obtener los numeros de teléfono de la gente cuyo nombre empiece por @e letra
+	 * @param letra el caracter por el que deben empezar los nombres 
+	 * @return guia de telefono con esos nombres
+	 */
+	Guia_Tlf telefonosEmpiezanCon(char letra){
+		Guia_Tlf salida;
+		for (Guia_Tlf::iterator it = begin(); it != end(); ++it){
+			if ((*it).first[0] == letra){
+				salida.insert((*it));
+			}
+		}
+		return salida;
+	}
+
+	/**
+	* @brief metodo para obtener los numeros de teléfono entre @e nombre1 y @e nombre2
+	* @pre @e nombre1 y @e nombre2 deben estar en la guia
+	* @param nombre1 el primer elemento del subconjunto de numeros
+	* @param nombre2 el final del subconjunto del numeros
+	*/
+	Guia_Tlf numerosEntre(string nombre1, string nombre2){
+		Guia_Tlf salida;
+		iterator it (datos.find(nombre1));
+		iterator fin(datos.find(nombre2));
+		for (; it != fin; ++it){
+			salida.insert((*it));
+		}
+		salida.insert((*it));
+		return salida;
+	}
+
 };
 
 #endif
