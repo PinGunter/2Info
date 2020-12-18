@@ -393,7 +393,7 @@ public:
 	}
 	/**
 	 * @brief método begin constante
-	 * @return una referencia al begin constante de @e datos
+	 * @return un iterador diccionario que apunta al begin constante de @e datos
 	 */
 	typename Diccionario<T, U>::const_iterator cbegin() const
 	{
@@ -401,7 +401,7 @@ public:
 	}
 	/**
 	 * @brief método end constante
-	 * @return una referencia al end constante de @e datos
+	 * @return un iterador diccionario que apunta al end constante de @e datos
 	 */
 	typename Diccionario<T, U>::const_iterator cend() const
 	{

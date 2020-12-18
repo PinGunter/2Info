@@ -7,7 +7,12 @@
 #include <list>
 
 using namespace std;
-
+/**
+ * @brief sobrecarga del operador >> para leer datos de un flujo @e is
+ * @param is el flujo de donde se lee
+ * @param D el diccionario que se lee
+ * @return una referencia al flujo
+ */
 istream & operator >>(istream & is,Diccionario<string,string> &D){
 	  int np;
 	  is>>np;
@@ -35,22 +40,13 @@ istream & operator >>(istream & is,Diccionario<string,string> &D){
 	  D=Daux;
 	  return is;
 }
-
+/**
+ * @brief sobrecarga del operador << para escribir datos en un flujo @e os
+ * @param os el flujo de donde se escribe
+ * @param D el diccionario que se escribe
+ * @return una referencia al flujo
+ */
 ostream & operator<<(ostream & os, Diccionario<string,string> D){
-	  
-	//  typename Diccionario<string,string>::const_iterator it;
-	  
-	//   for (it=D.cbegin(); it.operator!=(D.cend()); ++it){
-	  
-	// 	    list<string>::const_iterator it_s;
-		    
-	// 	    os<<endl<<(*it).clave<<endl<<" informacion asociada:"<<endl;
-	// 	    for (it_s=(*it).info_asoci.begin();it_s!=(*it).info_asoci.end();++it_s){
-	// 		      os<<(*it_s)<<endl;
-	// 	    }
-	// 	    os<<"**************************************"<<endl;
-	//   }
-	  
 	typename Diccionario<string,string>::const_iterator it;
 	string clave;
 	int cont;
