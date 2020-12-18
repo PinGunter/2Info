@@ -36,28 +36,42 @@ istream & operator >>(istream & is,Diccionario<string,string> &D){
 	  return is;
 }
 
-ostream & operator<<(ostream & os, const Diccionario<string,string> & D){
+ostream & operator<<(ostream & os, Diccionario<string,string> D){
 	  
-	  list<data<string,string> >::const_iterator it;
+	//  typename Diccionario<string,string>::const_iterator it;
 	  
-	  for (it=D.cbegin(); it!=D.cend(); ++it){
+	//   for (it=D.cbegin(); it.operator!=(D.cend()); ++it){
 	  
-		    list<string>::const_iterator it_s;
+	// 	    list<string>::const_iterator it_s;
 		    
-		    os<<endl<<(*it).clave<<endl<<" informacion asociada:"<<endl;
-		    for (it_s=(*it).info_asoci.begin();it_s!=(*it).info_asoci.end();++it_s){
-			      os<<(*it_s)<<endl;
-		    }
-		    os<<"**************************************"<<endl;
-	  }
+	// 	    os<<endl<<(*it).clave<<endl<<" informacion asociada:"<<endl;
+	// 	    for (it_s=(*it).info_asoci.begin();it_s!=(*it).info_asoci.end();++it_s){
+	// 		      os<<(*it_s)<<endl;
+	// 	    }
+	// 	    os<<"**************************************"<<endl;
+	//   }
 	  
+	typename Diccionario<string,string>::const_iterator it;
+	string clave;
+	int cont;
+	for (it = D.cbegin(); it != D.cend(); ++it){
+		clave = D.getClave(it);
+		list<string> definiciones= D.getInfo_Asoc(clave);
+		cont = 1;
+		os << "Palabra: " << clave << endl;
+		for (typename list<string>::const_iterator it_def = definiciones.cbegin(); it_def != definiciones.cend();++it_def){
+			os << "Def. " << cont++ << " --> " << (*it_def) << endl;
+		}
+		os << "******************************" << endl;
+	}
+
+
 	  return os;
 }
 
 int main(){
     Diccionario<string,string> dic1, dic2, dic_union, sub_dic, dic_difer;
     list<string> definiciones;
-    int np,nd; 
     string palabra, borrado, definicion;
     cin >> dic1;
 

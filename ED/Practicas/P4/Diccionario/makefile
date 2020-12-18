@@ -6,12 +6,12 @@ BIN = bin/
 todo: main_dic usodiccionario
 
 main_dic: $(OBJ)main_dic.o
-	g++ -g -w $(OBJ)main_dic.o -I $(INC) -o $(BIN)main_dic
+	g++ -g -Wall $(OBJ)main_dic.o -I $(INC) -o $(BIN)main_dic
 $(OBJ)main_dic.o: $(SRC)main_dic.cpp
-	g++ -g -w -c $(SRC)main_dic.cpp -I $(INC) -o $(OBJ)main_dic.o
+	g++ -g -Wall -c $(SRC)main_dic.cpp -I $(INC) -o $(OBJ)main_dic.o
 	
 usodiccionario: $(SRC)usodiccionario.cpp
-	g++ -g -w -o $(BIN)usodiccionario $(SRC)usodiccionario.cpp -I $(INC)
+	g++ -g -Wall -o $(BIN)usodiccionario $(SRC)usodiccionario.cpp -I $(INC)
 	
 clean:
 	-rm $(BIN)*

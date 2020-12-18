@@ -8,9 +8,9 @@ listas de listas y otro sobre listas
 */
 ostream & operator<<(ostream & os, const Diccionario<string,string> & D){
 	  
-	  list<data<string,string> >::const_iterator it;
+	 typename Diccionario<string,string>::const_iterator it;
 	  
-	  for (it=D.cbegin(); it!=D.cend(); ++it){
+	  for (it=D.cbegin(); it.operator!=(D.cend()); ++it){
 	  
 		    list<string>::const_iterator it_s;
 		    

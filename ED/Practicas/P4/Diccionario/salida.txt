@@ -1,0 +1,49 @@
+******************** DICCIONARIO UNION ************************
+Palabra: Alcachofa
+Def. 1 --> Planta hortense, de la familia de las compuestas, de raíz fusiforme, tallo estriado, ramoso y de más de medio metro de altura, y hojas algo espinosas, con cabezuelas comestibles.
+Def. 2 --> Receptáculo redondeado con muchos orificios que, sumergido en una cavidad que contiene agua estancada o corriente, permite la entrada de ella en un aparato destinado a elevarla, impidiendo la entrada de cuerpos extraños.
+Def. 3 --> Cabeza del micrófono
+Def. 4 --> Adorno en forma de alcachofa.
+Def. 5 --> Panecillo cuya forma recuerda la de la alcachofa.
+******************************
+Palabra: Diccionario
+Def. 1 --> Repertorio en forma de libro o en soporte electrónico en el que se recogen, según un orden determinado, las palabras o expresiones de una o más lenguas, o de una materia concreta, acompañadas de su definición, equivalencia o explicación.
+******************************
+Palabra: Feo
+Def. 1 --> Desprovisto de belleza y hermosura.
+******************************
+Palabra: Guapo
+Def. 1 --> No Feo
+******************************
+Palabra: Juan
+Def. 1 --> Caballo
+******************************
+Palabra: Libro
+Def. 1 --> Conjunto de muchas hojas de papel u otro material semejante que, encuadernadas, forman un volumen.
+Def. 2 --> Obra científica, literaria o de cualquier otra índole con extensión suficiente para formar volumen, que puede aparecer impresa o en otro soporte.
+******************************
+******************** SUBDICCIONARIO ************************
+Palabra: Feo
+Def. 1 --> Desprovisto de belleza y hermosura.
+******************************
+Palabra: Guapo
+Def. 1 --> No Feo
+******************************
+Palabra: Juan
+Def. 1 --> Caballo
+******************************
+Palabra: Libro
+Def. 1 --> Conjunto de muchas hojas de papel u otro material semejante que, encuadernadas, forman un volumen.
+Def. 2 --> Obra científica, literaria o de cualquier otra índole con extensión suficiente para formar volumen, que puede aparecer impresa o en otro soporte.
+******************************
+******************** DIFERENCIA ************************
+Palabra: Alcachofa
+Def. 1 --> Planta hortense, de la familia de las compuestas, de raíz fusiforme, tallo estriado, ramoso y de más de medio metro de altura, y hojas algo espinosas, con cabezuelas comestibles.
+Def. 2 --> Receptáculo redondeado con muchos orificios que, sumergido en una cavidad que contiene agua estancada o corriente, permite la entrada de ella en un aparato destinado a elevarla, impidiendo la entrada de cuerpos extraños.
+Def. 3 --> Cabeza del micrófono
+Def. 4 --> Adorno en forma de alcachofa.
+Def. 5 --> Panecillo cuya forma recuerda la de la alcachofa.
+******************************
+Palabra: Diccionario
+Def. 1 --> Repertorio en forma de libro o en soporte electrónico en el que se recogen, según un orden determinado, las palabras o expresiones de una o más lenguas, o de una materia concreta, acompañadas de su definición, equivalencia o explicación.
+******************************

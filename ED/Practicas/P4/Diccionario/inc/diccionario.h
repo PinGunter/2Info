@@ -37,7 +37,6 @@ bool operator<(const data<T, U> &d1, const data<T, U> &d2)
 	return false;
 }
 
-
 /**
  * @brief funcion para saber si un elemento está dentro de una lista
  * @param lista la lista donde se busca
@@ -46,16 +45,17 @@ bool operator<(const data<T, U> &d1, const data<T, U> &d2)
  * 		   false si no se encuentra
  */
 template <typename U>
-bool esta_dentro(const list<U> & lista, const U & elemento){
+bool esta_dentro(const list<U> &lista, const U &elemento)
+{
 	typename list<U>::const_iterator it;
 	bool encontrado = false;
-	for (it=lista.cbegin(); it != lista.cend() && !encontrado; ++it){
+	for (it = lista.cbegin(); it != lista.cend() && !encontrado; ++it)
+	{
 		if ((*it) == elemento)
 			encontrado = true;
 	}
 	return encontrado;
 }
-
 
 /**
  * @brief Un diccionario es una lista de datos de los definidos anteriormente.  Se añaden 2 funciones privadas que hacen más facil la implementación de algunos operadores o funciones de la parte pública. 
@@ -132,7 +132,7 @@ public:
 	 * @brief Busca la clave p en el diccionario. 
 	 * @return Si está devuelve un iterador a dónde está clave. Si no está, devuelve end() y deja el iterador de salida apuntando al sitio dónde debería estar la clave
 	*/
-	bool Esta_Clave(const T &p, typename list<data<T, U>>::iterator &it_out) 
+	bool Esta_Clave(const T &p, typename list<data<T, U>>::iterator &it_out)
 	{
 
 		if (datos.size() > 0)
@@ -169,7 +169,7 @@ public:
 	 * @warning Si el diccionario no estuviera ordenado habría que usar la función sort() 
 	 * @param clave la clave de la nueva entrada
 	 * @param info la lista de definiciones asocida a la @e clave
-	 */ 
+	 */
 	void Insertar(const T &clave, const list<U> &info)
 	{
 
@@ -188,15 +188,15 @@ public:
 	/**
 	 * @brief Añade una nueva informacion asocida a una clave que está en el diccionario la nueva información se inserta al final de la lista de información. Si no esta la clave la inserta y añade la informacion asociada. 
 	*/
-	void AddSignificado_Palabra(const U &s, const T & p)
+	void AddSignificado_Palabra(const U &s, const T &p)
 	{
 		typename list<data<T, U>>::iterator it;
 		if (!Esta_Clave(p, it))
 		{
 			list<U> lista_temp;
 			lista_temp.insert(lista_temp.begin(), s);
-			data<T,U> nuevo = {p,lista_temp};
-			datos.insert(it,nuevo);
+			data<T, U> nuevo = {p, lista_temp};
+			datos.insert(it, nuevo);
 		}
 
 		//Insertamos el siginificado al final
@@ -235,54 +235,21 @@ public:
 		return datos.size();
 	}
 
-	/*Funciones begin y end asociadas al diccionario*/
-	/**
-	 * @brief método begin no constante
-	 * @return una referencia al begin no constante de @e datos
-	 */
-	typename list<data<T, U>>::iterator &begin()
-	{
-		return datos.begin();
-	}
-	/**
-	 * @brief método end no constante
-	 * @return una referencia al end no constante de @e datos
-	 */	
-	typename list<data<T, U>>::iterator &end()  
-	{
-		return datos.end();
-	}
-	/**
-	 * @brief método begin constante
-	 * @return una referencia al begin constante de @e datos
-	 */
-	typename list<data<T, U>>::const_iterator cbegin() const
-	{
-		return datos.cbegin();
-	}
-	/**
-	 * @brief método end constante
-	 * @return una referencia al end constante de @e datos
-	 */
-	typename list<data<T, U>>::const_iterator cend() const
-	{
-		return datos.cend();
-	}
-
-
 	//CLASES ITERADORAS
 	/**
 	 * @brief clase iteradora que sirve para recorrer el diccionario, versión no constante
 	 */
-	class iterator{
-		private:
-			typename list<data<T,U>>::iterator it;
-			/**
+	class iterator
+	{
+	private:
+		typename list<data<T, U>>::iterator it;
+		/**
 			 * @brief constructor privado del iterador
 			 * @param otro un interador de la clase list de la stl
 			 */
-			iterator(typename list<data<T,U>>::iterator otro):it(otro){}
-		public:
+		iterator(typename list<data<T, U>>::iterator otro) : it(otro) {}
+
+	public:
 		/**
 		 * @brief constructor por defecto
 		 */
@@ -292,49 +259,64 @@ public:
 		 * @brief constructor de copia
 		 * @param otro el objeto que se copia
 		 */
-		iterator(const iterator & otro):it(otro.it){}
+		iterator(const iterator &otro) : it(otro.it) {}
 
 		/**
 		 * @brief operador para continuar en la iteracion, es el operador prefijo
 		 * @return una referencia al objeto
 		 */
 
-		iterator & operator++(){ return ++it; }
+		iterator &operator++() { return ++it; }
 		/**
 		 * @brief operador para continuar en la iteracion, es el operador posfijo
 		 * @return una copia del objeto
 		 */
-		iterator operator++(int){ return it++; }
+		iterator operator++(int) { return it++; }
 
 		/**
 		 * @brief operador de asignacion
 		 * @param otro el que se le asigna
 		 * @return una referencia al objeto actual
 		 */
-		iterator & operator=(const iterator & otro){ it = otro.it; return *this;}
-
+		iterator &operator=(const iterator &otro)
+		{
+			it = otro.it;
+			return *this;
+		}
 
 		/**
 		 * @brief operador de consulta
 		 * @return el elemento de la posicion del iterador
 		 */
-		data<T,U> & operator*() { return (*it); }
-		friend class Diccionario<T,U>;
-		friend bool operator!=(const typename Diccionario<T,U>::iterator & uno, const typename Diccionario<T,U>::iterator & otro);
+		data<T, U> &operator*() { return (*it); }
+		/**
+		 * @brief operador de desigualdad de iteradores no constantes
+		 * @param otro el segundo iterador con el que se compara
+		 * @return true si uno != otro
+		 * 		   false si uno == otro
+		 */
+		bool operator!=(const typename Diccionario<T, U>::iterator &otro)
+		{
+			return this->it != otro.it;
+		}
+
+		friend class Diccionario<T, U>;
 	};
 
-		/**
+	/**
 	 * @brief clase iteradora que sirve para recorrer el diccionario, versión constante
 	 */
-	class const_iterator{
-		private:
-			typename list<data<T,U>>::const_iterator it;
-			/**
+	class const_iterator
+	{
+	private:
+		typename list<data<T, U>>::const_iterator it;
+		/**
 			 * @brief constructor privado del iterador
 			 * @param otro un interador de la clase list de la stl
 			 */
-			const_iterator(typename list<data<T,U>>::const_iterator otro):it(otro){}
-		public:
+		const_iterator(typename list<data<T, U>>::const_iterator otro) : it(otro) {}
+
+	public:
 		/**
 		 * @brief constructor por defecto
 		 */
@@ -344,14 +326,18 @@ public:
 		 * @brief constructor de copia
 		 * @param otro el objeto que se copia
 		 */
-		const_iterator(const const_iterator & otro):it(otro.it){}
+		const_iterator(const const_iterator &otro) : it(otro.it) {}
 
 		/**
 		 * @brief operador para continuar en la iteracion, es el operador prefijo
 		 * @return una referencia al objeto
 		 */
 
-		const_iterator & operator++() { return ++it; }
+		const_iterator &operator++()
+		{
+			it++;
+			return *this;
+		}
 		/**
 		 * @brief operador para continuar en la iteracion, es el operador posfijo
 		 * @return una copia del objeto
@@ -363,17 +349,64 @@ public:
 		 * @param otro el que se le asigna
 		 * @return una referencia al objeto actual
 		 */
-		const_iterator & operator=(const const_iterator & otro) { it=otro.it; return *this; }
+		const_iterator &operator=(const const_iterator &otro)
+		{
+			it = otro.it;
+			return *this;
+		}
 
 		/**
 		 * @brief operador de consulta
 		 * @return el elemento de la posicion del iterador
 		 */
-		data<T,U>  operator*() const { return (*it); };
-		friend class Diccionario<T,U>;
-		friend bool operator!=(const typename Diccionario<T,U>::const_iterator & uno, const typename Diccionario<T,U>::const_iterator & otro);
+		data<T, U> operator*() const { return (*it); };
+
+		/**
+		 * @brief operador de desigualdad de iteradores constantes
+		 * @param otro el segundo iterador con el que se compara
+		 * @return true si uno != otro
+		 * 		   false si uno == otro
+		 */
+		bool operator!=(const typename Diccionario<T, U>::const_iterator &otro)
+		{
+			return this->it != otro.it;
+		}
+		friend class Diccionario<T, U>;
 	};
 
+	/*Funciones begin y end asociadas al diccionario*/
+	/**
+	 * @brief método begin no constante
+	 * @return una referencia al begin no constante de @e datos
+	 */
+	typename Diccionario<T, U>::iterator &begin()
+	{
+		return Diccionario<T, U>::iterator(datos.begin());
+	}
+	/**
+	 * @brief método end no constante
+	 * @return una referencia al end no constante de @e datos
+	 */
+	typename Diccionario<T, U>::iterator &end()
+	{
+		return Diccionario<T, U>::iterator(datos.end());
+	}
+	/**
+	 * @brief método begin constante
+	 * @return una referencia al begin constante de @e datos
+	 */
+	typename Diccionario<T, U>::const_iterator cbegin() const
+	{
+		return Diccionario<T, U>::const_iterator(datos.cbegin());
+	}
+	/**
+	 * @brief método end constante
+	 * @return una referencia al end constante de @e datos
+	 */
+	typename Diccionario<T, U>::const_iterator cend() const
+	{
+		return Diccionario<T, U>::const_iterator(datos.cend());
+	}
 
 	/**
 	 * @brief metodo para eliminar un elemento del diccionario por su clave
@@ -381,11 +414,13 @@ public:
 	 * @return true si se ha podido eliminar
 	 * 		   false si no esta en el diccionario y no se ha podido eliminar
 	 */
-	bool borrar_por_clave(const T & clave){
+	bool borrar_por_clave(const T &clave)
+	{
 		//primero comprobamos que realmente esté la clave en el diccionario
 		typename list<data<T, U>>::iterator posicion;
-		bool esta_clave = Esta_Clave(clave,posicion);
-		if (esta_clave){
+		bool esta_clave = Esta_Clave(clave, posicion);
+		if (esta_clave)
+		{
 			datos.erase(posicion);
 		}
 		return esta_clave;
@@ -396,23 +431,28 @@ public:
 	 * @param nuevo el diccionario que se une al objeto que llama al metodo
 	 * @return la union de diccionarios
 	 */
-	Diccionario<T,U> union_dic( Diccionario<T,U>  nuevo){
-		Diccionario<T,U> aux(*this);
-		typename list<data<U,T>>::iterator it_aux;
-		for (auto it=nuevo.cbegin(); it != nuevo.cend(); ++it){
-			typename Diccionario<T,U>::const_iterator it_dic(it);
+	Diccionario<T, U> union_dic(Diccionario<T, U> nuevo)
+	{
+		Diccionario<T, U> aux(*this);
+		typename list<data<U, T>>::iterator it_aux;
+		for (auto it = nuevo.cbegin(); it != nuevo.cend(); ++it)
+		{
+			typename Diccionario<T, U>::const_iterator it_dic(it);
 			T clave = nuevo.getClave(it_dic);
 			list<U> definiciones(nuevo.getInfo_Asoc(clave));
-			if (aux.Esta_Clave(clave,it_aux)){
-				for (typename list<U>::const_iterator iterador_def = definiciones.cbegin(); iterador_def != definiciones.cend(); ++iterador_def){
-					if (!esta_dentro((*it_aux).info_asoci,(*iterador_def)))
-					aux.AddSignificado_Palabra((*iterador_def),clave);
+			if (aux.Esta_Clave(clave, it_aux))
+			{
+				for (typename list<U>::const_iterator iterador_def = definiciones.cbegin(); iterador_def != definiciones.cend(); ++iterador_def)
+				{
+					if (!esta_dentro((*it_aux).info_asoci, (*iterador_def)))
+						aux.AddSignificado_Palabra((*iterador_def), clave);
 				}
 			}
-			else{
-				aux.Insertar(clave,nuevo.getInfo_Asoc(clave));
+			else
+			{
+				aux.Insertar(clave, nuevo.getInfo_Asoc(clave));
 			}
-		}   
+		}
 		return aux;
 	}
 
@@ -422,16 +462,18 @@ public:
 	 * @param fin ultima clave del rango
 	 * @return subdiccionario de las claves entre @e inicio y @e fin
 	 */
-	Diccionario<T,U> subdiccionario_entre(const T & inicio, const T & fin){
-		typename list<data<T,U>>::iterator inicio_it;
-		typename list<data<T,U>>::iterator fin_it;
-		assert(Esta_Clave(inicio,inicio_it));
-		assert(Esta_Clave(fin,fin_it));
-		Diccionario<T,U> nuevo;
-		for (typename list<data<T,U>>::iterator it=inicio_it; it != fin_it; ++it){
-			nuevo.Insertar((*it).clave,(*it).info_asoci);
+	Diccionario<T, U> subdiccionario_entre(const T &inicio, const T &fin)
+	{
+		typename list<data<T, U>>::iterator inicio_it;
+		typename list<data<T, U>>::iterator fin_it;
+		assert(Esta_Clave(inicio, inicio_it));
+		assert(Esta_Clave(fin, fin_it));
+		Diccionario<T, U> nuevo;
+		for (typename list<data<T, U>>::iterator it = inicio_it; it != fin_it; ++it)
+		{
+			nuevo.Insertar((*it).clave, (*it).info_asoci);
 		}
-		nuevo.Insertar((*fin_it).clave,(*fin_it).info_asoci);
+		nuevo.Insertar((*fin_it).clave, (*fin_it).info_asoci);
 		return nuevo;
 	}
 
@@ -440,13 +482,15 @@ public:
 	 * @param otro diccionario que se le resta al actual
 	 * @return diccionario diferencia
 	 */
-	Diccionario<T,U> diferencia(const Diccionario<T,U> & otro){
-		Diccionario<T,U> resultado(*this);
-		for (typename list<data<T,U>>::const_iterator it=otro.cbegin(); it != otro.cend(); ++it){
-			typename Diccionario<T,U>::const_iterator it_dic(it);
-			typename list<data<T,U>>::iterator it_basura;
+	Diccionario<T, U> diferencia(const Diccionario<T, U> &otro)
+	{
+		Diccionario<T, U> resultado(*this);
+		for (typename Diccionario<T, U>::const_iterator it_dic = otro.cbegin(); it_dic != otro.cend(); ++it_dic)
+		{
+			typename list<data<T, U>>::iterator it_basura;
 			T clave = otro.getClave(it_dic);
-			if (Esta_Clave(clave,it_basura)){
+			if (Esta_Clave(clave, it_basura))
+			{
 				resultado.borrar_por_clave(clave);
 			}
 		}
@@ -458,36 +502,14 @@ public:
 	 * @param it posicion de la clave
 	 * @return la clave
 	 */
-	T getClave(const iterator & it) const { return (*it).clave ;}
+	T getClave(const iterator &it) const { return (*it).clave; }
 
 	/**
 	 * @brief metodo que devuelve la clave en la posicion del iterador del diccionario (version it constante)
 	 * @param it posicion de la clave (constante)
 	 * @return la clave
 	 */
-	T getClave(const const_iterator & it) const { return (*it).clave; }
+	T getClave(const const_iterator &it) const { return (*it).clave; }
 };
-
-	/**
-	 * @brief operador de desigualdad de iteradores no constantes
-	 * @param uno uno de los iteradores
-	 * @param otro el segundo iterador con el que se compara
-	 * @return true si uno != otro
-	 * 		   false si uno == otro
-	 */
-	template <typename T, typename U>
-	bool operator!=(const typename Diccionario<T,U>::iterator & uno,const typename Diccionario<T,U>::iterator & otro) { return uno.it != otro.it; }
-
-	/**
-	 * @brief operador de desigualdad de iteradores constantes
-	 * @param uno uno de los iteradores
-	 * @param otro el segundo iterador con el que se compara
-	 * @return true si uno != otro
-	 * 		   false si uno == otro
-	 */
-	template <typename T, typename U>
-	bool operator!=(const typename Diccionario<T,U>::const_iterator & uno,const typename Diccionario<T,U>::const_iterator & otro) { return uno.it != otro.it; }
-
-
 
 #endif
