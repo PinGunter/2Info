@@ -2,6 +2,7 @@ SRC = src/
 INC = inc/
 OBJ = obj/
 BIN = bin/
+DOC = doc/
 
 todo: main_guia usoguia
 
@@ -16,5 +17,6 @@ usoguia: $(SRC)usoguia.cpp
 clean:
 	-rm $(BIN)*
 	-rm $(OBJ)*
+	-rm -rf $(DOC)*
 documentacion:
 	doxygen Doxyfile

@@ -2,6 +2,7 @@ SRC = src/
 INC = inc/
 OBJ = obj/
 BIN = bin/
+DOC = doc/
 
 todo: main_dic usodiccionario
 
@@ -16,5 +17,6 @@ usodiccionario: $(SRC)usodiccionario.cpp
 clean:
 	-rm $(BIN)*
 	-rm $(OBJ)*
+	-rm -rf $(DOC)*
 documentacion:
 	doxygen Doxyfile
