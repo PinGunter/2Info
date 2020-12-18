@@ -32,27 +32,27 @@ class Guia_Tlf
 private:
 	map<string, string> datos; //si admites que haya nombres repetidos tendr�as que usar un
 							   //multimap
-
+	
 public:
-	//Guia_Tlf(){}
-	//Guia_Tlf(const Guia_Tlf & gt);
-	//~Guia_Tlf(){}
-	//Guia_Tlf & operator=(const Guia_Tlf & gt);
+	Guia_Tlf() = default;
+	Guia_Tlf(const Guia_Tlf & gt):datos(gt.datos){}
+	~Guia_Tlf() = default;
+	Guia_Tlf & operator=(const Guia_Tlf & gt) = default;
 	/**
-		      @brief Acceso a un elemento
-		      @param nombre: nombre del elemento  elemento acceder
-		      @return devuelve el valor asociado a un nombre, es decir el teléfono
-		    */
+	 @brief Acceso a un elemento
+	@param nombre: nombre del elemento  elemento acceder
+	@return devuelve el valor asociado a un nombre, es decir el teléfono
+*/
 	string &operator[](const string &nombre)
 	{
 		return datos[nombre];
 	}
 
 	/**
-			 * @brief Acceso al teléfono
-			 * @param nombre el nombre del cual hay que buscar su número
-			 * @return el teléfono asociado a @e nombre
-			 */
+	 * @brief Acceso al teléfono
+	 * @param nombre el nombre del cual hay que buscar su número
+	 * @return el teléfono asociado a @e nombre
+	 */
 	string gettelefono(const string &nombre)
 	{
 		map<string, string>::iterator it = datos.find(nombre);
@@ -63,11 +63,11 @@ public:
 	}
 
 	/**
-		     @brief Insert un nuevo telefono 
-		     @param nombre: nombre clave del nuevo telefono
-		     @param tlf: numero de telefono
-		     @return : un pair donde first apunta al nuevo elemento insertado y bool es true si se ha insertado el nuevo tlf o false en caso contrario
-		    */
+	 @brief Insert un nuevo telefono 
+		@param nombre: nombre clave del nuevo telefono
+		@param tlf: numero de telefono
+		@return : un pair donde first apunta al nuevo elemento insertado y bool es true si se ha insertado el nuevo tlf o false en caso contrario
+	*/
 	pair<map<string, string>::iterator, bool> insert(string nombre, string tlf)
 	{
 		pair<string, string> p(nombre, tlf);
@@ -78,11 +78,10 @@ public:
 	}
 
 	/**
-		     @brief Insert un nuevo telefono 
-		     @param p: pair con el nombre y el telefono asociado
-		     
-		     @return : un pair donde first apunta al nuevo elemento insertado y bool es true si se ha insertado el nuevo tlf o false en caso contrario
-		    */
+	 @brief Insert un nuevo telefono 
+	@param p: pair con el nombre y el telefono asociado		
+	@return : un pair donde first apunta al nuevo elemento insertado y bool es true si se ha insertado el nuevo tlf o false en caso contrario
+	*/
 	pair<map<string, string>::iterator, bool> insert(pair<string, string> p)
 	{
 
@@ -93,10 +92,10 @@ public:
 	}
 
 	/**
-		      @brief Borrar un telefono
-		      @param nombre: nombre que se quiere borrar
-		      @note: en caso de que fuese un multimap borraria todos con ese nombre
-		    */
+	 @brief Borrar un telefono
+	@param nombre: nombre que se quiere borrar
+	@note: en caso de que fuese un multimap borraria todos con ese nombre
+*/
 	void borrar(const string &nombre)
 	{
 		map<string, string>::iterator itlow = datos.lower_bound(nombre);   //el primero que tiene dicho nombre
@@ -105,10 +104,10 @@ public:
 	}
 
 	/**
-		      @brief Borrar un telefono
-		      @param nombre: nombre que se quiere borrar y telefono asociado
-		      @note: esta funcion nos permite borrar solamente aquel que coincida en nombre y tlf
-		    */
+	 @brief Borrar un telefono
+	@param nombre: nombre que se quiere borrar y telefono asociado
+	@note: esta funcion nos permite borrar solamente aquel que coincida en nombre y tlf
+*/
 	//con map siempre hay uno con multimap puede existir mas de uno
 	void borrar(const string &nombre, const string &tlf)
 	{
@@ -126,19 +125,19 @@ public:
 		}
 	}
 	/**
-		      @brief  Numero de telefonos 
-		      @return el numero de telefonos asociados
-		     */
+	 @brief  Numero de telefonos 
+	@return el numero de telefonos asociados
+	*/
 	int size() const
 	{
 		return datos.size();
 	}
 	/**
-		      @brief Contabiliza cuantos telefonos tenemos asociados a un nombre
-		      @param nombre: nombre sobre el que queremos consultar
-		      @return numero de telefonos asociados a un nombre
-		      
-		     */
+	 @brief Contabiliza cuantos telefonos tenemos asociados a un nombre
+	@param nombre: nombre sobre el que queremos consultar
+	@return numero de telefonos asociados a un nombre
+	
+	*/
 	//al ser un map debe de ser 0 o 1. Si fuese un multimap podr�amos tener mas de uno
 	unsigned int contabiliza(const string &nombre)
 	{
@@ -224,11 +223,12 @@ public:
 	/**
 	 * @brief clase iteradora no constante de la guía telefónica
 	 */
-	class iterator{
-		private:
-		typename map<string,string>::iterator it;
-
-		public:
+	class iterator
+	{
+	private:
+		typename map<string, string>::iterator it;
+		iterator(const typename map<string,string>::iterator otro):it(otro){}
+	public:
 		/**
 		 * @brief constructor sin parametros por defecto
 		 */
@@ -238,14 +238,15 @@ public:
 		 * @brief constructor de copia por defecto
 		 * @param otro el que se copia
 		 */
-		iterator(const iterator & otro):it(otro.it){}
+		iterator(const iterator &otro) : it(otro.it) {}
 
 		/**
 		 * @brief operador de asignacion (se delega en el operador de asignacion de map)
 		 * @param otro el que se asigna
 		 * @return una referencia al objeto
 		 */
-		iterator & operator=(const iterator & otro){
+		iterator &operator=(const iterator &otro)
+		{
 			this->it = otro.it;
 			return *this;
 		}
@@ -254,7 +255,8 @@ public:
 		 * @brief operador ++ pre incremento
 		 * @return una referencia al objeto
 		 */
-		iterator & operator++(){
+		iterator &operator++()
+		{
 			it++;
 			return *this;
 		}
@@ -262,28 +264,174 @@ public:
 		 * @brief operador ++ post incremento
 		 * @return una copia del objeto
 		 */
-		iterator operator++(int){
+		iterator operator++(int)
+		{
 			Guia_Tlf::iterator aux(*this);
 			it++;
 			return aux;
 		}
-
-		friend bool operator!=(const Guia_Tlf::iterator & uno, const Guia_Tlf::iterator & otro);
-
-		
-
-
-
+		/**
+		 * @brief operador de desigualdad
+		 * @param otro el iterador con el que se compara
+		 * @return true si son distintos
+		 * 			false si son iguales
+		 */
+		bool operator!=(const Guia_Tlf::iterator &otro)
+		{
+			return this->it != otro.it;
+		}
+		/**
+		 * @brief operador *
+		 * @return la entrada de la guia a la que apunta el iterador
+		 */
+		pair<string, string> operator*()
+		{
+			return (*it);
+		}
+		friend class Guia_Tlf;
 	};
 	/**
 	 * @brief clase iteradora constante de la guía telefónica
 	 */
-	class const_iterator{
-		typename map<string,string>::const_iterator it;
+	class const_iterator
+	{
+		typename map<string, string>::const_iterator it;
+		const_iterator(const typename map<string,string>::const_iterator otro):it(otro){}
+
+	public:
+		/**
+		 * @brief constructor sin parametros por defecto
+		 */
+		const_iterator() = default;
+
+		/**
+		 * @brief constructor de copia por defecto
+		 * @param otro el que se copia
+		 */
+		const_iterator(const const_iterator &otro) : it(otro.it) {}
+
+		/**
+		 * @brief operador de asignacion (se delega en el operador de asignacion de map)
+		 * @param otro el que se asigna
+		 * @return una referencia al objeto
+		 */
+		const_iterator &operator=(const const_iterator &otro)
+		{
+			this->it = otro.it;
+			return *this;
+		}
+		/**
+		 * @brief operador ++ pre incremento
+		 * @return una referencia al objeto
+		 */
+		const_iterator &operator++()
+		{
+			it++;
+			return *this;
+		}
+		/**
+		 * @brief operador ++ post incremento
+		 * @return una copia del objeto
+		 */
+		const_iterator operator++(int)
+		{
+			Guia_Tlf::const_iterator aux(*this);
+			it++;
+			return aux;
+		}
+		/**
+		 * @brief operador de desigualdad
+		 * @param otro el iterador con el que se compara
+		 * @return true si son distintos
+		 * 			false si son iguales
+		 */
+		bool operator!=(const Guia_Tlf::const_iterator &otro)
+		{
+			return this->it != otro.it;
+		}
+		/**
+		 * @brief operador *
+		 * @return la entrada de la guia a la que apunta el iterador
+		 */
+		pair<string, string> operator*()
+		{
+			return (*it);
+		}
+		friend class Guia_Tlf;
 	};
+
+	/**
+	 * @brief método begin no constante
+	 * @return un iterador diccionario que apunta al begin no constante de @e datos
+	 */
+	Guia_Tlf::iterator begin()
+	{
+		return Guia_Tlf::iterator(datos.begin());
+	}
+	/**
+	 * @brief método end no constante
+	 * @return un iterador diccionario que apunta al end no constante de @e datos
+	 */
+	Guia_Tlf::iterator end()
+	{
+		return Guia_Tlf::iterator(datos.end());
+	}
+	/**
+	 * @brief método begin constante
+	 * @return un iterador diccionario que apunta al begin  constante de @e datos
+	 */
+	Guia_Tlf::const_iterator cbegin() const
+	{
+		return Guia_Tlf::const_iterator(datos.cbegin());
+	}
+	/**
+	 * @brief método end constante
+	 * @return un iterador diccionario que apunta al end constante de @e datos
+	 */
+	Guia_Tlf::const_iterator cend() const
+	{
+		return Guia_Tlf::const_iterator(datos.cend());
+	}
+
+	/**
+	 * @brief metodo para saber si una clave está en la guia
+	 * @param nombre la clave que se busca
+	 * @return true si está
+	 * 			false si no está
+	 */
+	bool estaClave(const string &nombre) const{
+		return (datos.find(nombre) != datos.end());
+	}
+
+	/**
+	 * @brief metodo para realizar la interseccion con @e otra
+	 * @param otra la guia de teléfono con la que se hace la interseccion
+	 * @return la guia con la interseccion
+	 */
+	Guia_Tlf interseccion(const Guia_Tlf & otra){
+		Guia_Tlf inters(*this);
+		Guia_Tlf::iterator it_this;
+		for (it_this = begin(); it_this != end(); ++it_this){
+			pair<string,string> aux = (*it_this);
+			if (!otra.estaClave(aux.first)){
+				inters.borrar(aux.first);
+			}
+		}
+	return inters;
+	}
+
+	/**
+	 * @brief metodo para modificar el numero de telefono de una guia
+	 * @param nombre el nombre de la persona que se cambia su telefono
+	 * @param telefono el telefono nuevo
+	 */
+	void modificarTelefono(const string &nombre, const string &telefono){
+		typename map<string,string>::iterator posicion = datos.find(nombre);
+		if (posicion != datos.end()){
+			datos[nombre] = telefono;
+		}
+	}
+
 };
 
-bool operator!=(const Guia_Tlf::iterator & uno, const Guia_Tlf::iterator & otro){
-	return uno.it != otro.it;
-}
 #endif
