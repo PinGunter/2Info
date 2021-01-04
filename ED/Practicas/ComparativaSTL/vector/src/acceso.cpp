@@ -36,9 +36,12 @@ int main(int argc, char *argv[])
     vect[i] = i;
   }
   clock_t tini, tfin;
+  int izquierda = 1,derecha = N,medio;
   tini = clock();
-  //for (int i=0; i < 1000000; i++)
-    aux = vect[N/2];
+  while (izquierda <= derecha){
+
+  }
+
   tfin = clock();
   cout << N << "\t" << ((tfin - tini))/ (double)CLOCKS_PER_SEC << endl;
 
