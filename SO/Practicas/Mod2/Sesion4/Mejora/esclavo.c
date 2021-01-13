@@ -15,13 +15,16 @@ int main(int argc, char *argv[])
 
 	read(STDIN_FILENO, &min, sizeof(int));
 	read(STDIN_FILENO, &max, sizeof(int));
+
 	for (i = min; i <= max; i++) {
 		if (esPrimo(i)) {
 			write(STDOUT_FILENO, &i, sizeof(int));
 		}
 	}
-	close(STDOUT_FILENO);
-	return 0;
+
+	// close(STDOUT_FILENO);
+
+	exit(EXIT_SUCCESS);
 }
 
 int esPrimo(int n)

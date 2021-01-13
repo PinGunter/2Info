@@ -37,29 +37,51 @@ int main(int argc, char *argv[])
 	pipe(fd_padre);
 	int sigue = 1;
 	// hacemos los forks y el trabajo de cada hijo
-	for (int i=0; i < NUM_HIJOS && sigue; i++){
+	for (int i=0; i < NUM_HIJOS; i++){
 		if ((PID[i] = fork()) < 0 ){
 			printf("Error de fork");
 			exit(EXIT_FAILURE);
 		} else if (PID[i] == 0){		//codigo del hijo
+			for (int j = 0; j < NUM_HIJOS; j++) {
+				if (i != j) {
+					close(fd[j][0]);
+					close(fd[j][1]);
+				}
+			}
+
 			printf("Soy el hijo %d\n", i);
-			sigue = 0;
 			close(fd[i][1]);
 			close(fd_padre[0]);
+
 			dup2(fd[i][0],STDIN_FILENO);
 			dup2(fd_padre[1],STDOUT_FILENO);
+
 			execl("./esclavo", "esclavo", NULL);
-			exit(EXIT_SUCCESS);
 		} else{
-			dup2(fd_padre[0],STDIN_FILENO);
-			minI = i*por_hijo + min;
-			maxI = minI+1 + por_hijo;
-			close(fd_padre[1]);
-			write(fd[i][1], &minI, sizeof(int));
-			write(fd[i][1], &maxI, sizeof(int));
-			while ((read(fd_padre[0],&primo, sizeof(int))) > 0)
-				printf("%d\n", primo);
+			// dup2(fd_padre[0],STDIN_FILENO);
+			// minI = i*por_hijo + min;
+			// maxI = minI+1 + por_hijo;
+			// close(fd_padre[1]);
+			// write(fd[i][1], &minI, sizeof(int));
+			// write(fd[i][1], &maxI, sizeof(int));
+			// while ((read(fd_padre[0],&primo, sizeof(int))) > 0)
+				// printf("%d\n", primo);
 		}
+	}
+
+	close(fd_padre[1]);
+	for (int i = 0; i < NUM_HIJOS; i++) {
+		minI = i * por_hijo + min;
+		maxI = minI + 1 + por_hijo;
+
+		close(fd[i][0]);
+
+		write(fd[i][1], &minI, sizeof(int));
+		write(fd[i][1], &maxI, sizeof(int));
+	}
+
+	while ((read(fd_padre[0],&primo, sizeof(int))) > 0) {
+		printf("%d\n", primo);
 	}
 
 
