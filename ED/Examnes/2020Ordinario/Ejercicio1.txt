@@ -1,0 +1,22 @@
+1.
+       a. Si la distancia al nodo padre más cercano de los dos es 0 => son el mismo nodo.
+       b. En general, si m1 = a y m2 > a quiere decir que n1 es ancestro de n2 puesto que está más cerca en la jerarquía al ancestro común.
+       c. Si están a la misma distancia de 1 quiere decir que el ancestro común es el inmediatamente superior, el padre. Por tanto son hermanos.
+    -> d. Como todas las anteriores son correctas. Ésta es la opción correcta.
+2.
+       a.
+       b.
+       c.
+    -> d. Todo lo anterior es falso pues se necesitan 2 rotaciones dobles y una simple
+    árbol:
+                  18
+               /      \
+              11      23
+            /   \    /   \
+           7    15  19   30
+          / \
+         1   9
+3.
+    -> a. Se contradicen los recorridos.
+4.
+       d. Se modifica con la segunda instrucción y como no está el 7, find devuelve end.

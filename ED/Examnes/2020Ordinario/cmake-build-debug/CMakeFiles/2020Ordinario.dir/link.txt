@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/2020Ordinario.dir/main.cpp.o  -o 2020Ordinario 
