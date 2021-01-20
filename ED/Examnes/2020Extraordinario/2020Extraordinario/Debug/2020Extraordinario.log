@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\pingu\Documents\GitHub\2Info\ED\Examnes\2020Extraordinario\2020Extraordinario\main.cpp(101,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  2020Extraordinario.vcxproj -> C:\Users\pingu\Documents\GitHub\2Info\ED\Examnes\2020Extraordinario\2020Extraordinario\Debug\2020Extraordinario.exe

@@ -1,0 +1,13 @@
+a. Implementar un conjunto ordenado de enteros
+	1. ABB				2. APO			3. Vector ordenado
+	Ranking:
+	1. APO debido a que por su propia naturaleza se insertan ordenados. Tanto insertar como borrar y buscar son log2. (borrar un elemento cualquiera es N)
+	2. ABB porque inserciones y busqueda son log2 pero borrado es n. Puede tender a linealizarse.
+	3. Vector: insercion y borrado O(n) y busqueda binaria (log2).
+b.
+	Tabla hash puesto que el acceso es constante, aplicar la función hash devuelve el sitio exacto de lo que buscamos.
+	Inserción es constante, borrado también. Búsqueda entre constante y N. (Puesto que si el factor de carga es alto estaremos buscando en una lista para obtener la posicion de memoria)
+	Lista ordenada: insertar y borrar constante. Búsqueda N.
+	Vector es N en insertar y log2 buscar.
+c.
+	AVl - Más eficiente
