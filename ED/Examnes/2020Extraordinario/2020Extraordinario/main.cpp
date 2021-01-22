@@ -98,7 +98,6 @@ int main() {
     Diccionario c;
     Diccionario::iterador_primos it;
 
-    srand(time(NULL));
 
 
 

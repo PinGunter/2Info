@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ordinario.dir/main.cpp.o CMakeFiles/ordinario.dir/ejercicio4.cpp.o CMakeFiles/ordinario.dir/ejercicio6.cpp.o CMakeFiles/ordinario.dir/ejercicio5.cpp.o  -o ordinario 

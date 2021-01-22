@@ -1,0 +1,26 @@
+a) Falso. No existen los iteradores de colas con prioridad puesto que solo se accede al elemento prioritario.
+b) Falso. Se necesitan al menos dos recorridos del mismo árbol para recuperarlo de forma unívoca.
+
+    3
+   /  \
+  1    5
+        \
+         7
+    5
+   /  \
+  3    7
+ /
+ 1
+
+Por ejemplo, tiene el mismo recorrido en inorden pero son arboles distintos
+c) Falso, no tiene por qué ser así. Solo se garantiza que el mínimo sea la raíz. Por ejemplo el apo:
+     1
+   /   \
+  2     30
+ /  \
+4    5
+
+No cumple lo que pide.
+d) Falso. Ahora el valor de M[3] vale 9.
+e) Falso. De cara a la búsqueda ocupada y borrada son equivalentes. Por lo que en la A hay un 90% de "ocupados" y en la B hay un 50%
+
